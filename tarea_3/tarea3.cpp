@@ -188,7 +188,7 @@ float distancia_euclidea(string col1,string col2)
                 cout<<itf2->second<<endl;
                 resultado+=pow((itf1->second - itf2->second),2.0);
             }
-            itf1++;
+            //itf1++;
         }
         cout<<"no hay coincidencia"<<endl;
         itf1++;    

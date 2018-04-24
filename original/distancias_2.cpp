@@ -58,8 +58,11 @@ float distancia_euclidea(int col1,int col2)
     float resultado=0.0;
     for(int i=0;i<size_m;i++)
     {
-	if((matrix[i][col1]!=INF&&matrix[i][col2]!=INF))
-	    resultado=resultado+=(pow((matrix[i][col1]-matrix[i][col2]),2.0));
+	    if((matrix[i][col1]!=0.0 && matrix[i][col2]!=0.0))
+	    {
+	        //cout<<"col1: "<<matrix[i][col1]<<" col2: "<<matrix[i][col2]<<" res: "<<resultado<<endl;
+	        resultado+=(pow((matrix[i][col1]-matrix[i][col2]),2.0));
+	    }
     }
     return sqrt(resultado);
 }
@@ -275,12 +278,12 @@ float proyectado_knn(myvec & knn,int libro)
 }
 int main()
 {
-    load_hash();
-    load_matrix("data_movies.csv");
+    //load_hash();
+    load_matrix("../data/data_movies.csv");
     //cout<<"Distancia Manhattan:\t"<<distancia_manhattan(0,1)<<endl;
-    //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(0,1)<<endl;
-    //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(4,7)<<endl;
-    //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(6,8)<<endl;
+    cout<<"Distancia Euclidea:\t"<<distancia_euclidea(0,1)<<endl;
+    cout<<"Distancia Euclidea:\t"<<distancia_euclidea(4,7)<<endl;
+    cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(6,8)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,14)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,3)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,20)<<endl;
@@ -291,6 +294,7 @@ int main()
     //myvec knn=k_nn(nombres.find("Patrick C")->second,3);
     myvec knn=k_nn(4,2);
     //calcular_influencia(nombres.find("Patrick C")->second,knn);
+ 
     calcular_influencia(4,knn);
     for(int i=0;i<knn.size();i++)
     {
