@@ -336,6 +336,16 @@ int main()
     load_matrix();
     cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
     cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");
+    myvec knn=k_nn("15600",25000);
+    calcular_influencia("15600",knn);
+    for(int i=0;i<knn.size();i++)
+    {
+            cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+
+        cout<<endl;
+    }
+    //cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
+    
     return 0;
 }
 

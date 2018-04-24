@@ -21,8 +21,7 @@ using namespace std;
 
 #define myvec vector < MyStruct >
 
-#define pointer_vect vector<float,float>
-#define matrix_cos  vector<string,pointer_vect*>
+
 
 
 columna_u matrix_user;
@@ -275,7 +274,7 @@ float correlacion_pearson(string col1, string col2)
     ((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
     
     return resultado;
-}/*
+}
 float similitud_coseno(string col1,string col2)
 {
     float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
@@ -284,7 +283,8 @@ float similitud_coseno(string col1,string col2)
     auto itc2=matrix_user.find(col2);    
     auto it_matrix_end=matrix_user.end();
     auto itf1=itc1->second->begin();
-    matrix_cos coseno;
+
+    vector<vector<float>> coseno;
 
     while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
@@ -293,21 +293,12 @@ float similitud_coseno(string col1,string col2)
         {
             if(itf1->first==itf2->first)
             {
-                if(it_f_b!=matrix_user.end())
-                {
-                    //cout<<"entro if"<<endl;
-                    //cout<<"it_f_b: "<<it_f_b->first<<" , "<<it_f_b->second->size()<<endl;
-                    it_f_b->second->insert({b,rat});
-                    //cout<<"salio if"<<endl;
-                }
-                else
-                {
-                    //cout<<"entro else"<<endl;
-                    pointer_vect* fb=new pointer_vect();
-                    fb->push_back(itf1->second,itf2->second);
-                    coseno.push_back(itf1->first,fb);
-                    //cout<<"salio else"<<endl;
-                }
+                
+                //cout<<"entro else"<<endl;
+                pointer_vect* fb=new pointer_vect();
+                fb->push_back(itf1->second,itf2->second);
+                coseno.push_back(itf1->first,fb);
+                //cout<<"salio else"<<endl;
             }
         }
         itf1++;    
@@ -322,8 +313,8 @@ float similitud_coseno(string col1,string col2)
     
     resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
     return resultado;
+}
 
-}*/
 struct MyStruct
 {
     string key;
