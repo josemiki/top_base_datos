@@ -21,6 +21,10 @@ using namespace std;
 
 #define myvec vector < MyStruct >
 
+#define pointer_vect vector<float,float>
+#define matrix_cos  vector<string,pointer_vect*>
+
+
 columna_u matrix_user;
 columna_b matrix_book;
 
@@ -190,7 +194,7 @@ float distancia_euclidea(string col1,string col2)
         auto itf2=itc2->second->find(itf1->first);
         if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
         {
-            //cout<<"entro 1 if"<<endl;
+            
             if(itf1->first==itf2->first)
             {
                 //cout<<"col1: "<<itf1->second<<" col2: "<<itf2->second<<" res: "<<resultado<<endl;
@@ -271,7 +275,55 @@ float correlacion_pearson(string col1, string col2)
     ((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
     
     return resultado;
-}
+}/*
+float similitud_coseno(string col1,string col2)
+{
+    float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
+
+    auto itc1=matrix_user.find(col1); 
+    auto itc2=matrix_user.find(col2);    
+    auto it_matrix_end=matrix_user.end();
+    auto itf1=itc1->second->begin();
+    matrix_cos coseno;
+
+    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
+    {
+        auto itf2=itc2->second->find(itf1->first);
+        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
+        {
+            if(itf1->first==itf2->first)
+            {
+                if(it_f_b!=matrix_user.end())
+                {
+                    //cout<<"entro if"<<endl;
+                    //cout<<"it_f_b: "<<it_f_b->first<<" , "<<it_f_b->second->size()<<endl;
+                    it_f_b->second->insert({b,rat});
+                    //cout<<"salio if"<<endl;
+                }
+                else
+                {
+                    //cout<<"entro else"<<endl;
+                    pointer_vect* fb=new pointer_vect();
+                    fb->push_back(itf1->second,itf2->second);
+                    coseno.push_back(itf1->first,fb);
+                    //cout<<"salio else"<<endl;
+                }
+            }
+        }
+        itf1++;    
+        
+    }
+    for(int i=0;i<size_m;i++)
+    {
+        resultado_p=resultado_p+=(matrix[i][col1]*matrix[i][col2]);
+        resultado_x=resultado_x+=pow(matrix[i][col1],2.0);
+        resultado_y=resultado_y+=pow(matrix[i][col2],2.0);
+    }
+    
+    resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
+    return resultado;
+
+}*/
 struct MyStruct
 {
     string key;
