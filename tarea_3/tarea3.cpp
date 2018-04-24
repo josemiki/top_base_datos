@@ -17,6 +17,8 @@ using namespace std;
 #define users unordered_map<string,string>
 #define books unordered_map<string,string>
 
+#define myvec vector < MyStruct >
+
 columna_u matrix_user;
 columna_b matrix_book;
 
@@ -198,11 +200,142 @@ float distancia_euclidea(string col1,string col2)
     return sqrt(resultado);
 }
 
+float correlacion_pearson(string col1, string col2)
+{
+    float sum_x_m_y=0.0;
+    float sum_x=0.0;
+    float sum_y=0.0;
+    float sum_c_x=0.0;
+    float sum_c_y=0.0;
+    float resultado=0.0;
+
+    int n=0;
+    
+    auto itc1=matrix_user.find(col1); 
+    auto itc2=matrix_user.find(col2);    
+    auto it_matrix_end=matrix_user.end();
+    auto itf1=itc1->second->begin();
+
+    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
+    {
+        auto itf2=itc2->second->find(itf1->first);
+
+        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
+        {
+            //cout<<"entro 1 if"<<endl;
+            if(itf1->first==itf2->first)
+            {
+                sum_x=sum_x+=itf1->second;
+                sum_y=sum_y+=itf2->second; 
+                sum_c_x=sum_c_x+=pow(itf1->second,2.0);
+                sum_c_y=sum_c_y+=pow(itf2->second,2.0);
+                sum_x_m_y=sum_x_m_y+=(itf1->second*itf2->second);
+                n++;
+                //cout<<itf2->second<<endl;
+                //resultado+=pow((itf1->second - itf2->second),2.0);
+            }
+            
+        }
+        //cout<<"no hay coincidencia"<<endl;
+        itf1++; 
+    }
+    
+
+    resultado=(sum_x_m_y-((sum_x*sum_y)/n))/
+    ((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
+    
+    return resultado;
+}
+struct MyStruct
+{
+    string key;
+    float euclidia;
+    float pearson;
+    float influencia;
+
+    MyStruct(string k, float e,float p,float i) : key(k), euclidia(e), pearson(p),influencia(i) {}
+};
+
+struct less_than_key
+{
+    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
+    {
+        return (struct1.euclidia > struct2.euclidia);
+    }
+};
+
+myvec k_nn(string col,int k)
+{
+    myvec vec;
+    auto itc1=matrix_user.find(col); 
+    auto itc2=matrix_user.begin();    
+    auto it_matrix_end=matrix_user.end();
+    //auto itf1=itc1->second->begin();
+    //auto itf2=itc2->second->begin();
+
+    while(itc2!=it_matrix_end)
+    {
+        
+        vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
+        itc2++;
+    }
+    std::sort(vec.begin(), vec.end(), less_than_key());
+    vec.erase(vec.begin());
+    //for(int i=0;i<vec.size();i++)
+    //    cout<<vec[i].key<<","<<vec[i].euclidia<<"."<<vec[i].pearson<<endl;
+    //cout<<"ordenado"<<endl;
+    //cout<<"vec_size"<<vec.size()<<endl;
+    /*int fin=(vec.size()-k);
+
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
+    //cout<<"vec_size"<<vec.size()<<endl;*/
+    cout<<"fin:\t"<<vec.size()-k<<endl;
+    int fin=(vec.size()-k);
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
+    
+    return vec;
+
+}
+void calcular_influencia(string col, vector < MyStruct >& score)
+{
+    float suma_pearson=0.0;
+    for(int i=0;i<score.size();i++)
+    {
+        score[i].pearson=correlacion_pearson(col,score[i].key);
+        // cout<<suma_pearson<<endl;
+        suma_pearson+=score[i].pearson;
+    }
+    //cout<<suma_pearson<<endl;
+    for(int i=0;i<score.size();i++)
+    {
+        //score[i].influencia=score[i].pearson/suma_pearson*100;
+        score[i].influencia=score[i].pearson/suma_pearson;
+    }
+
+}
+float proyectado_knn(myvec & knn,string libro)
+{
+    int k= knn.size();
+    float resultado=0.0;
+    //float * puntaje=new float[k];
+    for(int i=0;i<k;i++)
+    {
+        
+        resultado+=knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second;
+        cout<<knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second<<endl;
+
+    }
+    cout<<resultado;
+    return resultado;
+}
 int main()
 {
     load_hash_header();
     load_matrix();
     cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
+    cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");
     return 0;
 }
 

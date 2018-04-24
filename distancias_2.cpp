@@ -348,7 +348,7 @@ float proyectado_knn(myvec & knn,string libro)
     //float * puntaje=new float[k];
     for(int i=0;i<k;i++)
     {
-
+        
         resultado+=knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second;
         cout<<knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second<<endl;
 
@@ -372,6 +372,7 @@ int main()
         cout<<endl;
     }
     cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
+    
     return 0;
 }
 
