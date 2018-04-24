@@ -25,7 +25,7 @@ books hash_books;
 
 void load_hash_header()
 {
-    ifstream book("BX-Books.csv");
+    ifstream book("../../bd/BX-Books.csv");
     string b1,b2;
     int line=1;
     while(!book.eof())
@@ -39,9 +39,10 @@ void load_hash_header()
             ++line;
         }
     }
-    cout<<"size_books: "<<hash_books.size()<<endl;
+    
+    cout<<"load books \n size_books: "<<hash_books.size()<<endl;
 
-    ifstream user("BX-Users.csv");
+    ifstream user("../../bd/BX-Users.csv");
     line=1;
     //int i=0;
     while(!user.eof())
@@ -55,13 +56,13 @@ void load_hash_header()
             ++line;
         }
     }
-    cout<<"size_users: "<<hash_users.size()<<endl;
+    cout<<"load users \n size_users: "<<hash_users.size()<<endl;
     
 
 }
 void load_matrix()
 {
-    ifstream input("BX-Book-Ratings.csv");
+    ifstream input("../../bd/BX-Book-Ratings.csv");
     string u,b,r;
     
     float rat;
@@ -77,8 +78,8 @@ void load_matrix()
             getline(input,b,';');
             getline(input,r);
             //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r.size()<<endl;
-            r.erase(0,1);
-            r.erase(r.size()-1,1);
+            //r.erase(0,1);
+            //erase(r.size()-1,1);
             //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r<<endl;
             rat=stof(r);
             
@@ -130,45 +131,78 @@ void load_matrix()
             //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<rat<<endl;
             ++line;
         }
-        /*getline(input,u,';');
-        if(!u.empty())
-        {
-            //cout<<line<<endl;
-            getline(input,b,';');
-            getline(input,r);
-            //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r.size()<<endl;
-            r.erase(0,1);
-            r.erase(r.size()-1,1);
-            //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r<<endl;
-            rat=stof(r);
-            
-            fila_b fb;
-            fb.insert({b,rat});
 
-            fila_u fu;
-            fu.insert({u,rat});
-            
-            itcol=hash_users.find(u);
-            itfil=hash_books.find(b);
-
-            if(itcol!=hash_users.end()&&itfil!=hash_books.end())
-            {
-                matrix_user.insert({u,fb});
-                matrix_book.insert({b,fu});
-            }
-            //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<rat<<endl;
-            ++line;
-        }*/
     }
-    cout<<"size_matrix_user: "<<matrix_user.size()<<endl;
-    cout<<"size_matrix_book: "<<matrix_book.size()<<endl;
+
+    /*auto it=matrix_user.begin();
+    
+    while(it!=matrix_user.end())
+    {
+        cout<<it->first<<" size hash: "<<(it->second)->size()<<endl;
+        auto it2=it->second->begin();
+        while(it2!=it->second->end())
+        {
+            cout<<"   "<<it2->first<<" , "<<it2->second<<"    ";
+            it2++;
+        }
+        cout<<endl;
+        it++;
+    }*/
+
+    cout<<"load matriz users \n size_matrix_user: "<<matrix_user.size()<<endl;
+    cout<<"load matriz books \n size_matrix_book: "<<matrix_book.size()<<endl;
+}
+float distancia_euclidea(string col1,string col2)
+{
+    float resultado=0.0;
+
+    auto itc1=matrix_user.find(col1);
+
+    //cout<<"itc1: "<<itc1->first<<endl;
+    
+    auto itc2=matrix_user.find(col2);
+
+    //cout<<"itc2: "<<itc2->first<<endl;
+    
+    auto it_matrix_end=matrix_user.end();
+
+    auto itf1=itc1->second->begin();
+
+    
+
+    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
+    {
+        //cout<<"primer while"<<endl;
+        //auto itf1=itc2->second->find(itc1->first);
+        
+
+        //cout<<"itf"<<itf->first<<endl;
+
+        auto itf2=itc2->second->find(itf1->first);
+
+        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
+        {
+            cout<<"entro 1 if"<<endl;
+            if(itf1->first==itf2->first)
+            {
+                cout<<itf2->second<<endl;
+                resultado+=pow((itf1->second - itf2->second),2.0);
+            }
+            itf1++;
+        }
+        cout<<"no hay coincidencia"<<endl;
+        itf1++;    
+        
+    }
+
+    return sqrt(resultado);
 }
 
 int main()
 {
     load_hash_header();
     load_matrix();
-    //load_matrix_fil();
+    cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
     return 0;
 }
 

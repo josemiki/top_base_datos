@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "*.tcc": "cpp"
+    }
+}
