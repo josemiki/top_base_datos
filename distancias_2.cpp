@@ -181,7 +181,23 @@ void load_matrix()
     */
 
 }
-
+void print_matrix()
+{
+    auto it=matrix_user.begin();
+    
+    while(it!=matrix_user.end())
+    {
+        cout<<it->first<<" size hash: "<<(it->second)->size()<<endl;
+        auto it2=it->second->begin();
+        while(it2!=it->second->end())
+        {
+            cout<<"  "<<it2->first<<","<<it2->second<<"    ";
+            it2++;
+        }
+        cout<<endl;
+        it++;
+    }
+}
 float distancia_euclidea(string col1,string col2)
 {
     float resultado=0.0;
@@ -209,10 +225,9 @@ float distancia_euclidea(string col1,string col2)
     }
 
     return sqrt(resultado);
-    /*
-    float resultado=0.0;
+    /*    float resultado=0.0;
     auto itc1=matrix_user.find(col1)->second->begin();
-    //auto itc2=matrix_user.find(col2)->second;
+    auto itc2=matrix_user.find(col2)->second;
     while(itc1!=matrix_user.find(col1)->second->end())
     {
         auto itf=matrix_user.find(col2)->second->find(itc1->first);
@@ -233,6 +248,7 @@ float distancia_euclidea(string col1,string col2)
 
 float correlacion_pearson(string col1, string col2)
 {
+    cout<<"Usuarios a evaluar: "<<col1<<" ; "<<col2<<endl;
     float sum_x_m_y=0.0;
     float sum_x=0.0;
     float sum_y=0.0;
@@ -246,22 +262,24 @@ float correlacion_pearson(string col1, string col2)
     auto itc2=matrix_user.find(col2);    
     auto it_matrix_end=matrix_user.end();
     auto itf1=itc1->second->begin();
-
+    //cout<<"size_books col1: "<<itc1->second->size()<<endl;
+    
     
     while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
         auto itf2=itc2->second->find(itf1->first);
-
+        cout<<"libro a buscar:\t"<<itf1->first<<endl;
         if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
         {
-            //cout<<"entro 1 if"<<endl;
+            //cout<<"coincidencia libro:\t"<<itf1->first<<" ; "<<itf2->first<<endl;
             if(itf1->first==itf2->first)
             {
-                sum_x=sum_x+=itf1->second;
-                sum_y=sum_y+=itf2->second; 
-                sum_c_x=sum_c_x+=pow(itf1->second,2.0);
-                sum_c_y=sum_c_y+=pow(itf2->second,2.0);
-                sum_x_m_y=sum_x_m_y+=(itf1->second*itf2->second);
+                //cout<<"coincidencia rating:\t"<<itf1->second<<" ; "<<itf2->second<<endl;
+                sum_x+=itf1->second;
+                sum_y+=itf2->second; 
+                sum_c_x+=pow(itf1->second,2.0);
+                sum_c_y+=pow(itf2->second,2.0);
+                sum_x_m_y+=(itf1->second*itf2->second);
                 n++;
                 //cout<<itf2->second<<endl;
                 //resultado+=pow((itf1->second - itf2->second),2.0);
@@ -275,7 +293,7 @@ float correlacion_pearson(string col1, string col2)
 
     resultado=(sum_x_m_y-((sum_x*sum_y)/n))/
     ((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
-    
+    //cout<<"Correlacion de Pearson: "<<resultado<<endl;
     return resultado;
 }
 
@@ -384,13 +402,18 @@ myvec k_nn(string col,int k)
     {
         
         vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
+        cout<<correlacion_pearson(col,itc2->first)<<endl;
         itc2++;
     }
+    
+
     std::sort(vec.begin(), vec.end(), less_than_key());
+    for(int i=0;i<vec.size();i++)
+        cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+    cout<<"ordenado"<<endl;
+
     vec.erase(vec.begin());
-    //for(int i=0;i<vec.size();i++)
-    //    cout<<vec[i].key<<","<<vec[i].euclidia<<"."<<vec[i].pearson<<endl;
-    //cout<<"ordenado"<<endl;
+
     //cout<<"vec_size"<<vec.size()<<endl;
     /*int fin=(vec.size()-k);
 
@@ -424,7 +447,7 @@ void calcular_influencia(string col, vector < MyStruct >& score)
 }
 float proyectado_knn(myvec & knn,string libro)
 {
-    cout<<"entre proyeccion"<<endl;
+    //cout<<"entre proyeccion"<<endl;
     int k= knn.size();
     float resultado=0.0;
     //float * puntaje=new float[k];
@@ -437,11 +460,12 @@ float proyectado_knn(myvec & knn,string libro)
             if(it!=itmb->second->end())
                 resultado+=knn[i].influencia*it->second;
             else
-                cout<<"autor no califico libro"<<endl;
+                resultado+=0.0;
+                //cout<<"autor no califico libro"<<endl;
         }//cout<<knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second<<endl;
 
     }
-    cout<<resultado;
+    //cout<<resultado;
     return resultado;
 }
 myvec k_nn_rango(string col,float r)
@@ -488,12 +512,54 @@ myvec k_nn_rango(string col,float r)
     return vec;
 
 }
-
+void crear_usuario(string name)
+{
+    vector<string> lmovie;
+    lmovie.push_back("Gladiator");
+    lmovie.push_back("Alien");
+    lmovie.push_back("Avatar");
+    lmovie.push_back("Spiderman");
+    lmovie.push_back("Star Wars");
+    vector<float> lrating;
+    lrating.push_back(2.0);
+    lrating.push_back(4.0);
+    lrating.push_back(3.0);
+    lrating.push_back(5.0);
+    lrating.push_back(3.0);
+    
+    for(int i=0;i<lmovie.size();i++)
+    {
+        auto it_f_b=matrix_user.find(name);
+        auto it_f_u=matrix_book.find(lmovie[i]);
+        if(it_f_b!=matrix_user.end())
+        {
+            it_f_b->second->insert({lmovie[i],lrating[i]});
+        }
+        else
+        {
+            fila_b* fb=new fila_b();
+            fb->insert({lmovie[i],lrating[i]});
+            matrix_user.insert({name,fb});
+        }
+        if(it_f_u!=matrix_book.end())
+        {
+            it_f_u->second->insert({name,lrating[i]});
+        }
+        else
+        {
+            fila_u* fu=new fila_u();
+            fu->insert({name,lrating[i]});
+            matrix_book.insert({lmovie[i],fu});
+        }
+        
+    }
+    //auto itmu=
+}
 int main()
 {
     load_hash_header();
     load_matrix();
-    cout<<"Similitud Coseno:\t"<<similitud_coseno("Patrick C","greg")<<endl;
+    /*cout<<"Similitud Coseno:\t"<<similitud_coseno("Patrick C","greg")<<endl;
     myvec knn=k_nn_rango("vanessa",0.6);
     calcular_influencia("vanessa",knn);
     cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
@@ -502,7 +568,20 @@ int main()
             cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
 
         cout<<endl;
+    }*/
+    crear_usuario("tim");
+    //print_matrix();
+    //myvec knn=k_nn_rango("tim",0.1);
+    myvec knn=k_nn("tim",5);
+    for(int i=0;i<knn.size();i++)
+    {
+            cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+
+        cout<<endl;
     }
+    calcular_influencia("tim",knn);
+    cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
+    
 
     /*cout<<"Distancia Euclidea: "<<distancia_euclidea("Patrick C","Heather")<<endl;
     cout<<"Distancia Euclidea: "<<distancia_euclidea("Thomas","greg")<<endl;
