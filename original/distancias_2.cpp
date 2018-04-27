@@ -83,9 +83,10 @@ float similitud_coseno(int col1,int col2)
     float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
     for(int i=0;i<size_m;i++)
     {
-        resultado_p=resultado_p+=(matrix[i][col1]*matrix[i][col2]);
-        resultado_x=resultado_x+=pow(matrix[i][col1],2.0);
-        resultado_y=resultado_y+=pow(matrix[i][col2],2.0);
+        cout<<matrix[i][col1]<<" , "<<matrix[i][col2]<<endl;
+        resultado_p+=(matrix[i][col1]*matrix[i][col2]);
+        resultado_x+=pow(matrix[i][col1],2.0);
+        resultado_y+=pow(matrix[i][col2],2.0);
     }
     
     resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
@@ -177,6 +178,7 @@ float correlacion_pearson(int col1, int col2)
            
         if(matrix[i][col1]!=0.0&&matrix[i][col2]!=0.0)
         {
+           cout<<"[ "<<matrix[i][col1]<<", "<<matrix[i][col2]<<endl;
             
            sum_x=sum_x+=matrix[i][col1];
            sum_y=sum_y+=matrix[i][col2]; 
@@ -281,29 +283,29 @@ int main()
     //load_hash();
     load_matrix("../data/data_movies.csv");
     //cout<<"Distancia Manhattan:\t"<<distancia_manhattan(0,1)<<endl;
-    cout<<"Distancia Euclidea:\t"<<distancia_euclidea(0,1)<<endl;
-    cout<<"Distancia Euclidea:\t"<<distancia_euclidea(4,7)<<endl;
-    cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(6,8)<<endl;
+    //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(0,1)<<endl;
+    //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(4,7)<<endl;
+    //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(3,4)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,14)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,3)<<endl;
     //cout<<"Correlacion de Pearson:\t"<<correlacion_pearson(nombres.find("Patrick C")->second,20)<<endl;
     //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(4,5)<<endl;
     //cout<<"Distancia Euclidea:\t"<<distancia_euclidea(0,1)<<endl;
     //cout<<"Distancia minkowski:\t"<<distancia_minkowski(0,1,1.0)<<endl;
-    //cout<<"Similitud Coseno:\t"<<similitud_coseno(0,7)<<endl;
+    cout<<"Similitud Coseno:\t"<<similitud_coseno(0,7)<<endl;
     //myvec knn=k_nn(nombres.find("Patrick C")->second,3);
-    myvec knn=k_nn(4,2);
+    //myvec knn=k_nn(4,2);
     //calcular_influencia(nombres.find("Patrick C")->second,knn);
  
-    calcular_influencia(4,knn);
-    for(int i=0;i<knn.size();i++)
-    {
-            cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+    //calcular_influencia(4,knn);
+    //for(int i=0;i<knn.size();i++)
+    //{
+     //       cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
 
-        cout<<endl;
-    }
+//        cout<<endl;
+  //  }
     //cout<<"proyeccion:\t"<<proyectado_knn(knn,libros.find("Avatar")->second)<<endl;
-    cout<<"proyeccion:\t"<<proyectado_knn(knn,9)<<endl;
+ //   cout<<"proyeccion:\t"<<proyectado_knn(knn,9)<<endl;
 
     return 0;
 }
