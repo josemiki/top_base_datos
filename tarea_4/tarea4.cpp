@@ -219,7 +219,7 @@ float correlacion_pearson(string col1, string col2)
     //if(n==0||n==1||sum_x_m_y==0.0)
       //  return resultado=-1.0;
     //cout<<"resultado de Pearson:\t"<<resultado<<endl;
-    if(n>=3 && numerador>0 && denominador>0)
+    /*if(n>=3 && numerador>0 && denominador>0)
     {
         cout<<"=================================="<<endl;
         cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
@@ -240,7 +240,7 @@ float correlacion_pearson(string col1, string col2)
          return resultado;
         
     }
-    else
+    else*/
         return resultado=-1.0;
 
 
@@ -384,8 +384,8 @@ myvec k_nn_pearson(string col,int k)
         itc2++;
     }
 
-    //for(int i=0;i<vec.size();i++)
-    //    cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+    for(int i=0;i<vec.size();i++)
+        cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
 
     std::sort(vec.begin(), vec.end(), more_than_key());
     //vec.erase(vec.begin());
@@ -432,7 +432,7 @@ myvec k_nn_coseno(string col,int k)
     while(itc2!=it_matrix_end)
     {
         
-        vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
+        vec.push_back(MyStruct(itc2->first,similitud_coseno(col,itc2->first),0.0,0.0));
         //cout<<correlacion_pearson(col,itc2->first)<<endl;
         itc2++;
     }
@@ -449,14 +449,38 @@ myvec k_nn_coseno(string col,int k)
     return vec;
 
 }
+myvec k_nn_euclidea(string col,int k)
+{
+    myvec vec;
+    auto itc1=matrix_user.find(col); 
+    auto itc2=matrix_user.begin();    
+    auto it_matrix_end=matrix_user.end();
 
+    while(itc2!=it_matrix_end)
+    {
+        
+        vec.push_back(MyStruct(itc2->first,distancia_euclidea(col,itc2->first),0.0,0.0));
+        itc2++;
+    }
+    cout<<"inicio:\t"<<vec.size()<<endl;
+    std::sort(vec.begin(), vec.end(), more_than_key());
+    //vec.erase(vec.begin());
+    int fin=(vec.size()-k);
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
+    std::sort(vec.begin(), vec.end(), less_than_key());
+
+    cout<<"fin:\t"<<vec.size()<<endl;  
+    return vec;
+
+}
 
 void calcular_influencia(string col, vector < MyStruct >& score)
 {
     float suma_pearson=0.0;
     for(int i=0;i<score.size();i++)
     {
-        score[i].pearson=correlacion_pearson(col,score[i].key);
+        score[i].pearson=distancia_euclidea(col,score[i].key);
         // cout<<suma_pearson<<endl;
         suma_pearson+=score[i].pearson;
     }
@@ -538,17 +562,29 @@ myvec k_nn_rango(string col,float r)
 void crear_usuario(string name)
 {
     vector<string> lmovie;
-    lmovie.push_back("Gladiator");
-    lmovie.push_back("Alien");
-    lmovie.push_back("Avatar");
-    lmovie.push_back("Spiderman");
-    lmovie.push_back("Star Wars");
+    lmovie.push_back("7");
+    lmovie.push_back("285");
+    lmovie.push_back("1317");
+    lmovie.push_back("5323");
+    lmovie.push_back("3581");
+    lmovie.push_back("134246");
+    lmovie.push_back("63239");
+    lmovie.push_back("73531");
+    lmovie.push_back("2354");
+    lmovie.push_back("82242");
+
     vector<float> lrating;
+    lrating.push_back(3.5);
+    lrating.push_back(4.1);
     lrating.push_back(2.0);
-    lrating.push_back(4.0);
-    lrating.push_back(3.0);
+    lrating.push_back(1.5);
+    lrating.push_back(2.8);
     lrating.push_back(5.0);
-    lrating.push_back(3.0);
+    lrating.push_back(3.7);
+    lrating.push_back(4.8);
+    lrating.push_back(1.8);
+    //lrating.push_back(1.8);
+    lrating.push_back(4.5);
     
     for(int i=0;i<lmovie.size();i++)
     {
@@ -587,9 +623,14 @@ int main()
     //cout<<"distancia_manhatan: "<<correlacion_pearson("29605","15651");
     //cout<<"===> 277752 "<<"k:  "<<8<<endl;
     //myvec knn=k_nn_pearson("277752",800);
-    cout<<"===> 132 "<<"k:  "<<10<<endl;
-    myvec knn=k_nn_pearson("132",10);
+    //cout<<"===> 132 "<<"k:  "<<10<<endl;
+    //myvec knn=k_nn_pearson("132",10);
     //calcular_influencia("277752",knn);
+    crear_usuario("ben");
+    myvec knn=k_nn_euclidea("ben",50);
+    
+    
+    calcular_influencia("ben",knn);
     for(int i=0;i<knn.size();i++)
     {
             cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;

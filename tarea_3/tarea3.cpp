@@ -368,7 +368,7 @@ float correlacion_pearson(string col1, string col2)
         resultado=-1.0;
     if(n>=2)
     {
-        cout<<"=================================="<<endl;
+        /*cout<<"=================================="<<endl;
         cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
         cout<<"sum_x: "<<sum_x<<endl;  
         cout<<"sum_y: "<<sum_y<<endl;
@@ -383,7 +383,7 @@ float correlacion_pearson(string col1, string col2)
         cout<<"denominador: "<<denominador<<endl;
         
         cout<<"resultado de Pearson:\t"<<resultado<<endl;
-        cout<<"=================================="<<endl;
+        cout<<"=================================="<<endl;*/
         
     }
     //cout<<"resultado de Pearson:\t"<<resultado<<endl;
@@ -633,7 +633,8 @@ myvec k_nn_manhattan(string col,int k)
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
         vec.pop_back();
-    cout<<"fin:\t"<<vec.size()<<endl;  
+    cout<<"fin:\t"<<vec.size()<<endl; 
+     std::sort(vec.begin(), vec.end(), less_than_key());
     return vec;
 
 }
@@ -843,8 +844,48 @@ void crear_usuario(string name)
             matrix_book.insert({lmovie[i],fu});
         }
         
+    } 
+    /*
+    vector<string> lmovie;
+    lmovie.push_back("Gladiator");
+    lmovie.push_back("Alien");
+    lmovie.push_back("Avatar");
+    lmovie.push_back("Spiderman");
+    lmovie.push_back("Star Wars");
+    vector<float> lrating;
+    lrating.push_back(2.0);
+    lrating.push_back(4.0);
+    lrating.push_back(3.0);
+    lrating.push_back(5.0);
+    lrating.push_back(3.0);
+    
+    for(int i=0;i<lmovie.size();i++)
+    {
+        auto it_f_b=matrix_user.find(name);
+        auto it_f_u=matrix_book.find(lmovie[i]);
+        if(it_f_b!=matrix_user.end())
+        {
+            it_f_b->second->insert({lmovie[i],lrating[i]});
+        }
+        else
+        {
+            fila_b* fb=new fila_b();
+            fb->insert({lmovie[i],lrating[i]});
+            matrix_user.insert({name,fb});
+        }
+        if(it_f_u!=matrix_book.end())
+        {
+            it_f_u->second->insert({name,lrating[i]});
+        }
+        else
+        {
+            fila_u* fu=new fila_u();
+            fu->insert({name,lrating[i]});
+            matrix_book.insert({lmovie[i],fu});
+        }
+        
     }
-    //auto itmu=
+*/
 }
 int main()
 {
@@ -854,11 +895,20 @@ int main()
     //cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
     //cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");ç
     //cout<<"distancia_manhatan: "<<correlacion_pearson("29605","15651");
-    //cout<<"===> 277752 "<<"k:  "<<8<<endl;
-    //myvec knn=k_nn_pearson("277752",800);
-    cout<<"===> 38556 "<<"k:  "<<10<<endl;
-    //myvec knn=k_nn_manhattan("29605",10);
-    myvec knn=k_nn_euclidea("38556",10);
+    cout<<"===> 277752 "<<"k:  "<<8<<endl;
+    myvec knn=k_nn_pearson("277752",8);
+    for(int i=0;i<knn.size();i++)
+    {
+            cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+
+        cout<<endl;
+    }
+
+
+
+    cout<<"===> 29605 "<<"k:  "<<10<<endl;
+    myvec knn2=k_nn_manhattan("29605",10);
+    //myvec knn=k_nn_euclidea("38556",10);
     //calcular_influencia("277752",knn);
     for(int i=0;i<knn.size();i++)
     {
