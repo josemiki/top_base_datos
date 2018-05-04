@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 #include<fstream>
 #include<string>
 #include<unordered_map>
@@ -337,10 +338,14 @@ float correlacion_pearson(string col1, string col2)
         itf1++; 
     }
     
-    
+    if(n==1)
+        return 0;
+    else
+    {
     resultado=(sum_x_m_y-((sum_x*sum_y)/n))/((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
     //cout<<"resultado de Pearson:\t"<<resultado<<endl;
     return resultado;
+    }
 }
 /*
 float correlacion_pearson(string col1, string col2)
@@ -505,7 +510,7 @@ float distancia_manhattan(string col1,string col2)
     return resultado;
 }
 */
-myvec k_nn(string col,int k)
+myvec k_nn_pearson(string col,int k)
 {
     myvec vec;
     auto itc1=matrix_user.find(col); 
@@ -517,7 +522,41 @@ myvec k_nn(string col,int k)
     while(itc2!=it_matrix_end)
     {
         
-        vec.push_back(MyStruct(itc2->first,similitud_coseno(col,itc2->first),0.0,0.0));
+        vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
+        //cout<<correlacion_pearson(col,itc2->first)<<endl;
+        itc2++;
+    }
+    std::sort(vec.begin(), vec.end(), less_than_key());
+    vec.erase(vec.begin());
+    
+    int fin=(vec.size()-k);
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
+        
+    //for(int i=0;i<vec.size();i++)
+    //    cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+    //cout<<"ordenado"<<endl
+
+    cout<<"fin:\t"<<vec.size()<<endl;
+    
+    
+    return vec;
+
+}
+
+myvec k_nn_coseno(string col,int k)
+{
+    myvec vec;
+    auto itc1=matrix_user.find(col); 
+    auto itc2=matrix_user.begin();    
+    auto it_matrix_end=matrix_user.end();
+    //auto itf1=itc1->second->begin();
+    //auto itf2=itc2->second->begin();
+
+    while(itc2!=it_matrix_end)
+    {
+        
+        vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
         //cout<<correlacion_pearson(col,itc2->first)<<endl;
         itc2++;
     }
@@ -562,6 +601,8 @@ myvec k_nn(string col,int k)
     return vec;
 
 }
+
+
 void calcular_influencia(string col, vector < MyStruct >& score)
 {
     float suma_pearson=0.0;
@@ -696,7 +737,7 @@ int main()
     //cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
     //cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");
     cout<<"===> 11676 "<<"k:  "<<6<<endl;
-    myvec knn=k_nn("11676",6);
+    myvec knn=k_nn_pearson("11676",6);
     calcular_influencia("11676",knn);
     for(int i=0;i<knn.size();i++)
     {

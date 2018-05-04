@@ -294,7 +294,10 @@ float correlacion_pearson(string col1, string col2)
     resultado=(sum_x_m_y-((sum_x*sum_y)/n))/
     ((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
     //cout<<"Correlacion de Pearson: "<<resultado<<endl;
-    return resultado;
+    if(n==1)
+        return 0;
+    else
+        return resultado;
 }
 
 
