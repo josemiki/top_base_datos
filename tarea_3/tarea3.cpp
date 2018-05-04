@@ -69,7 +69,7 @@ void load_matrix_file()
  ifstream input("../../bd/BX-Book-Ratings.csv");
     string u,b,r;
     
-    float rat;
+    float rat=0.0;
     int line=1;
     while(!input.eof())
     {
@@ -84,7 +84,7 @@ void load_matrix_file()
             //erase(r.size()-1,1);
             //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r<<endl;
             rat=stof(r);
-            
+            //cout<<" user: "<<u<<" book: "<<b<<" rat: "<<rat<<endl;
             //fila_b fb;
             //fb.insert({b,rat});
 
@@ -179,7 +179,7 @@ void load_matrix()
             //erase(r.size()-1,1);
             //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<r<<endl;
             rat=stof(r);
-            
+            cout<<" user: "<<u<<" book: "<<b<<" rat: "<<rat<<endl;
             //fila_b fb;
             //fb.insert({b,rat});
 
@@ -286,18 +286,26 @@ float distancia_euclidea(string col1,string col2)
 }
 float correlacion_pearson(string col1, string col2)
 {
+    //cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
     float sum_x_m_y=0.0;
     float sum_x=0.0;
     float sum_y=0.0;
     float sum_c_x=0.0;
     float sum_c_y=0.0;
-    float resultado=0.0;
+    //float resultado=0.0;
 
     int n=0;
     
     auto itc1=matrix_user.find(col1); 
     auto itc2=matrix_user.find(col2);
 
+    if(itc1==matrix_user.end())
+        cout<<"columna 1 no existe: "<<col1<<endl;
+    
+    if(itc2==matrix_user.end())
+        cout<<"columna 2 no existe: "<<col2<<endl;
+    
+    
     auto it_matrix_end=matrix_user.end();
     auto itf1=itc1->second->begin();
 
@@ -311,19 +319,19 @@ float correlacion_pearson(string col1, string col2)
             
                 //cout<<itf1->second<<","<<itf2->second<<endl;
 
-                sum_x+=itf1->second;
+                sum_x=sum_x+itf1->second;
                 //cout<<"sum_x: "<<sum_x<<endl;
                 
-                sum_y+=itf2->second; 
+                sum_y=sum_y+itf2->second; 
                 //cout<<"sum_y: "<<sum_y<<endl;
 
-                sum_c_x+=pow(itf1->second,2.0);
+                sum_c_x=sum_c_x+powf(itf1->second,2.0);
                 //cout<<"sum_c_x: "<<sum_c_x<<endl;
                 
-                sum_c_y+=pow(itf2->second,2.0);
+                sum_c_y=sum_c_y+powf(itf2->second,2.0);
                 //cout<<"sum_c_y: "<<sum_c_y<<endl;
                 
-                sum_x_m_y+=(itf1->second*itf2->second);
+                sum_x_m_y=sum_x_m_y+(itf1->second*itf2->second);
                 //cout<<"sum_x_m_y: "<<sum_x_m_y<<endl;
 
                 n++;
@@ -338,14 +346,50 @@ float correlacion_pearson(string col1, string col2)
         itf1++; 
     }
     
-    if(n==1)
-        return 0;
-    else
+    //resultado=(sum_x_m_y-((sum_x*sum_y)/n))/((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
+    float sum=(sum_x*sum_y)/n;
+    float numerador=sum_x_m_y-sum;
+    
+    float mx=powf(sum_x,2.0);
+    mx=mx/n;
+    float sqrt1=sqrtf(sum_c_x-mx);
+    
+    float my=powf(sum_y,2.0);
+    my=my/n;
+    float sqrt2=sqrtf(sum_c_y-my);
+    
+    float denominador=sqrt1*sqrt2;
+
+    float resultado=numerador/denominador;
+
+
+
+    if(n==0||n==1||sum_x_m_y==0.0)
+        resultado=-1.0;
+    if(n>=2)
     {
-    resultado=(sum_x_m_y-((sum_x*sum_y)/n))/((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
-    //cout<<"resultado de Pearson:\t"<<resultado<<endl;
-    return resultado;
+        cout<<"=================================="<<endl;
+        cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
+        cout<<"sum_x: "<<sum_x<<endl;  
+        cout<<"sum_y: "<<sum_y<<endl;
+        cout<<"sum_c_x: "<<sum_c_x<<endl;
+        cout<<"sum_c_y: "<<sum_c_y<<endl;
+        cout<<"sum_x_m_y: "<<sum_x_m_y<<endl;
+        cout<<"n: "<<n<<endl;
+        
+        cout<<"numerador: "<<numerador<<endl;
+        cout<<"sqrt1: "<<sqrt1<<endl;
+        cout<<"sqrt2: "<<sqrt2<<endl;
+        cout<<"denominador: "<<denominador<<endl;
+        
+        cout<<"resultado de Pearson:\t"<<resultado<<endl;
+        cout<<"=================================="<<endl;
+        
     }
+    //cout<<"resultado de Pearson:\t"<<resultado<<endl;
+
+    return resultado;
+    
 }
 /*
 float correlacion_pearson(string col1, string col2)
@@ -463,8 +507,8 @@ float similitud_coseno(string col1,string col2)
       //std::cout<<itr->first<<":";
       
           resultado_p+=(itr->second[0]*itr->second[1]);
-          resultado_x+=pow(itr->second[0],2.0);
-          resultado_y+=pow(itr->second[1],2.0);
+          resultado_x+=powf(itr->second[0],2.0);
+          resultado_y+=powf(itr->second[1],2.0);
           //std::cout<<*vitr<<",";
       
       //std::cout<<std::endl;
@@ -499,17 +543,39 @@ struct more_than_key
         return (struct1.euclidia > struct2.euclidia);
     }
 };
-/*
+
 float distancia_manhattan(string col1,string col2)
 {
+
     float resultado=0.0;
-    for(int i=0;i<8;i++)
+    auto itc1=matrix_user.find(col1); 
+    auto itc2=matrix_user.find(col2);    
+    auto it_matrix_end=matrix_user.end();
+    auto itf1=itc1->second->begin();
+    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
-        resultado=resultado+=(fabs(matrix[i][col1]-matrix[i][col2]));
+        auto itf2=itc2->second->find(itf1->first);
+        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
+        {
+            
+            if(itf1->first==itf2->first)
+            {
+                //cout<<"col1: "<<itf1->second<<" col2: "<<itf2->second<<" res: "<<resultado<<endl;
+                //cout<<itf2->second<<endl;
+                //resultado+=(fabs(itr->second[0]-itr->second[1]));
+                resultado+=fabs(itf1->second - itf2->second);
+            }
+            //itf1++;
+        }
+        //cout<<"no hay coincidencia"<<endl;
+        itf1++;    
+        
     }
+
+   
     return resultado;
 }
-*/
+
 myvec k_nn_pearson(string col,int k)
 {
     myvec vec;
@@ -526,7 +592,12 @@ myvec k_nn_pearson(string col,int k)
         //cout<<correlacion_pearson(col,itc2->first)<<endl;
         itc2++;
     }
-    std::sort(vec.begin(), vec.end(), less_than_key());
+    cout<<"inicio:\t"<<vec.size()<<endl;
+
+    std::sort(vec.begin(), vec.end(), more_than_key());
+    //for(int i=0;i<vec.size();i++)
+    //    cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+
     vec.erase(vec.begin());
     
     int fin=(vec.size()-k);
@@ -543,7 +614,29 @@ myvec k_nn_pearson(string col,int k)
     return vec;
 
 }
+myvec k_nn_manhattan(string col,int k)
+{
+    myvec vec;
+    auto itc1=matrix_user.find(col); 
+    auto itc2=matrix_user.begin();    
+    auto it_matrix_end=matrix_user.end();
 
+    while(itc2!=it_matrix_end)
+    {
+        
+        vec.push_back(MyStruct(itc2->first,distancia_manhattan(col,itc2->first),0.0,0.0));
+        itc2++;
+    }
+    cout<<"inicio:\t"<<vec.size()<<endl;
+    std::sort(vec.begin(), vec.end(), more_than_key());
+    //vec.erase(vec.begin());
+    int fin=(vec.size()-k);
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
+    cout<<"fin:\t"<<vec.size()<<endl;  
+    return vec;
+
+}
 myvec k_nn_coseno(string col,int k)
 {
     myvec vec;
@@ -735,10 +828,13 @@ int main()
     load_hash_header();
     load_matrix_file();
     //cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
-    //cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");
-    cout<<"===> 11676 "<<"k:  "<<6<<endl;
-    myvec knn=k_nn_pearson("11676",6);
-    calcular_influencia("11676",knn);
+    //cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");ç
+    //cout<<"distancia_manhatan: "<<correlacion_pearson("29605","15651");
+    //cout<<"===> 277752 "<<"k:  "<<8<<endl;
+    //myvec knn=k_nn_pearson("277752",800);
+    cout<<"===> 29605 "<<"k:  "<<10<<endl;
+    myvec knn=k_nn_manhattan("29605",10);
+    //calcular_influencia("277752",knn);
     for(int i=0;i<knn.size();i++)
     {
             cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;

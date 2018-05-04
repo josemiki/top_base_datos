@@ -1,0 +1,22 @@
+load books 
+ size_books: 271379
+load users 
+ size_users: 278858
+size_hash:	1149780
+load matriz users 
+ size_matrix_user: 105283
+load matriz books 
+ size_matrix_book: 340556
+===> 29605 k:  10
+inicio:	105283
+fin:	10
+11676 ; 8 ; 0 ; 0
+14502 ; 5 ; 0 ; 0
+80075 ; 5 ; 0 ; 0
+222488 ; 5 ; 0 ; 0
+159147 ; 0 ; 0 ; 0
+29485 ; 0 ; 0 ; 0
+29482 ; 0 ; 0 ; 0
+57179 ; 0 ; 0 ; 0
+11251 ; 0 ; 0 ; 0
+56833 ; 0 ; 0 ; 0
