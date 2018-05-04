@@ -1,0 +1,3839 @@
+size_hash:	100004
+load matriz users 
+ size_matrix_user: 671
+load matriz books 
+ size_matrix_book: 9066
+===> 132 k:  10
+==================================
+columnas a evaluar: 132 , 662
+sum_x: 17
+sum_y: 19
+sum_c_x: 62.5
+sum_c_y: 75
+sum_x_m_y: 65
+n: 5
+numerador: 0.400002
+sqrt1: 2.16795
+sqrt2: 1.67332
+denominador: 3.62767
+resultado de Pearson:	0.110264
+==================================
+==================================
+columnas a evaluar: 132 , 660
+sum_x: 25
+sum_y: 24
+sum_c_x: 91.5
+sum_c_y: 97
+sum_x_m_y: 86.75
+n: 7
+numerador: 1.03571
+sqrt1: 1.48805
+sqrt2: 3.83592
+denominador: 5.70803
+resultado de Pearson:	0.181448
+==================================
+==================================
+columnas a evaluar: 132 , 657
+sum_x: 22.5
+sum_y: 22
+sum_c_x: 86.25
+sum_c_y: 88
+sum_x_m_y: 83.5
+n: 6
+numerador: 1
+sqrt1: 1.36931
+sqrt2: 2.70801
+denominador: 3.7081
+resultado de Pearson:	0.26968
+==================================
+==================================
+columnas a evaluar: 132 , 648
+sum_x: 97
+sum_y: 84.5
+sum_c_x: 409
+sum_c_y: 323.25
+sum_x_m_y: 353.25
+n: 24
+numerador: 11.7292
+sqrt1: 4.11805
+sqrt2: 5.07342
+denominador: 20.8926
+resultado de Pearson:	0.561402
+==================================
+==================================
+columnas a evaluar: 132 , 632
+sum_x: 16.5
+sum_y: 24
+sum_c_x: 57.25
+sum_c_y: 115.5
+sum_x_m_y: 79.5
+n: 5
+numerador: 0.300003
+sqrt1: 1.67332
+sqrt2: 0.547725
+denominador: 0.91652
+resultado de Pearson:	0.327329
+==================================
+==================================
+columnas a evaluar: 132 , 629
+sum_x: 19
+sum_y: 20
+sum_c_x: 74
+sum_c_y: 88
+sum_x_m_y: 77
+n: 5
+numerador: 1
+sqrt1: 1.34164
+sqrt2: 2.82843
+denominador: 3.79474
+resultado de Pearson:	0.263523
+==================================
+==================================
+columnas a evaluar: 132 , 627
+sum_x: 31.5
+sum_y: 30
+sum_c_x: 114.75
+sum_c_y: 109.5
+sum_x_m_y: 107.5
+n: 9
+numerador: 2.5
+sqrt1: 2.12132
+sqrt2: 3.08221
+denominador: 6.53835
+resultado de Pearson:	0.38236
+==================================
+==================================
+columnas a evaluar: 132 , 623
+sum_x: 68
+sum_y: 78
+sum_c_x: 271
+sum_c_y: 344.5
+sum_x_m_y: 300
+n: 18
+numerador: 5.33334
+sqrt1: 3.75648
+sqrt2: 2.54951
+denominador: 9.57717
+resultado de Pearson:	0.556881
+==================================
+==================================
+columnas a evaluar: 132 , 622
+sum_x: 11
+sum_y: 14
+sum_c_x: 40.5
+sum_c_y: 66
+sum_x_m_y: 51.5
+n: 3
+numerador: 0.166668
+sqrt1: 0.40825
+sqrt2: 0.816495
+denominador: 0.333334
+resultado de Pearson:	0.500003
+==================================
+==================================
+columnas a evaluar: 132 , 621
+sum_x: 21.5
+sum_y: 25.5
+sum_c_x: 81.25
+sum_c_y: 109.25
+sum_x_m_y: 91.75
+n: 6
+numerador: 0.375
+sqrt1: 2.05142
+sqrt2: 0.935414
+denominador: 1.91893
+resultado de Pearson:	0.195421
+==================================
+==================================
+columnas a evaluar: 132 , 620
+sum_x: 56.5
+sum_y: 50
+sum_c_x: 251.75
+sum_c_y: 203.5
+sum_x_m_y: 223
+n: 13
+numerador: 5.69231
+sqrt1: 2.48843
+sqrt2: 3.34549
+denominador: 8.32503
+resultado de Pearson:	0.683758
+==================================
+==================================
+columnas a evaluar: 132 , 619
+sum_x: 14.5
+sum_y: 14
+sum_c_x: 53.75
+sum_c_y: 54
+sum_x_m_y: 52.5
+n: 4
+numerador: 1.75
+sqrt1: 1.08972
+sqrt2: 2.23607
+denominador: 2.4367
+resultado de Pearson:	0.718185
+==================================
+==================================
+columnas a evaluar: 132 , 614
+sum_x: 12
+sum_y: 13
+sum_c_x: 48.5
+sum_c_y: 57
+sum_x_m_y: 52.5
+n: 3
+numerador: 0.5
+sqrt1: 0.707107
+sqrt2: 0.816497
+denominador: 0.577351
+resultado de Pearson:	0.866025
+==================================
+==================================
+columnas a evaluar: 132 , 611
+sum_x: 11.5
+sum_y: 13
+sum_c_x: 44.75
+sum_c_y: 57.5
+sum_x_m_y: 50.5
+n: 3
+numerador: 0.666668
+sqrt1: 0.816497
+sqrt2: 1.08012
+denominador: 0.881918
+resultado de Pearson:	0.755929
+==================================
+==================================
+columnas a evaluar: 132 , 610
+sum_x: 75.5
+sum_y: 65.5
+sum_c_x: 342.25
+sum_c_y: 258.75
+sum_x_m_y: 293.5
+n: 17
+numerador: 2.60294
+sqrt1: 2.63461
+sqrt2: 2.52633
+denominador: 6.6559
+resultado de Pearson:	0.391072
+==================================
+==================================
+columnas a evaluar: 132 , 608
+sum_x: 37
+sum_y: 37
+sum_c_x: 158.5
+sum_c_y: 167
+sum_x_m_y: 154.5
+n: 9
+numerador: 2.38889
+sqrt1: 2.52762
+sqrt2: 3.85861
+denominador: 9.75312
+resultado de Pearson:	0.244935
+==================================
+==================================
+columnas a evaluar: 132 , 606
+sum_x: 49.5
+sum_y: 50.5
+sum_c_x: 227.25
+sum_c_y: 234.75
+sum_x_m_y: 229
+n: 11
+numerador: 1.75
+sqrt1: 2.12132
+sqrt2: 1.7056
+denominador: 3.61813
+resultado de Pearson:	0.483675
+==================================
+==================================
+columnas a evaluar: 132 , 597
+sum_x: 18
+sum_y: 22
+sum_c_x: 70
+sum_c_y: 98
+sum_x_m_y: 80.5
+n: 5
+numerador: 1.3
+sqrt1: 2.28035
+sqrt2: 1.09544
+denominador: 2.498
+resultado de Pearson:	0.520419
+==================================
+==================================
+columnas a evaluar: 132 , 596
+sum_x: 95.5
+sum_y: 99
+sum_c_x: 401.75
+sum_c_y: 420
+sum_x_m_y: 400
+n: 24
+numerador: 6.0625
+sqrt1: 4.66257
+sqrt2: 3.40955
+denominador: 15.8973
+resultado de Pearson:	0.381355
+==================================
+==================================
+columnas a evaluar: 132 , 594
+sum_x: 10.5
+sum_y: 12
+sum_c_x: 38.75
+sum_c_y: 50
+sum_x_m_y: 43
+n: 3
+numerador: 1
+sqrt1: 1.41421
+sqrt2: 1.41421
+denominador: 2
+resultado de Pearson:	0.5
+==================================
+==================================
+columnas a evaluar: 132 , 584
+sum_x: 69
+sum_y: 82.5
+sum_c_x: 263.5
+sum_c_y: 369.75
+sum_x_m_y: 300.75
+n: 19
+numerador: 1.14474
+sqrt1: 3.59459
+sqrt2: 3.39504
+denominador: 12.2038
+resultado de Pearson:	0.0938026
+==================================
+==================================
+columnas a evaluar: 132 , 577
+sum_x: 61
+sum_y: 76.5
+sum_c_x: 232
+sum_c_y: 348.75
+sum_x_m_y: 277.25
+n: 17
+numerador: 2.75
+sqrt1: 3.62183
+sqrt2: 2.12132
+denominador: 7.68306
+resultado de Pearson:	0.35793
+==================================
+==================================
+columnas a evaluar: 132 , 573
+sum_x: 10.5
+sum_y: 14
+sum_c_x: 40.25
+sum_c_y: 66
+sum_x_m_y: 49.5
+n: 3
+numerador: 0.5
+sqrt1: 1.87083
+sqrt2: 0.816495
+denominador: 1.52752
+resultado de Pearson:	0.327327
+==================================
+==================================
+columnas a evaluar: 132 , 570
+sum_x: 21
+sum_y: 22
+sum_c_x: 77.5
+sum_c_y: 92.5
+sum_x_m_y: 83
+n: 6
+numerador: 6
+sqrt1: 2
+sqrt2: 3.43996
+denominador: 6.87992
+resultado de Pearson:	0.872103
+==================================
+==================================
+columnas a evaluar: 132 , 569
+sum_x: 12.5
+sum_y: 18
+sum_c_x: 42.75
+sum_c_y: 82
+sum_x_m_y: 57
+n: 4
+numerador: 0.75
+sqrt1: 1.92029
+sqrt2: 1
+denominador: 1.92029
+resultado de Pearson:	0.390567
+==================================
+==================================
+columnas a evaluar: 132 , 564
+sum_x: 77
+sum_y: 71
+sum_c_x: 313
+sum_c_y: 275
+sum_x_m_y: 277.5
+n: 20
+numerador: 4.14999
+sqrt1: 4.06817
+sqrt2: 4.79062
+denominador: 19.489
+resultado de Pearson:	0.21294
+==================================
+==================================
+columnas a evaluar: 132 , 563
+sum_x: 54.5
+sum_y: 57.5
+sum_c_x: 221.25
+sum_c_y: 242.25
+sum_x_m_y: 224.25
+n: 14
+numerador: 0.410721
+sqrt1: 3.01484
+sqrt2: 2.46765
+denominador: 7.43957
+resultado de Pearson:	0.0552076
+==================================
+==================================
+columnas a evaluar: 132 , 559
+sum_x: 19.5
+sum_y: 29
+sum_c_x: 66.25
+sum_c_y: 141
+sum_x_m_y: 94.5
+n: 6
+numerador: 0.25
+sqrt1: 1.69558
+sqrt2: 0.912868
+denominador: 1.54784
+resultado de Pearson:	0.161515
+==================================
+==================================
+columnas a evaluar: 132 , 555
+sum_x: 13.5
+sum_y: 13
+sum_c_x: 48.75
+sum_c_y: 43
+sum_x_m_y: 45
+n: 4
+numerador: 1.125
+sqrt1: 1.78536
+sqrt2: 0.866025
+denominador: 1.54616
+resultado de Pearson:	0.727607
+==================================
+==================================
+columnas a evaluar: 132 , 552
+sum_x: 21.5
+sum_y: 16
+sum_c_x: 81.25
+sum_c_y: 56
+sum_x_m_y: 60.5
+n: 6
+numerador: 3.16667
+sqrt1: 2.05142
+sqrt2: 3.65148
+denominador: 7.49074
+resultado de Pearson:	0.422745
+==================================
+==================================
+columnas a evaluar: 132 , 590
+sum_x: 24
+sum_y: 24
+sum_c_x: 87
+sum_c_y: 84
+sum_x_m_y: 83
+n: 7
+numerador: 0.714287
+sqrt1: 2.17124
+sqrt2: 1.30931
+denominador: 2.84282
+resultado de Pearson:	0.25126
+==================================
+==================================
+columnas a evaluar: 132 , 550
+sum_x: 27.5
+sum_y: 32
+sum_c_x: 99.75
+sum_c_y: 142
+sum_x_m_y: 110.5
+n: 8
+numerador: 0.5
+sqrt1: 2.28446
+sqrt2: 3.74166
+denominador: 8.54766
+resultado de Pearson:	0.0584955
+==================================
+==================================
+columnas a evaluar: 132 , 574
+sum_x: 79.5
+sum_y: 76
+sum_c_x: 332.25
+sum_c_y: 299
+sum_x_m_y: 305.75
+n: 20
+numerador: 3.64999
+sqrt1: 4.02958
+sqrt2: 3.19375
+denominador: 12.8694
+resultado de Pearson:	0.283617
+==================================
+==================================
+columnas a evaluar: 132 , 548
+sum_x: 22
+sum_y: 21
+sum_c_x: 83
+sum_c_y: 75
+sum_x_m_y: 78.5
+n: 6
+numerador: 1.5
+sqrt1: 1.52753
+sqrt2: 1.22474
+denominador: 1.87083
+resultado de Pearson:	0.801783
+==================================
+==================================
+columnas a evaluar: 132 , 666
+sum_x: 22.5
+sum_y: 22
+sum_c_x: 86.25
+sum_c_y: 90
+sum_x_m_y: 85
+n: 6
+numerador: 2.5
+sqrt1: 1.36931
+sqrt2: 3.05505
+denominador: 4.1833
+resultado de Pearson:	0.597614
+==================================
+==================================
+columnas a evaluar: 132 , 516
+sum_x: 27.5
+sum_y: 30
+sum_c_x: 99.25
+sum_c_y: 120
+sum_x_m_y: 106
+n: 8
+numerador: 2.875
+sqrt1: 2.17227
+sqrt2: 2.73861
+denominador: 5.949
+resultado de Pearson:	0.483274
+==================================
+==================================
+columnas a evaluar: 132 , 514
+sum_x: 35
+sum_y: 37
+sum_c_x: 130.5
+sum_c_y: 145
+sum_x_m_y: 135
+n: 10
+numerador: 5.5
+sqrt1: 2.82843
+sqrt2: 2.84605
+denominador: 8.04985
+resultado de Pearson:	0.683243
+==================================
+==================================
+columnas a evaluar: 132 , 512
+sum_x: 14
+sum_y: 17.5
+sum_c_x: 51
+sum_c_y: 78.25
+sum_x_m_y: 62.75
+n: 4
+numerador: 1.5
+sqrt1: 1.41421
+sqrt2: 1.29904
+denominador: 1.83712
+resultado de Pearson:	0.816497
+==================================
+==================================
+columnas a evaluar: 132 , 510
+sum_x: 15
+sum_y: 14
+sum_c_x: 59
+sum_c_y: 54
+sum_x_m_y: 54
+n: 4
+numerador: 1.5
+sqrt1: 1.65831
+sqrt2: 2.23607
+denominador: 3.7081
+resultado de Pearson:	0.40452
+==================================
+==================================
+columnas a evaluar: 132 , 501
+sum_x: 76.5
+sum_y: 83.5
+sum_c_x: 320.25
+sum_c_y: 370.75
+sum_x_m_y: 337
+n: 19
+numerador: 0.802643
+sqrt1: 3.49812
+sqrt2: 1.94665
+denominador: 6.80963
+resultado de Pearson:	0.117869
+==================================
+==================================
+columnas a evaluar: 132 , 497
+sum_x: 14
+sum_y: 14
+sum_c_x: 53.5
+sum_c_y: 54
+sum_x_m_y: 50.5
+n: 4
+numerador: 1.5
+sqrt1: 2.12132
+sqrt2: 2.23607
+denominador: 4.74342
+resultado de Pearson:	0.316228
+==================================
+==================================
+columnas a evaluar: 132 , 496
+sum_x: 23
+sum_y: 29
+sum_c_x: 79
+sum_c_y: 129
+sum_x_m_y: 97.5
+n: 7
+numerador: 2.21429
+sqrt1: 1.85164
+sqrt2: 2.97609
+denominador: 5.51066
+resultado de Pearson:	0.401819
+==================================
+==================================
+columnas a evaluar: 132 , 488
+sum_x: 47
+sum_y: 44
+sum_c_x: 222.5
+sum_c_y: 194.5
+sum_x_m_y: 207
+n: 10
+numerador: 0.199997
+sqrt1: 1.26491
+sqrt2: 0.94868
+denominador: 1.2
+resultado de Pearson:	0.166664
+==================================
+==================================
+columnas a evaluar: 132 , 481
+sum_x: 126.5
+sum_y: 135
+sum_c_x: 547.25
+sum_c_y: 614
+sum_x_m_y: 572
+n: 30
+numerador: 2.75
+sqrt1: 3.72044
+sqrt2: 2.54951
+denominador: 9.4853
+resultado de Pearson:	0.289922
+==================================
+==================================
+columnas a evaluar: 132 , 607
+sum_x: 53
+sum_y: 56
+sum_c_x: 197
+sum_c_y: 219.5
+sum_x_m_y: 200.75
+n: 15
+numerador: 2.88333
+sqrt1: 3.11983
+sqrt2: 3.23007
+denominador: 10.0773
+resultado de Pearson:	0.286123
+==================================
+==================================
+columnas a evaluar: 132 , 475
+sum_x: 74
+sum_y: 71.5
+sum_c_x: 299
+sum_c_y: 288.25
+sum_x_m_y: 281.5
+n: 19
+numerador: 3.02631
+sqrt1: 3.28473
+sqrt2: 4.37998
+denominador: 14.387
+resultado de Pearson:	0.210349
+==================================
+==================================
+columnas a evaluar: 132 , 473
+sum_x: 27.5
+sum_y: 38.5
+sum_c_x: 100.25
+sum_c_y: 187.25
+sum_x_m_y: 134.5
+n: 8
+numerador: 2.15625
+sqrt1: 2.39139
+sqrt2: 1.40312
+denominador: 3.35541
+resultado de Pearson:	0.642619
+==================================
+==================================
+columnas a evaluar: 132 , 471
+sum_x: 21.5
+sum_y: 25.5
+sum_c_x: 70.25
+sum_c_y: 95.75
+sum_x_m_y: 80
+n: 7
+numerador: 1.67857
+sqrt1: 2.05287
+sqrt2: 1.69031
+denominador: 3.46999
+resultado de Pearson:	0.483741
+==================================
+==================================
+columnas a evaluar: 132 , 468
+sum_x: 144.5
+sum_y: 112.5
+sum_c_x: 604.75
+sum_c_y: 362.75
+sum_x_m_y: 453.5
+n: 36
+numerador: 1.9375
+sqrt1: 4.97424
+sqrt2: 3.34477
+denominador: 16.6377
+resultado de Pearson:	0.116452
+==================================
+==================================
+columnas a evaluar: 132 , 456
+sum_x: 28.5
+sum_y: 33
+sum_c_x: 105.75
+sum_c_y: 140
+sum_x_m_y: 118.75
+n: 8
+numerador: 1.1875
+sqrt1: 2.05396
+sqrt2: 1.9685
+denominador: 4.04322
+resultado de Pearson:	0.293701
+==================================
+==================================
+columnas a evaluar: 132 , 450
+sum_x: 41.5
+sum_y: 50.5
+sum_c_x: 160.25
+sum_c_y: 236.25
+sum_x_m_y: 191.75
+n: 11
+numerador: 1.22728
+sqrt1: 1.91881
+sqrt2: 2.09978
+denominador: 4.02908
+resultado de Pearson:	0.304605
+==================================
+==================================
+columnas a evaluar: 132 , 449
+sum_x: 22
+sum_y: 28
+sum_c_x: 83
+sum_c_y: 132
+sum_x_m_y: 104
+n: 6
+numerador: 1.33334
+sqrt1: 1.52753
+sqrt2: 1.1547
+denominador: 1.76383
+resultado de Pearson:	0.755931
+==================================
+==================================
+columnas a evaluar: 132 , 445
+sum_x: 12.5
+sum_y: 13
+sum_c_x: 52.75
+sum_c_y: 57.5
+sum_x_m_y: 55
+n: 3
+numerador: 0.833332
+sqrt1: 0.816497
+sqrt2: 1.08012
+denominador: 0.881918
+resultado de Pearson:	0.944908
+==================================
+==================================
+columnas a evaluar: 132 , 443
+sum_x: 30.5
+sum_y: 33.5
+sum_c_x: 135.75
+sum_c_y: 160.75
+sum_x_m_y: 146.75
+n: 7
+numerador: 0.785721
+sqrt1: 1.69031
+sqrt2: 0.654655
+denominador: 1.10657
+resultado de Pearson:	0.71005
+==================================
+==================================
+columnas a evaluar: 132 , 442
+sum_x: 54
+sum_y: 69
+sum_c_x: 190.5
+sum_c_y: 300.5
+sum_x_m_y: 233.5
+n: 16
+numerador: 0.625
+sqrt1: 2.87228
+sqrt2: 1.71391
+denominador: 4.92284
+resultado de Pearson:	0.126959
+==================================
+==================================
+columnas a evaluar: 132 , 439
+sum_x: 37
+sum_y: 32
+sum_c_x: 161
+sum_c_y: 120
+sum_x_m_y: 133
+n: 9
+numerador: 1.44444
+sqrt1: 2.98142
+sqrt2: 2.49444
+denominador: 7.43698
+resultado de Pearson:	0.194224
+==================================
+==================================
+columnas a evaluar: 132 , 433
+sum_x: 83
+sum_y: 84
+sum_c_x: 356
+sum_c_y: 362
+sum_x_m_y: 350.75
+n: 20
+numerador: 2.14999
+sqrt1: 3.39853
+sqrt2: 3.03315
+denominador: 10.3083
+resultado de Pearson:	0.20857
+==================================
+==================================
+columnas a evaluar: 132 , 430
+sum_x: 81
+sum_y: 90
+sum_c_x: 327
+sum_c_y: 401.5
+sum_x_m_y: 352
+n: 21
+numerador: 4.85715
+sqrt1: 3.81726
+sqrt2: 3.97312
+denominador: 15.1664
+resultado de Pearson:	0.320257
+==================================
+==================================
+columnas a evaluar: 132 , 426
+sum_x: 50.5
+sum_y: 49.5
+sum_c_x: 192.75
+sum_c_y: 182.75
+sum_x_m_y: 180
+n: 14
+numerador: 1.44643
+sqrt1: 3.25412
+sqrt2: 2.78067
+denominador: 9.04864
+resultado de Pearson:	0.15985
+==================================
+==================================
+columnas a evaluar: 132 , 422
+sum_x: 20.5
+sum_y: 25
+sum_c_x: 75.25
+sum_c_y: 107
+sum_x_m_y: 86.5
+n: 6
+numerador: 1.08334
+sqrt1: 2.28218
+sqrt2: 1.68325
+denominador: 3.84148
+resultado de Pearson:	0.28201
+==================================
+==================================
+columnas a evaluar: 132 , 508
+sum_x: 21
+sum_y: 25
+sum_c_x: 78
+sum_c_y: 109
+sum_x_m_y: 90
+n: 6
+numerador: 2.5
+sqrt1: 2.12132
+sqrt2: 2.19848
+denominador: 4.66369
+resultado de Pearson:	0.536056
+==================================
+==================================
+columnas a evaluar: 132 , 416
+sum_x: 21
+sum_y: 20
+sum_c_x: 78
+sum_c_y: 68
+sum_x_m_y: 71
+n: 6
+numerador: 1
+sqrt1: 2.12132
+sqrt2: 1.1547
+denominador: 2.44949
+resultado de Pearson:	0.408248
+==================================
+==================================
+columnas a evaluar: 132 , 412
+sum_x: 23.5
+sum_y: 29
+sum_c_x: 76.25
+sum_c_y: 107
+sum_x_m_y: 86
+n: 8
+numerador: 0.8125
+sqrt1: 2.68677
+sqrt2: 1.36931
+denominador: 3.67902
+resultado de Pearson:	0.220847
+==================================
+==================================
+columnas a evaluar: 132 , 428
+sum_x: 71
+sum_y: 75.5
+sum_c_x: 292.5
+sum_c_y: 331.75
+sum_x_m_y: 301.75
+n: 18
+numerador: 3.94446
+sqrt1: 3.52767
+sqrt2: 3.88194
+denominador: 13.6942
+resultado de Pearson:	0.288038
+==================================
+==================================
+columnas a evaluar: 132 , 194
+sum_x: 17.5
+sum_y: 20
+sum_c_x: 65.75
+sum_c_y: 84
+sum_x_m_y: 71
+n: 5
+numerador: 1
+sqrt1: 2.12132
+sqrt2: 2
+denominador: 4.24264
+resultado de Pearson:	0.235702
+==================================
+==================================
+columnas a evaluar: 132 , 192
+sum_x: 19.5
+sum_y: 25
+sum_c_x: 66.75
+sum_c_y: 109
+sum_x_m_y: 82
+n: 6
+numerador: 0.75
+sqrt1: 1.83712
+sqrt2: 2.19848
+denominador: 4.03887
+resultado de Pearson:	0.185695
+==================================
+==================================
+columnas a evaluar: 132 , 580
+sum_x: 168.5
+sum_y: 152
+sum_c_x: 721.25
+sum_c_y: 579
+sum_x_m_y: 631
+n: 41
+numerador: 6.31708
+sqrt1: 5.36247
+sqrt2: 3.93545
+denominador: 21.1038
+resultado de Pearson:	0.299334
+==================================
+==================================
+columnas a evaluar: 132 , 185
+sum_x: 39.5
+sum_y: 44
+sum_c_x: 151.75
+sum_c_y: 182
+sum_x_m_y: 159.5
+n: 11
+numerador: 1.5
+sqrt1: 3.14787
+sqrt2: 2.44949
+denominador: 7.71068
+resultado de Pearson:	0.194535
+==================================
+==================================
+columnas a evaluar: 132 , 175
+sum_x: 30
+sum_y: 33
+sum_c_x: 105.5
+sum_c_y: 133
+sum_x_m_y: 114
+n: 9
+numerador: 4
+sqrt1: 2.34521
+sqrt2: 3.4641
+denominador: 8.12404
+resultado de Pearson:	0.492366
+==================================
+==================================
+columnas a evaluar: 132 , 583
+sum_x: 12
+sum_y: 14
+sum_c_x: 48.5
+sum_c_y: 65.5
+sum_x_m_y: 56.25
+n: 3
+numerador: 0.25
+sqrt1: 0.707107
+sqrt2: 0.408245
+denominador: 0.288673
+resultado de Pearson:	0.866032
+==================================
+==================================
+columnas a evaluar: 132 , 409
+sum_x: 11.5
+sum_y: 12
+sum_c_x: 44.75
+sum_c_y: 50
+sum_x_m_y: 47
+n: 3
+numerador: 1
+sqrt1: 0.816497
+sqrt2: 1.41421
+denominador: 1.1547
+resultado de Pearson:	0.866025
+==================================
+==================================
+columnas a evaluar: 132 , 163
+sum_x: 34
+sum_y: 30
+sum_c_x: 133
+sum_c_y: 117
+sum_x_m_y: 115.75
+n: 9
+numerador: 2.41666
+sqrt1: 2.13438
+sqrt2: 4.12311
+denominador: 8.80025
+resultado de Pearson:	0.274613
+==================================
+==================================
+columnas a evaluar: 132 , 339
+sum_x: 18.5
+sum_y: 27.5
+sum_c_x: 61.25
+sum_c_y: 127.25
+sum_x_m_y: 86.75
+n: 6
+numerador: 1.95834
+sqrt1: 2.05142
+sqrt2: 1.09924
+denominador: 2.25501
+resultado de Pearson:	0.868437
+==================================
+==================================
+columnas a evaluar: 132 , 595
+sum_x: 23.5
+sum_y: 26
+sum_c_x: 81.25
+sum_c_y: 112
+sum_x_m_y: 92
+n: 7
+numerador: 4.71429
+sqrt1: 1.5353
+sqrt2: 3.92792
+denominador: 6.03053
+resultado de Pearson:	0.781737
+==================================
+==================================
+columnas a evaluar: 132 , 386
+sum_x: 11.5
+sum_y: 11
+sum_c_x: 47.25
+sum_c_y: 41
+sum_x_m_y: 43.5
+n: 3
+numerador: 1.33333
+sqrt1: 1.77951
+sqrt2: 0.816497
+denominador: 1.45297
+resultado de Pearson:	0.917661
+==================================
+==================================
+columnas a evaluar: 132 , 164
+sum_x: 14.5
+sum_y: 16.5
+sum_c_x: 55.75
+sum_c_y: 68.25
+sum_x_m_y: 60.25
+n: 4
+numerador: 0.4375
+sqrt1: 1.78536
+sqrt2: 0.433013
+denominador: 0.773082
+resultado de Pearson:	0.565916
+==================================
+==================================
+columnas a evaluar: 132 , 605
+sum_x: 17.5
+sum_y: 17
+sum_c_x: 65.75
+sum_c_y: 59
+sum_x_m_y: 60
+n: 5
+numerador: 0.5
+sqrt1: 2.12132
+sqrt2: 1.09545
+denominador: 2.32379
+resultado de Pearson:	0.215166
+==================================
+==================================
+columnas a evaluar: 132 , 369
+sum_x: 24
+sum_y: 29
+sum_c_x: 87
+sum_c_y: 123
+sum_x_m_y: 100.5
+n: 7
+numerador: 1.07143
+sqrt1: 2.17124
+sqrt2: 1.69031
+denominador: 3.67006
+resultado de Pearson:	0.291937
+==================================
+==================================
+columnas a evaluar: 132 , 518
+sum_x: 40.5
+sum_y: 48
+sum_c_x: 143.75
+sum_c_y: 202
+sum_x_m_y: 163
+n: 12
+numerador: 1
+sqrt1: 2.65754
+sqrt2: 3.16228
+denominador: 8.40387
+resultado de Pearson:	0.118993
+==================================
+==================================
+columnas a evaluar: 132 , 157
+sum_x: 74.5
+sum_y: 74
+sum_c_x: 309.25
+sum_c_y: 293
+sum_x_m_y: 295
+n: 19
+numerador: 4.8421
+sqrt1: 4.13903
+sqrt2: 2.18848
+denominador: 9.0582
+resultado de Pearson:	0.534554
+==================================
+==================================
+columnas a evaluar: 132 , 398
+sum_x: 11.5
+sum_y: 10
+sum_c_x: 44.25
+sum_c_y: 34
+sum_x_m_y: 38.5
+n: 3
+numerador: 0.166668
+sqrt1: 0.40825
+sqrt2: 0.816497
+denominador: 0.333335
+resultado de Pearson:	0.500001
+==================================
+==================================
+columnas a evaluar: 132 , 152
+sum_x: 80.5
+sum_y: 84
+sum_c_x: 324.25
+sum_c_y: 345
+sum_x_m_y: 322.25
+n: 21
+numerador: 0.25
+sqrt1: 3.95811
+sqrt2: 3
+denominador: 11.8743
+resultado de Pearson:	0.0210538
+==================================
+==================================
+columnas a evaluar: 132 , 150
+sum_x: 42.5
+sum_y: 48
+sum_c_x: 160.25
+sum_c_y: 198.5
+sum_x_m_y: 171.5
+n: 12
+numerador: 1.5
+sqrt1: 3.11916
+sqrt2: 2.54951
+denominador: 7.95233
+resultado de Pearson:	0.188624
+==================================
+==================================
+columnas a evaluar: 132 , 353
+sum_x: 52.5
+sum_y: 41
+sum_c_x: 193.75
+sum_c_y: 123
+sum_x_m_y: 144.5
+n: 15
+numerador: 1
+sqrt1: 3.16228
+sqrt2: 3.30656
+denominador: 10.4563
+resultado de Pearson:	0.0956365
+==================================
+==================================
+columnas a evaluar: 132 , 182
+sum_x: 23.5
+sum_y: 29
+sum_c_x: 82.75
+sum_c_y: 125
+sum_x_m_y: 97.5
+n: 7
+numerador: 0.14286
+sqrt1: 1.96396
+sqrt2: 2.20389
+denominador: 4.32836
+resultado de Pearson:	0.0330057
+==================================
+==================================
+columnas a evaluar: 132 , 191
+sum_x: 22.5
+sum_y: 21
+sum_c_x: 86.25
+sum_c_y: 81
+sum_x_m_y: 81.5
+n: 6
+numerador: 2.75
+sqrt1: 1.36931
+sqrt2: 2.73861
+denominador: 3.75
+resultado de Pearson:	0.733333
+==================================
+==================================
+columnas a evaluar: 132 , 588
+sum_x: 24.5
+sum_y: 30
+sum_c_x: 90.25
+sum_c_y: 132
+sum_x_m_y: 107.5
+n: 7
+numerador: 2.5
+sqrt1: 2.12132
+sqrt2: 1.85164
+denominador: 3.92792
+resultado de Pearson:	0.636469
+==================================
+==================================
+columnas a evaluar: 132 , 249
+sum_x: 15
+sum_y: 14
+sum_c_x: 57
+sum_c_y: 54
+sum_x_m_y: 54
+n: 4
+numerador: 1.5
+sqrt1: 0.866025
+sqrt2: 2.23607
+denominador: 1.93649
+resultado de Pearson:	0.774597
+==================================
+==================================
+columnas a evaluar: 132 , 140
+sum_x: 13.5
+sum_y: 17.5
+sum_c_x: 47.75
+sum_c_y: 76.75
+sum_x_m_y: 59.25
+n: 4
+numerador: 0.1875
+sqrt1: 1.47902
+sqrt2: 0.433013
+denominador: 0.640434
+resultado de Pearson:	0.29277
+==================================
+==================================
+columnas a evaluar: 132 , 38
+sum_x: 43.5
+sum_y: 46.5
+sum_c_x: 176.25
+sum_c_y: 198.25
+sum_x_m_y: 185.5
+n: 11
+numerador: 1.61363
+sqrt1: 2.05604
+sqrt2: 1.29685
+denominador: 2.66637
+resultado de Pearson:	0.605179
+==================================
+==================================
+columnas a evaluar: 132 , 454
+sum_x: 21.5
+sum_y: 26
+sum_c_x: 79.25
+sum_c_y: 116
+sum_x_m_y: 95.5
+n: 6
+numerador: 2.33334
+sqrt1: 1.48605
+sqrt2: 1.82574
+denominador: 2.71314
+resultado de Pearson:	0.860013
+==================================
+==================================
+columnas a evaluar: 132 , 633
+sum_x: 17.5
+sum_y: 17
+sum_c_x: 65.75
+sum_c_y: 59
+sum_x_m_y: 60.5
+n: 5
+numerador: 1
+sqrt1: 2.12132
+sqrt2: 1.09545
+denominador: 2.32379
+resultado de Pearson:	0.430331
+==================================
+==================================
+columnas a evaluar: 132 , 193
+sum_x: 20
+sum_y: 20
+sum_c_x: 84
+sum_c_y: 82
+sum_x_m_y: 80.5
+n: 5
+numerador: 0.5
+sqrt1: 2
+sqrt2: 1.41421
+denominador: 2.82843
+resultado de Pearson:	0.176777
+==================================
+==================================
+columnas a evaluar: 132 , 624
+sum_x: 115
+sum_y: 98
+sum_c_x: 477
+sum_c_y: 355
+sum_x_m_y: 390.5
+n: 29
+numerador: 1.8793
+sqrt1: 4.57881
+sqrt2: 4.88135
+denominador: 22.3508
+resultado de Pearson:	0.0840822
+==================================
+==================================
+columnas a evaluar: 132 , 153
+sum_x: 17.5
+sum_y: 19
+sum_c_x: 77.75
+sum_c_y: 91
+sum_x_m_y: 84
+n: 4
+numerador: 0.875
+sqrt1: 1.08972
+sqrt2: 0.866025
+denominador: 0.943729
+resultado de Pearson:	0.927173
+==================================
+==================================
+columnas a evaluar: 132 , 106
+sum_x: 23
+sum_y: 27
+sum_c_x: 91.5
+sum_c_y: 123.5
+sum_x_m_y: 104.5
+n: 6
+numerador: 1
+sqrt1: 1.82574
+sqrt2: 1.41421
+denominador: 2.58199
+resultado de Pearson:	0.387298
+==================================
+==================================
+columnas a evaluar: 132 , 130
+sum_x: 56
+sum_y: 54
+sum_c_x: 208
+sum_c_y: 196
+sum_x_m_y: 189.5
+n: 16
+numerador: 0.5
+sqrt1: 3.4641
+sqrt2: 3.7081
+denominador: 12.8452
+resultado de Pearson:	0.0389249
+==================================
+==================================
+columnas a evaluar: 132 , 649
+sum_x: 27.5
+sum_y: 30
+sum_c_x: 99.25
+sum_c_y: 118
+sum_x_m_y: 104
+n: 8
+numerador: 0.875
+sqrt1: 2.17227
+sqrt2: 2.34521
+denominador: 5.09442
+resultado de Pearson:	0.171757
+==================================
+==================================
+columnas a evaluar: 132 , 205
+sum_x: 60.5
+sum_y: 55.5
+sum_c_x: 250.75
+sum_c_y: 216.25
+sum_x_m_y: 226.75
+n: 15
+numerador: 2.89999
+sqrt1: 2.59487
+sqrt2: 3.30151
+denominador: 8.56699
+resultado de Pearson:	0.338508
+==================================
+==================================
+columnas a evaluar: 132 , 188
+sum_x: 27.5
+sum_y: 32
+sum_c_x: 99.25
+sum_c_y: 132
+sum_x_m_y: 113.5
+n: 8
+numerador: 3.5
+sqrt1: 2.17227
+sqrt2: 2
+denominador: 4.34454
+resultado de Pearson:	0.805609
+==================================
+==================================
+columnas a evaluar: 132 , 230
+sum_x: 81
+sum_y: 83
+sum_c_x: 370
+sum_c_y: 388
+sum_x_m_y: 376.25
+n: 18
+numerador: 2.75
+sqrt1: 2.34521
+sqrt2: 2.29734
+denominador: 5.38774
+resultado de Pearson:	0.510418
+==================================
+==================================
+columnas a evaluar: 132 , 500
+sum_x: 59.5
+sum_y: 44
+sum_c_x: 244.75
+sum_c_y: 156.5
+sum_x_m_y: 180.25
+n: 15
+numerador: 5.71666
+sqrt1: 2.95522
+sqrt2: 5.23768
+denominador: 15.4785
+resultado de Pearson:	0.369329
+==================================
+==================================
+columnas a evaluar: 132 , 119
+sum_x: 54
+sum_y: 58
+sum_c_x: 206
+sum_c_y: 244
+sum_x_m_y: 213.5
+n: 15
+numerador: 4.7
+sqrt1: 3.40588
+sqrt2: 4.44222
+denominador: 15.1297
+resultado de Pearson:	0.310648
+==================================
+==================================
+columnas a evaluar: 132 , 118
+sum_x: 18.5
+sum_y: 27
+sum_c_x: 61.25
+sum_c_y: 125
+sum_x_m_y: 83.5
+n: 6
+numerador: 0.25
+sqrt1: 2.05142
+sqrt2: 1.87083
+denominador: 3.83786
+resultado de Pearson:	0.0651405
+==================================
+==================================
+columnas a evaluar: 132 , 183
+sum_x: 13
+sum_y: 13
+sum_c_x: 57.5
+sum_c_y: 57
+sum_x_m_y: 56.5
+n: 3
+numerador: 0.166668
+sqrt1: 1.08012
+sqrt2: 0.816497
+denominador: 0.881918
+resultado de Pearson:	0.188983
+==================================
+==================================
+columnas a evaluar: 132 , 34
+sum_x: 21.5
+sum_y: 28
+sum_c_x: 70.25
+sum_c_y: 116
+sum_x_m_y: 89.5
+n: 7
+numerador: 3.5
+sqrt1: 2.05287
+sqrt2: 2
+denominador: 4.10575
+resultado de Pearson:	0.852464
+==================================
+==================================
+columnas a evaluar: 132 , 110
+sum_x: 27.5
+sum_y: 32
+sum_c_x: 99.25
+sum_c_y: 134
+sum_x_m_y: 110.5
+n: 8
+numerador: 0.5
+sqrt1: 2.17227
+sqrt2: 2.44949
+denominador: 5.32095
+resultado de Pearson:	0.0939682
+==================================
+==================================
+columnas a evaluar: 132 , 366
+sum_x: 13.5
+sum_y: 12
+sum_c_x: 61.25
+sum_c_y: 50
+sum_x_m_y: 54.5
+n: 3
+numerador: 0.5
+sqrt1: 0.707107
+sqrt2: 1.41421
+denominador: 1
+resultado de Pearson:	0.5
+==================================
+==================================
+columnas a evaluar: 132 , 105
+sum_x: 84
+sum_y: 78
+sum_c_x: 342.5
+sum_c_y: 283.5
+sum_x_m_y: 303
+n: 22
+numerador: 5.18182
+sqrt1: 4.66613
+sqrt2: 2.63715
+denominador: 12.3053
+resultado de Pearson:	0.421106
+==================================
+==================================
+columnas a evaluar: 132 , 138
+sum_x: 32
+sum_y: 31
+sum_c_x: 120
+sum_c_y: 120
+sum_x_m_y: 114.5
+n: 9
+numerador: 4.27778
+sqrt1: 2.49444
+sqrt2: 3.63624
+denominador: 9.07037
+resultado de Pearson:	0.471621
+==================================
+==================================
+columnas a evaluar: 132 , 309
+sum_x: 35
+sum_y: 36
+sum_c_x: 158
+sum_c_y: 163.5
+sum_x_m_y: 158.5
+n: 8
+numerador: 1
+sqrt1: 2.20794
+sqrt2: 1.22474
+denominador: 2.70416
+resultado de Pearson:	0.3698
+==================================
+==================================
+columnas a evaluar: 132 , 200
+sum_x: 55.5
+sum_y: 63
+sum_c_x: 203.25
+sum_c_y: 261.5
+sum_x_m_y: 219.5
+n: 16
+numerador: 0.96875
+sqrt1: 3.27634
+sqrt2: 3.66572
+denominador: 12.0101
+resultado de Pearson:	0.0806611
+==================================
+==================================
+columnas a evaluar: 132 , 279
+sum_x: 27.5
+sum_y: 26
+sum_c_x: 99.25
+sum_c_y: 94
+sum_x_m_y: 89.5
+n: 8
+numerador: 0.125
+sqrt1: 2.17227
+sqrt2: 3.08221
+denominador: 6.69538
+resultado de Pearson:	0.0186696
+==================================
+==================================
+columnas a evaluar: 132 , 495
+sum_x: 14
+sum_y: 18
+sum_c_x: 50.5
+sum_c_y: 82
+sum_x_m_y: 64
+n: 4
+numerador: 1
+sqrt1: 1.22474
+sqrt2: 1
+denominador: 1.22474
+resultado de Pearson:	0.816497
+==================================
+==================================
+columnas a evaluar: 132 , 461
+sum_x: 80
+sum_y: 77.5
+sum_c_x: 323.5
+sum_c_y: 312.25
+sum_x_m_y: 296.75
+n: 21
+numerador: 1.5119
+sqrt1: 4.32875
+sqrt2: 5.12231
+denominador: 22.1732
+resultado de Pearson:	0.0681859
+==================================
+==================================
+columnas a evaluar: 132 , 98
+sum_x: 16.5
+sum_y: 16
+sum_c_x: 68.75
+sum_c_y: 65
+sum_x_m_y: 66.75
+n: 4
+numerador: 0.75
+sqrt1: 0.829156
+sqrt2: 1
+denominador: 0.829156
+resultado de Pearson:	0.904534
+==================================
+==================================
+columnas a evaluar: 132 , 86
+sum_x: 21.5
+sum_y: 21
+sum_c_x: 78.75
+sum_c_y: 85
+sum_x_m_y: 75.5
+n: 6
+numerador: 0.25
+sqrt1: 1.30703
+sqrt2: 3.39117
+denominador: 4.43237
+resultado de Pearson:	0.0564033
+==================================
+==================================
+columnas a evaluar: 132 , 630
+sum_x: 22
+sum_y: 21
+sum_c_x: 83.5
+sum_c_y: 79.5
+sum_x_m_y: 80
+n: 6
+numerador: 3
+sqrt1: 1.68325
+sqrt2: 2.44949
+denominador: 4.12311
+resultado de Pearson:	0.727606
+==================================
+==================================
+columnas a evaluar: 132 , 521
+sum_x: 15
+sum_y: 18.5
+sum_c_x: 57
+sum_c_y: 86.25
+sum_x_m_y: 69.75
+n: 4
+numerador: 0.375
+sqrt1: 0.866025
+sqrt2: 0.829156
+denominador: 0.71807
+resultado de Pearson:	0.522233
+==================================
+==================================
+columnas a evaluar: 132 , 42
+sum_x: 26.5
+sum_y: 28
+sum_c_x: 103.25
+sum_c_y: 116
+sum_x_m_y: 106.75
+n: 7
+numerador: 0.75
+sqrt1: 1.71131
+sqrt2: 2
+denominador: 3.42262
+resultado de Pearson:	0.219131
+==================================
+==================================
+columnas a evaluar: 132 , 85
+sum_x: 27.5
+sum_y: 31
+sum_c_x: 99.25
+sum_c_y: 125
+sum_x_m_y: 107
+n: 8
+numerador: 0.4375
+sqrt1: 2.17227
+sqrt2: 2.20794
+denominador: 4.79624
+resultado de Pearson:	0.0912173
+==================================
+==================================
+columnas a evaluar: 132 , 238
+sum_x: 41
+sum_y: 36
+sum_c_x: 173.5
+sum_c_y: 134
+sum_x_m_y: 148
+n: 10
+numerador: 0.399994
+sqrt1: 2.32379
+sqrt2: 2.09762
+denominador: 4.87442
+resultado de Pearson:	0.0820598
+==================================
+==================================
+columnas a evaluar: 132 , 73
+sum_x: 160.5
+sum_y: 157.5
+sum_c_x: 670.75
+sum_c_y: 643.75
+sum_x_m_y: 632.5
+n: 40
+numerador: 0.53125
+sqrt1: 5.17144
+sqrt2: 4.85734
+denominador: 25.1194
+resultado de Pearson:	0.021149
+==================================
+==================================
+columnas a evaluar: 132 , 198
+sum_x: 35.5
+sum_y: 30.5
+sum_c_x: 162.75
+sum_c_y: 127.25
+sum_x_m_y: 135.5
+n: 8
+numerador: 0.15625
+sqrt1: 2.28446
+sqrt2: 3.31191
+denominador: 7.56592
+resultado de Pearson:	0.0206518
+==================================
+==================================
+columnas a evaluar: 132 , 267
+sum_x: 13
+sum_y: 13.5
+sum_c_x: 57.5
+sum_c_y: 61.25
+sum_x_m_y: 59
+n: 3
+numerador: 0.5
+sqrt1: 1.08012
+sqrt2: 0.707107
+denominador: 0.763763
+resultado de Pearson:	0.654653
+==================================
+==================================
+columnas a evaluar: 132 , 33
+sum_x: 17
+sum_y: 12
+sum_c_x: 79
+sum_c_y: 38
+sum_x_m_y: 54
+n: 4
+numerador: 3
+sqrt1: 2.59808
+sqrt2: 1.41421
+denominador: 3.67423
+resultado de Pearson:	0.816497
+==================================
+==================================
+columnas a evaluar: 132 , 349
+sum_x: 9
+sum_y: 10
+sum_c_x: 30.5
+sum_c_y: 36
+sum_x_m_y: 33
+n: 3
+numerador: 3
+sqrt1: 1.87083
+sqrt2: 1.63299
+denominador: 3.05505
+resultado de Pearson:	0.98198
+==================================
+==================================
+columnas a evaluar: 132 , 274
+sum_x: 17
+sum_y: 14.5
+sum_c_x: 76.5
+sum_c_y: 53.25
+sum_x_m_y: 63
+n: 4
+numerador: 1.375
+sqrt1: 2.06155
+sqrt2: 0.829156
+denominador: 1.70935
+resultado de Pearson:	0.8044
+==================================
+==================================
+columnas a evaluar: 132 , 158
+sum_x: 13
+sum_y: 9.5
+sum_c_x: 57.5
+sum_c_y: 34.75
+sum_x_m_y: 43.5
+n: 3
+numerador: 2.33333
+sqrt1: 1.08012
+sqrt2: 2.16025
+denominador: 2.33333
+resultado de Pearson:	0.999999
+==================================
+==================================
+columnas a evaluar: 132 , 23
+sum_x: 123
+sum_y: 118
+sum_c_x: 537.5
+sum_c_y: 492.5
+sum_x_m_y: 502.75
+n: 29
+numerador: 2.26724
+sqrt1: 3.97622
+sqrt2: 3.51597
+denominador: 13.9803
+resultado de Pearson:	0.162174
+==================================
+==================================
+columnas a evaluar: 132 , 460
+sum_x: 67.5
+sum_y: 63.5
+sum_c_x: 293.75
+sum_c_y: 261.75
+sum_x_m_y: 268
+n: 16
+numerador: 0.109375
+sqrt1: 2.99739
+sqrt2: 3.12
+denominador: 9.35186
+resultado de Pearson:	0.0116955
+==================================
+==================================
+columnas a evaluar: 132 , 24
+sum_x: 12.5
+sum_y: 13
+sum_c_x: 52.75
+sum_c_y: 57
+sum_x_m_y: 54.5
+n: 3
+numerador: 0.333332
+sqrt1: 0.816497
+sqrt2: 0.816497
+denominador: 0.666668
+resultado de Pearson:	0.499997
+==================================
+==================================
+columnas a evaluar: 132 , 54
+sum_x: 15.5
+sum_y: 15
+sum_c_x: 61.75
+sum_c_y: 59.5
+sum_x_m_y: 58.5
+n: 4
+numerador: 0.375
+sqrt1: 1.29904
+sqrt2: 1.80278
+denominador: 2.34187
+resultado de Pearson:	0.160128
+==================================
+==================================
+columnas a evaluar: 132 , 151
+sum_x: 24
+sum_y: 27
+sum_c_x: 87
+sum_c_y: 119
+sum_x_m_y: 93
+n: 7
+numerador: 0.428574
+sqrt1: 2.17124
+sqrt2: 3.8545
+denominador: 8.36904
+resultado de Pearson:	0.0512094
+==================================
+==================================
+columnas a evaluar: 132 , 187
+sum_x: 44
+sum_y: 41
+sum_c_x: 181.5
+sum_c_y: 166.5
+sum_x_m_y: 164.75
+n: 11
+numerador: 0.75
+sqrt1: 2.34521
+sqrt2: 3.69889
+denominador: 8.67468
+resultado de Pearson:	0.0864585
+==================================
+==================================
+columnas a evaluar: 132 , 179
+sum_x: 18.5
+sum_y: 17.5
+sum_c_x: 73.75
+sum_c_y: 63.75
+sum_x_m_y: 68.25
+n: 5
+numerador: 3.5
+sqrt1: 2.30217
+sqrt2: 1.58114
+denominador: 3.64006
+resultado de Pearson:	0.961524
+==================================
+==================================
+columnas a evaluar: 132 , 195
+sum_x: 40.5
+sum_y: 36
+sum_c_x: 149.75
+sum_c_y: 120
+sum_x_m_y: 122
+n: 12
+numerador: 0.5
+sqrt1: 3.61421
+sqrt2: 3.4641
+denominador: 12.52
+resultado de Pearson:	0.0399362
+==================================
+==================================
+columnas a evaluar: 132 , 472
+sum_x: 96
+sum_y: 98
+sum_c_x: 405.5
+sum_c_y: 417.5
+sum_x_m_y: 393.25
+n: 24
+numerador: 1.25
+sqrt1: 4.63681
+sqrt2: 4.16333
+denominador: 19.3046
+resultado de Pearson:	0.0647515
+==================================
+==================================
+columnas a evaluar: 132 , 7
+sum_x: 18.5
+sum_y: 19
+sum_c_x: 60.75
+sum_c_y: 61
+sum_x_m_y: 59
+n: 6
+numerador: 0.416668
+sqrt1: 1.9257
+sqrt2: 0.91287
+denominador: 1.75792
+resultado de Pearson:	0.237024
+==================================
+==================================
+columnas a evaluar: 132 , 647
+sum_x: 22
+sum_y: 26
+sum_c_x: 73.5
+sum_c_y: 108
+sum_x_m_y: 84.5
+n: 7
+numerador: 2.78571
+sqrt1: 2.08738
+sqrt2: 3.38062
+denominador: 7.05662
+resultado de Pearson:	0.394766
+==================================
+==================================
+columnas a evaluar: 132 , 593
+sum_x: 14.5
+sum_y: 19
+sum_c_x: 56.75
+sum_c_y: 91
+sum_x_m_y: 69
+n: 4
+numerador: 0.125
+sqrt1: 2.04634
+sqrt2: 0.866025
+denominador: 1.77218
+resultado de Pearson:	0.0705346
+==================================
+==================================
+columnas a evaluar: 132 , 32
+sum_x: 24
+sum_y: 25
+sum_c_x: 87
+sum_c_y: 99
+sum_x_m_y: 86
+n: 7
+numerador: 0.285713
+sqrt1: 2.17124
+sqrt2: 3.11678
+denominador: 6.76727
+resultado de Pearson:	0.0422199
+==================================
+==================================
+columnas a evaluar: 132 , 314
+sum_x: 21.5
+sum_y: 24
+sum_c_x: 79.25
+sum_c_y: 99.5
+sum_x_m_y: 86.25
+n: 6
+numerador: 0.25
+sqrt1: 1.48605
+sqrt2: 1.87083
+denominador: 2.78014
+resultado de Pearson:	0.0899235
+==================================
+==================================
+columnas a evaluar: 132 , 239
+sum_x: 12
+sum_y: 12
+sum_c_x: 48.5
+sum_c_y: 50
+sum_x_m_y: 49
+n: 3
+numerador: 1
+sqrt1: 0.707107
+sqrt2: 1.41421
+denominador: 1
+resultado de Pearson:	1
+==================================
+==================================
+columnas a evaluar: 132 , 513
+sum_x: 19
+sum_y: 21
+sum_c_x: 74
+sum_c_y: 91
+sum_x_m_y: 80.5
+n: 5
+numerador: 0.699997
+sqrt1: 1.34164
+sqrt2: 1.67332
+denominador: 2.245
+resultado de Pearson:	0.311803
+==================================
+==================================
+columnas a evaluar: 132 , 2
+sum_x: 24.5
+sum_y: 25
+sum_c_x: 90.25
+sum_c_y: 93
+sum_x_m_y: 88.5
+n: 7
+numerador: 1
+sqrt1: 2.12132
+sqrt2: 1.92725
+denominador: 4.08831
+resultado de Pearson:	0.2446
+==================================
+==================================
+columnas a evaluar: 132 , 320
+sum_x: 35.5
+sum_y: 34
+sum_c_x: 143.75
+sum_c_y: 132
+sum_x_m_y: 135.5
+n: 9
+numerador: 1.38889
+sqrt1: 1.92931
+sqrt2: 1.88562
+denominador: 3.63794
+resultado de Pearson:	0.381778
+==================================
+==================================
+columnas a evaluar: 132 , 9
+sum_x: 9.5
+sum_y: 13
+sum_c_x: 30.75
+sum_c_y: 57
+sum_x_m_y: 41.5
+n: 3
+numerador: 0.333332
+sqrt1: 0.816496
+sqrt2: 0.816497
+denominador: 0.666667
+resultado de Pearson:	0.499998
+==================================
+==================================
+columnas a evaluar: 132 , 3
+sum_x: 20
+sum_y: 21
+sum_c_x: 72
+sum_c_y: 80.5
+sum_x_m_y: 74.25
+n: 6
+numerador: 4.25
+sqrt1: 2.3094
+sqrt2: 2.64575
+denominador: 6.1101
+resultado de Pearson:	0.695569
+==================================
+==================================
+columnas a evaluar: 132 , 441
+sum_x: 57.5
+sum_y: 51.5
+sum_c_x: 246.25
+sum_c_y: 200.75
+sum_x_m_y: 215.75
+n: 14
+numerador: 4.23215
+sqrt1: 3.17636
+sqrt2: 3.36208
+denominador: 10.6792
+resultado de Pearson:	0.396299
+==================================
+==================================
+columnas a evaluar: 132 , 59
+sum_x: 21.5
+sum_y: 15.5
+sum_c_x: 82.25
+sum_c_y: 47.25
+sum_x_m_y: 57.5
+n: 6
+numerador: 1.95833
+sqrt1: 2.28218
+sqrt2: 2.68483
+denominador: 6.12727
+resultado de Pearson:	0.319609
+==================================
+==================================
+columnas a evaluar: 132 , 4
+sum_x: 25.5
+sum_y: 32
+sum_c_x: 96.25
+sum_c_y: 150
+sum_x_m_y: 117
+n: 7
+numerador: 0.428574
+sqrt1: 1.83225
+sqrt2: 1.92725
+denominador: 3.5312
+resultado de Pearson:	0.121368
+==================================
+==================================
+columnas a evaluar: 132 , 75
+sum_x: 23.5
+sum_y: 28
+sum_c_x: 85.25
+sum_c_y: 113.5
+sum_x_m_y: 94.25
+n: 7
+numerador: 0.25
+sqrt1: 2.52134
+sqrt2: 1.22474
+denominador: 3.08799
+resultado de Pearson:	0.0809587
+==================================
+==================================
+columnas a evaluar: 132 , 133
+sum_x: 82
+sum_y: 48.5
+sum_c_x: 365
+sum_c_y: 162.25
+sum_x_m_y: 215.25
+n: 19
+numerador: 5.9342
+sqrt1: 3.33245
+sqrt2: 6.20059
+denominador: 20.6632
+resultado de Pearson:	0.287187
+==================================
+==================================
+columnas a evaluar: 132 , 598
+sum_x: 54.5
+sum_y: 57
+sum_c_x: 224.75
+sum_c_y: 233
+sum_x_m_y: 222.5
+n: 14
+numerador: 0.607147
+sqrt1: 3.54814
+sqrt2: 0.963625
+denominador: 3.41907
+resultado de Pearson:	0.177576
+==================================
+==================================
+columnas a evaluar: 132 , 235
+sum_x: 35
+sum_y: 40.5
+sum_c_x: 133
+sum_c_y: 175.75
+sum_x_m_y: 145
+n: 10
+numerador: 3.25
+sqrt1: 3.24037
+sqrt2: 3.42418
+denominador: 11.0956
+resultado de Pearson:	0.292909
+==================================
+==================================
+columnas a evaluar: 132 , 407
+sum_x: 77.5
+sum_y: 84.5
+sum_c_x: 332.25
+sum_c_y: 385.75
+sum_x_m_y: 347
+n: 19
+numerador: 2.32895
+sqrt1: 4.01642
+sqrt2: 3.15394
+denominador: 12.6675
+resultado de Pearson:	0.183852
+==================================
+==================================
+columnas a evaluar: 132 , 93
+sum_x: 54
+sum_y: 60.5
+sum_c_x: 205.5
+sum_c_y: 248.75
+sum_x_m_y: 220.25
+n: 15
+numerador: 2.45
+sqrt1: 3.33167
+sqrt2: 2.17562
+denominador: 7.24845
+resultado de Pearson:	0.338003
+==================================
+==================================
+columnas a evaluar: 132 , 13
+sum_x: 27
+sum_y: 27
+sum_c_x: 107.5
+sum_c_y: 106.5
+sum_x_m_y: 104.75
+n: 7
+numerador: 0.60714
+sqrt1: 1.83225
+sqrt2: 1.5353
+denominador: 2.81305
+resultado de Pearson:	0.21583
+==================================
+==================================
+columnas a evaluar: 132 , 102
+sum_x: 41
+sum_y: 37
+sum_c_x: 174
+sum_c_y: 141
+sum_x_m_y: 154.5
+n: 10
+numerador: 2.8
+sqrt1: 2.42899
+sqrt2: 2.02485
+denominador: 4.91833
+resultado de Pearson:	0.569299
+==================================
+==================================
+columnas a evaluar: 132 , 243
+sum_x: 57
+sum_y: 56.5
+sum_c_x: 227.5
+sum_c_y: 220.75
+sum_x_m_y: 218.25
+n: 15
+numerador: 3.55
+sqrt1: 3.30151
+sqrt2: 2.81662
+denominador: 9.2991
+resultado de Pearson:	0.381758
+==================================
+==================================
+columnas a evaluar: 132 , 11
+sum_x: 12
+sum_y: 13
+sum_c_x: 48.5
+sum_c_y: 57
+sum_x_m_y: 52.5
+n: 3
+numerador: 0.5
+sqrt1: 0.707107
+sqrt2: 0.816497
+denominador: 0.577351
+resultado de Pearson:	0.866025
+==================================
+==================================
+columnas a evaluar: 132 , 397
+sum_x: 21.5
+sum_y: 21
+sum_c_x: 94.25
+sum_c_y: 89
+sum_x_m_y: 90.75
+n: 5
+numerador: 0.449997
+sqrt1: 1.34164
+sqrt2: 0.894429
+denominador: 1.2
+resultado de Pearson:	0.374996
+==================================
+==================================
+columnas a evaluar: 132 , 479
+sum_x: 24
+sum_y: 32.5
+sum_c_x: 85.5
+sum_c_y: 152.25
+sum_x_m_y: 112.75
+n: 7
+numerador: 1.32143
+sqrt1: 1.79284
+sqrt2: 1.16497
+denominador: 2.0886
+resultado de Pearson:	0.632684
+==================================
+==================================
+columnas a evaluar: 132 , 121
+sum_x: 27.5
+sum_y: 32
+sum_c_x: 99.25
+sum_c_y: 130
+sum_x_m_y: 111
+n: 8
+numerador: 1
+sqrt1: 2.17227
+sqrt2: 1.41421
+denominador: 3.07205
+resultado de Pearson:	0.325515
+==================================
+==================================
+columnas a evaluar: 132 , 414
+sum_x: 12
+sum_y: 10
+sum_c_x: 51.5
+sum_c_y: 38
+sum_x_m_y: 42.5
+n: 3
+numerador: 2.5
+sqrt1: 1.87083
+sqrt2: 2.16025
+denominador: 4.04145
+resultado de Pearson:	0.61859
+==================================
+==================================
+columnas a evaluar: 132 , 19
+sum_x: 30
+sum_y: 35
+sum_c_x: 105.5
+sum_c_y: 145
+sum_x_m_y: 119
+n: 9
+numerador: 2.33334
+sqrt1: 2.34521
+sqrt2: 2.98142
+denominador: 6.99206
+resultado de Pearson:	0.333712
+==================================
+==================================
+columnas a evaluar: 132 , 345
+sum_x: 67
+sum_y: 69
+sum_c_x: 264.5
+sum_c_y: 285
+sum_x_m_y: 263.75
+n: 18
+numerador: 6.91666
+sqrt1: 3.8873
+sqrt2: 4.52769
+denominador: 17.6005
+resultado de Pearson:	0.392981
+==================================
+==================================
+columnas a evaluar: 132 , 47
+sum_x: 14.5
+sum_y: 16
+sum_c_x: 53.75
+sum_c_y: 66
+sum_x_m_y: 58.5
+n: 4
+numerador: 0.5
+sqrt1: 1.08972
+sqrt2: 1.41421
+denominador: 1.5411
+resultado de Pearson:	0.324443
+==================================
+==================================
+columnas a evaluar: 132 , 48
+sum_x: 135.5
+sum_y: 127
+sum_c_x: 591.75
+sum_c_y: 513
+sum_x_m_y: 539.5
+n: 32
+numerador: 1.73438
+sqrt1: 4.24172
+sqrt2: 2.99479
+denominador: 12.703
+resultado de Pearson:	0.136532
+==================================
+==================================
+columnas a evaluar: 132 , 304
+sum_x: 41.5
+sum_y: 39
+sum_c_x: 165.75
+sum_c_y: 161.5
+sum_x_m_y: 158.5
+n: 11
+numerador: 11.3636
+sqrt1: 3.03015
+sqrt2: 4.81947
+denominador: 14.6037
+resultado de Pearson:	0.778132
+==================================
+==================================
+columnas a evaluar: 132 , 82
+sum_x: 25.5
+sum_y: 30
+sum_c_x: 95.25
+sum_c_y: 132
+sum_x_m_y: 110.5
+n: 7
+numerador: 1.21429
+sqrt1: 1.5353
+sqrt2: 1.85164
+denominador: 2.84282
+resultado de Pearson:	0.427142
+==================================
+==================================
+columnas a evaluar: 132 , 125
+sum_x: 61
+sum_y: 75
+sum_c_x: 244
+sum_c_y: 354
+sum_x_m_y: 288.25
+n: 16
+numerador: 2.3125
+sqrt1: 3.38194
+sqrt2: 1.56125
+denominador: 5.28005
+resultado de Pearson:	0.43797
+==================================
+==================================
+columnas a evaluar: 132 , 92
+sum_x: 24
+sum_y: 24
+sum_c_x: 87
+sum_c_y: 92
+sum_x_m_y: 84.5
+n: 7
+numerador: 2.21429
+sqrt1: 2.17124
+sqrt2: 3.11678
+denominador: 6.76727
+resultado de Pearson:	0.327205
+==================================
+==================================
+columnas a evaluar: 132 , 17
+sum_x: 51
+sum_y: 52.5
+sum_c_x: 197.5
+sum_c_y: 223.25
+sum_x_m_y: 197.25
+n: 14
+numerador: 6
+sqrt1: 3.42261
+sqrt2: 5.13566
+denominador: 17.5774
+resultado de Pearson:	0.341348
+==================================
+==================================
+columnas a evaluar: 132 , 61
+sum_x: 45
+sum_y: 46.5
+sum_c_x: 175
+sum_c_y: 191.25
+sum_x_m_y: 178.75
+n: 12
+numerador: 4.375
+sqrt1: 2.5
+sqrt2: 3.32603
+denominador: 8.31508
+resultado de Pearson:	0.526152
+==================================
+==================================
+columnas a evaluar: 132 , 64
+sum_x: 22.5
+sum_y: 27
+sum_c_x: 86.25
+sum_c_y: 125
+sum_x_m_y: 102
+n: 6
+numerador: 0.75
+sqrt1: 1.36931
+sqrt2: 1.87083
+denominador: 2.56174
+resultado de Pearson:	0.29277
+==================================
+==================================
+columnas a evaluar: 132 , 509
+sum_x: 113
+sum_y: 112.5
+sum_c_x: 468.5
+sum_c_y: 459.75
+sum_x_m_y: 454.75
+n: 29
+numerador: 16.3879
+sqrt1: 5.30939
+sqrt2: 4.82986
+denominador: 25.6436
+resultado de Pearson:	0.639064
+==================================
+==================================
+columnas a evaluar: 132 , 567
+sum_x: 12.5
+sum_y: 13
+sum_c_x: 52.75
+sum_c_y: 57
+sum_x_m_y: 54.5
+n: 3
+numerador: 0.333332
+sqrt1: 0.816497
+sqrt2: 0.816497
+denominador: 0.666668
+resultado de Pearson:	0.499997
+==================================
+==================================
+columnas a evaluar: 132 , 177
+sum_x: 15
+sum_y: 23
+sum_c_x: 49
+sum_c_y: 107
+sum_x_m_y: 70.5
+n: 5
+numerador: 1.5
+sqrt1: 2
+sqrt2: 1.09544
+denominador: 2.19089
+resultado de Pearson:	0.684654
+==================================
+==================================
+columnas a evaluar: 132 , 72
+sum_x: 93.5
+sum_y: 81.5
+sum_c_x: 394.25
+sum_c_y: 291.75
+sum_x_m_y: 332
+n: 23
+numerador: 0.684784
+sqrt1: 3.76194
+sqrt2: 1.71945
+denominador: 6.46846
+resultado de Pearson:	0.105865
+==================================
+==================================
+columnas a evaluar: 132 , 367
+sum_x: 27.5
+sum_y: 31
+sum_c_x: 115.75
+sum_c_y: 139
+sum_x_m_y: 122.5
+n: 7
+numerador: 0.714287
+sqrt1: 2.77746
+sqrt2: 1.3093
+denominador: 3.63654
+resultado de Pearson:	0.196419
+==================================
+==================================
+columnas a evaluar: 132 , 160
+sum_x: 10.5
+sum_y: 11
+sum_c_x: 38.75
+sum_c_y: 43
+sum_x_m_y: 40.5
+n: 3
+numerador: 2
+sqrt1: 1.41421
+sqrt2: 1.63299
+denominador: 2.3094
+resultado de Pearson:	0.866025
+==================================
+==================================
+columnas a evaluar: 132 , 455
+sum_x: 14
+sum_y: 14.5
+sum_c_x: 53.5
+sum_c_y: 52.75
+sum_x_m_y: 51.25
+n: 4
+numerador: 0.5
+sqrt1: 2.12132
+sqrt2: 0.433013
+denominador: 0.918559
+resultado de Pearson:	0.544331
+==================================
+==================================
+columnas a evaluar: 132 , 83
+sum_x: 41
+sum_y: 34.5
+sum_c_x: 179
+sum_c_y: 141.75
+sum_x_m_y: 145.25
+n: 10
+numerador: 3.8
+sqrt1: 3.30151
+sqrt2: 4.76707
+denominador: 15.7386
+resultado de Pearson:	0.241445
+==================================
+==================================
+columnas a evaluar: 132 , 143
+sum_x: 31.5
+sum_y: 32.5
+sum_c_x: 143.25
+sum_c_y: 151.75
+sum_x_m_y: 146.75
+n: 7
+numerador: 0.5
+sqrt1: 1.22474
+sqrt2: 0.925822
+denominador: 1.1339
+resultado de Pearson:	0.440957
+==================================
+==================================
+columnas a evaluar: 132 , 81
+sum_x: 60
+sum_y: 48.5
+sum_c_x: 280
+sum_c_y: 186.75
+sum_x_m_y: 226.25
+n: 13
+numerador: 2.40384
+sqrt1: 1.75412
+sqrt2: 2.40992
+denominador: 4.22728
+resultado de Pearson:	0.568649
+==================================
+==================================
+columnas a evaluar: 132 , 88
+sum_x: 93
+sum_y: 86
+sum_c_x: 392
+sum_c_y: 339
+sum_x_m_y: 351.75
+n: 23
+numerador: 4.01086
+sqrt1: 3.99456
+sqrt2: 4.1755
+denominador: 16.6793
+resultado de Pearson:	0.24047
+==================================
+==================================
+columnas a evaluar: 132 , 234
+sum_x: 39.5
+sum_y: 40
+sum_c_x: 161.75
+sum_c_y: 165
+sum_x_m_y: 158.75
+n: 10
+numerador: 0.75
+sqrt1: 2.3927
+sqrt2: 2.23607
+denominador: 5.35024
+resultado de Pearson:	0.140181
+==================================
+==================================
+columnas a evaluar: 132 , 618
+sum_x: 14.5
+sum_y: 18
+sum_c_x: 54.75
+sum_c_y: 82
+sum_x_m_y: 65.5
+n: 4
+numerador: 0.25
+sqrt1: 1.47902
+sqrt2: 1
+denominador: 1.47902
+resultado de Pearson:	0.169031
+==================================
+==================================
+columnas a evaluar: 132 , 78
+sum_x: 57.5
+sum_y: 67
+sum_c_x: 217.75
+sum_c_y: 294.5
+sum_x_m_y: 247.25
+n: 16
+numerador: 6.46875
+sqrt1: 3.33307
+sqrt2: 3.7333
+denominador: 12.4433
+resultado de Pearson:	0.519856
+==================================
+==================================
+columnas a evaluar: 132 , 156
+sum_x: 28.5
+sum_y: 27
+sum_c_x: 136.25
+sum_c_y: 123
+sum_x_m_y: 128.5
+n: 6
+numerador: 0.25
+sqrt1: 0.935414
+sqrt2: 1.22474
+denominador: 1.14564
+resultado de Pearson:	0.218218
+==================================
+==================================
+columnas a evaluar: 132 , 84
+sum_x: 21.5
+sum_y: 23
+sum_c_x: 81.25
+sum_c_y: 91
+sum_x_m_y: 82.5
+n: 6
+numerador: 0.0833359
+sqrt1: 2.05142
+sqrt2: 1.68325
+denominador: 3.45306
+resultado de Pearson:	0.0241339
+==================================
+==================================
+columnas a evaluar: 132 , 371
+sum_x: 35
+sum_y: 42.5
+sum_c_x: 128.5
+sum_c_y: 183.75
+sum_x_m_y: 151.75
+n: 10
+numerador: 3
+sqrt1: 2.44949
+sqrt2: 1.76777
+denominador: 4.33013
+resultado de Pearson:	0.69282
+==================================
+==================================
+columnas a evaluar: 132 , 50
+sum_x: 14.5
+sum_y: 14
+sum_c_x: 56.75
+sum_c_y: 50
+sum_x_m_y: 52.5
+n: 4
+numerador: 1.75
+sqrt1: 2.04634
+sqrt2: 1
+denominador: 2.04634
+resultado de Pearson:	0.855186
+==================================
+==================================
+columnas a evaluar: 132 , 95
+sum_x: 23.5
+sum_y: 28
+sum_c_x: 97.75
+sum_c_y: 132
+sum_x_m_y: 112
+n: 6
+numerador: 2.33334
+sqrt1: 2.38921
+sqrt2: 1.1547
+denominador: 2.75882
+resultado de Pearson:	0.845773
+==================================
+==================================
+columnas a evaluar: 132 , 453
+sum_x: 18.5
+sum_y: 22
+sum_c_x: 71.75
+sum_c_y: 100
+sum_x_m_y: 82.5
+n: 5
+numerador: 1.1
+sqrt1: 1.81659
+sqrt2: 1.78885
+denominador: 3.24962
+resultado de Pearson:	0.338501
+==================================
+==================================
+columnas a evaluar: 132 , 214
+sum_x: 32
+sum_y: 42
+sum_c_x: 107.5
+sum_c_y: 184
+sum_x_m_y: 136.5
+n: 10
+numerador: 2.10001
+sqrt1: 2.25832
+sqrt2: 2.75681
+denominador: 6.22575
+resultado de Pearson:	0.337309
+==================================
+==================================
+columnas a evaluar: 132 , 237
+sum_x: 23.5
+sum_y: 23
+sum_c_x: 81.25
+sum_c_y: 84
+sum_x_m_y: 77.5
+n: 7
+numerador: 0.285713
+sqrt1: 1.5353
+sqrt2: 2.9032
+denominador: 4.45728
+resultado de Pearson:	0.0641004
+==================================
+==================================
+columnas a evaluar: 132 , 199
+sum_x: 37
+sum_y: 40.5
+sum_c_x: 142.5
+sum_c_y: 173.25
+sum_x_m_y: 150.25
+n: 10
+numerador: 0.399994
+sqrt1: 2.36643
+sqrt2: 3.03727
+denominador: 7.1875
+resultado de Pearson:	0.0556514
+==================================
+==================================
+columnas a evaluar: 132 , 639
+sum_x: 17.5
+sum_y: 18
+sum_c_x: 62.75
+sum_c_y: 66
+sum_x_m_y: 64
+n: 5
+numerador: 1
+sqrt1: 1.22474
+sqrt2: 1.09544
+denominador: 1.34164
+resultado de Pearson:	0.745357
+==================================
+==================================
+columnas a evaluar: 132 , 212
+sum_x: 112.5
+sum_y: 108.5
+sum_c_x: 457.75
+sum_c_y: 422.25
+sum_x_m_y: 421.25
+n: 29
+numerador: 0.344818
+sqrt1: 4.61818
+sqrt2: 4.03861
+denominador: 18.651
+resultado de Pearson:	0.0184879
+==================================
+==================================
+columnas a evaluar: 132 , 147
+sum_x: 24
+sum_y: 27.5
+sum_c_x: 99.5
+sum_c_y: 129.25
+sum_x_m_y: 110.75
+n: 6
+numerador: 0.75
+sqrt1: 1.87083
+sqrt2: 1.79118
+denominador: 3.351
+resultado de Pearson:	0.223814
+==================================
+==================================
+columnas a evaluar: 132 , 363
+sum_x: 33
+sum_y: 33
+sum_c_x: 129
+sum_c_y: 133
+sum_x_m_y: 126.5
+n: 9
+numerador: 5.5
+sqrt1: 2.82843
+sqrt2: 3.4641
+denominador: 9.79796
+resultado de Pearson:	0.561341
+==================================
+==================================
+columnas a evaluar: 132 , 172
+sum_x: 17.5
+sum_y: 17
+sum_c_x: 65.75
+sum_c_y: 61
+sum_x_m_y: 61.5
+n: 5
+numerador: 2
+sqrt1: 2.12132
+sqrt2: 1.78885
+denominador: 3.79473
+resultado de Pearson:	0.527046
+==================================
+==================================
+columnas a evaluar: 132 , 220
+sum_x: 50.5
+sum_y: 53
+sum_c_x: 207.75
+sum_c_y: 223
+sum_x_m_y: 207.5
+n: 13
+numerador: 1.61539
+sqrt1: 3.40249
+sqrt2: 2.63117
+denominador: 8.95254
+resultado de Pearson:	0.180439
+==================================
+==================================
+columnas a evaluar: 132 , 406
+sum_x: 30.5
+sum_y: 28.5
+sum_c_x: 136.25
+sum_c_y: 119.75
+sum_x_m_y: 127
+n: 7
+numerador: 2.82143
+sqrt1: 1.83225
+sqrt2: 1.92725
+denominador: 3.5312
+resultado de Pearson:	0.798998
+==================================
+==================================
+columnas a evaluar: 132 , 116
+sum_x: 22
+sum_y: 23
+sum_c_x: 83.5
+sum_c_y: 97.5
+sum_x_m_y: 85
+n: 6
+numerador: 0.666664
+sqrt1: 1.68325
+sqrt2: 3.05505
+denominador: 5.14242
+resultado de Pearson:	0.12964
+==================================
+==================================
+columnas a evaluar: 132 , 231
+sum_x: 13
+sum_y: 12
+sum_c_x: 57.5
+sum_c_y: 50
+sum_x_m_y: 53
+n: 3
+numerador: 1
+sqrt1: 1.08012
+sqrt2: 1.41421
+denominador: 1.52753
+resultado de Pearson:	0.654653
+==================================
+==================================
+columnas a evaluar: 132 , 236
+sum_x: 38
+sum_y: 34.5
+sum_c_x: 149.5
+sum_c_y: 123.25
+sum_x_m_y: 134
+n: 10
+numerador: 2.89999
+sqrt1: 2.25832
+sqrt2: 2.05548
+denominador: 4.64193
+resultado de Pearson:	0.624739
+==================================
+==================================
+columnas a evaluar: 132 , 242
+sum_x: 36.5
+sum_y: 49
+sum_c_x: 143.75
+sum_c_y: 241
+sum_x_m_y: 179
+n: 10
+numerador: 0.149994
+sqrt1: 3.24422
+sqrt2: 0.94868
+denominador: 3.07773
+resultado de Pearson:	0.0487352
+==================================
+==================================
+columnas a evaluar: 132 , 132
+sum_x: 402.5
+sum_y: 402.5
+sum_c_x: 1778.25
+sum_c_y: 1778.25
+sum_x_m_y: 1778.25
+n: 94
+numerador: 54.7793
+sqrt1: 7.4013
+sqrt2: 7.4013
+denominador: 54.7793
+resultado de Pearson:	1
+==================================
+==================================
+columnas a evaluar: 132 , 362
+sum_x: 51.5
+sum_y: 57
+sum_c_x: 214.75
+sum_c_y: 256.5
+sum_x_m_y: 228
+n: 13
+numerador: 2.19231
+sqrt1: 3.27579
+sqrt2: 2.56455
+denominador: 8.40092
+resultado de Pearson:	0.26096
+==================================
+==================================
+columnas a evaluar: 132 , 240
+sum_x: 69.5
+sum_y: 66.5
+sum_c_x: 300.25
+sum_c_y: 266.25
+sum_x_m_y: 275.25
+n: 17
+numerador: 3.38235
+sqrt1: 4.01468
+sqrt2: 2.47339
+denominador: 9.92986
+resultado de Pearson:	0.340625
+==================================
+==================================
+columnas a evaluar: 132 , 255
+sum_x: 62.5
+sum_y: 61
+sum_c_x: 283.25
+sum_c_y: 272.5
+sum_x_m_y: 275.5
+n: 14
+numerador: 3.17856
+sqrt1: 2.05722
+sqrt2: 2.5912
+denominador: 5.33066
+resultado de Pearson:	0.596279
+==================================
+==================================
+columnas a evaluar: 132 , 257
+sum_x: 34.5
+sum_y: 33.5
+sum_c_x: 154.75
+sum_c_y: 145.75
+sum_x_m_y: 147.5
+n: 8
+numerador: 3.03125
+sqrt1: 2.4431
+sqrt2: 2.33854
+denominador: 5.71328
+resultado de Pearson:	0.530562
+==================================
+==================================
+columnas a evaluar: 132 , 79
+sum_x: 10.5
+sum_y: 10
+sum_c_x: 38.75
+sum_c_y: 34
+sum_x_m_y: 36
+n: 3
+numerador: 1
+sqrt1: 1.41421
+sqrt2: 0.816497
+denominador: 1.1547
+resultado de Pearson:	0.866025
+==================================
+==================================
+columnas a evaluar: 132 , 262
+sum_x: 133
+sum_y: 105
+sum_c_x: 574.5
+sum_c_y: 380.5
+sum_x_m_y: 446.75
+n: 32
+numerador: 10.3438
+sqrt1: 4.66034
+sqrt2: 5.9974
+denominador: 27.9499
+resultado de Pearson:	0.370082
+==================================
+==================================
+columnas a evaluar: 132 , 418
+sum_x: 24
+sum_y: 28
+sum_c_x: 78.5
+sum_c_y: 103
+sum_x_m_y: 86.25
+n: 8
+numerador: 2.25
+sqrt1: 2.54951
+sqrt2: 2.23607
+denominador: 5.70088
+resultado de Pearson:	0.394676
+==================================
+==================================
+columnas a evaluar: 132 , 271
+sum_x: 23
+sum_y: 30.5
+sum_c_x: 79.5
+sum_c_y: 134.25
+sum_x_m_y: 101.25
+n: 7
+numerador: 1.03571
+sqrt1: 1.98206
+sqrt2: 1.16497
+denominador: 2.30904
+resultado de Pearson:	0.448548
+==================================
+==================================
+columnas a evaluar: 132 , 273
+sum_x: 20
+sum_y: 26.5
+sum_c_x: 69.5
+sum_c_y: 117.75
+sum_x_m_y: 88.75
+n: 6
+numerador: 0.416664
+sqrt1: 1.68325
+sqrt2: 0.841627
+denominador: 1.41667
+resultado de Pearson:	0.294115
+==================================
+==================================
+columnas a evaluar: 132 , 277
+sum_x: 21.5
+sum_y: 28
+sum_c_x: 83.75
+sum_c_y: 132
+sum_x_m_y: 101.5
+n: 6
+numerador: 1.16666
+sqrt1: 2.59005
+sqrt2: 1.1547
+denominador: 2.99072
+resultado de Pearson:	0.390095
+==================================
+==================================
+columnas a evaluar: 132 , 283
+sum_x: 91
+sum_y: 87.5
+sum_c_x: 389
+sum_c_y: 364.25
+sum_x_m_y: 367.75
+n: 22
+numerador: 5.81818
+sqrt1: 3.54837
+sqrt2: 4.02972
+denominador: 14.2989
+resultado de Pearson:	0.406896
+==================================
+==================================
+columnas a evaluar: 132 , 285
+sum_x: 47
+sum_y: 52
+sum_c_x: 181
+sum_c_y: 218
+sum_x_m_y: 191.5
+n: 13
+numerador: 3.5
+sqrt1: 3.3282
+sqrt2: 3.16228
+denominador: 10.5247
+resultado de Pearson:	0.332551
+==================================
+==================================
+columnas a evaluar: 132 , 287
+sum_x: 31
+sum_y: 40
+sum_c_x: 109
+sum_c_y: 180.5
+sum_x_m_y: 138.25
+n: 9
+numerador: 0.472229
+sqrt1: 1.49071
+sqrt2: 1.64992
+denominador: 2.45955
+resultado de Pearson:	0.191998
+==================================
+==================================
+columnas a evaluar: 132 , 288
+sum_x: 27.5
+sum_y: 31
+sum_c_x: 99.25
+sum_c_y: 129
+sum_x_m_y: 110.5
+n: 8
+numerador: 3.9375
+sqrt1: 2.17227
+sqrt2: 2.97909
+denominador: 6.47139
+resultado de Pearson:	0.608447
+==================================
+==================================
+columnas a evaluar: 132 , 290
+sum_x: 18
+sum_y: 19.5
+sum_c_x: 67
+sum_c_y: 78.75
+sum_x_m_y: 71.75
+n: 5
+numerador: 1.55
+sqrt1: 1.48324
+sqrt2: 1.64317
+denominador: 2.43721
+resultado de Pearson:	0.635975
+==================================
+==================================
+columnas a evaluar: 132 , 528
+sum_x: 28
+sum_y: 23
+sum_c_x: 118
+sum_c_y: 78
+sum_x_m_y: 94.75
+n: 7
+numerador: 2.75
+sqrt1: 2.44949
+sqrt2: 1.55839
+denominador: 3.81726
+resultado de Pearson:	0.720413
+==================================
+==================================
+columnas a evaluar: 132 , 291
+sum_x: 14.5
+sum_y: 23.5
+sum_c_x: 43.25
+sum_c_y: 110.75
+sum_x_m_y: 68.75
+n: 5
+numerador: 0.599998
+sqrt1: 1.09545
+sqrt2: 0.547725
+denominador: 0.600003
+resultado de Pearson:	0.999992
+==================================
+==================================
+columnas a evaluar: 132 , 292
+sum_x: 47.5
+sum_y: 57
+sum_c_x: 171.25
+sum_c_y: 236.5
+sum_x_m_y: 196
+n: 14
+numerador: 2.60715
+sqrt1: 3.17636
+sqrt2: 2.10442
+denominador: 6.68439
+resultado de Pearson:	0.390035
+==================================
+==================================
+columnas a evaluar: 132 , 297
+sum_x: 62.5
+sum_y: 56.5
+sum_c_x: 267.25
+sum_c_y: 224.75
+sum_x_m_y: 237.5
+n: 15
+numerador: 2.08333
+sqrt1: 2.61407
+sqrt2: 3.45447
+denominador: 9.0302
+resultado de Pearson:	0.230707
+==================================
+==================================
+columnas a evaluar: 132 , 505
+sum_x: 77
+sum_y: 57
+sum_c_x: 324.5
+sum_c_y: 179
+sum_x_m_y: 232.25
+n: 19
+numerador: 1.25
+sqrt1: 3.52808
+sqrt2: 2.82843
+denominador: 9.97892
+resultado de Pearson:	0.125264
+==================================
+==================================
+columnas a evaluar: 132 , 520
+sum_x: 24
+sum_y: 29
+sum_c_x: 86.5
+sum_c_y: 126.5
+sum_x_m_y: 102.25
+n: 7
+numerador: 2.82143
+sqrt1: 2.05287
+sqrt2: 2.52134
+denominador: 5.17598
+resultado de Pearson:	0.5451
+==================================
+==================================
+columnas a evaluar: 132 , 97
+sum_x: 97.5
+sum_y: 76.5
+sum_c_x: 429.25
+sum_c_y: 285.25
+sum_x_m_y: 340.5
+n: 23
+numerador: 16.2065
+sqrt1: 3.99184
+sqrt2: 5.55017
+denominador: 22.1554
+resultado de Pearson:	0.731493
+==================================
+==================================
+columnas a evaluar: 132 , 178
+sum_x: 65
+sum_y: 60.5
+sum_c_x: 274
+sum_c_y: 239.75
+sum_x_m_y: 246.5
+n: 16
+numerador: 0.71875
+sqrt1: 3.15238
+sqrt2: 3.31427
+denominador: 10.4478
+resultado de Pearson:	0.0687942
+==================================
+==================================
+columnas a evaluar: 132 , 535
+sum_x: 25.5
+sum_y: 21
+sum_c_x: 95.25
+sum_c_y: 71
+sum_x_m_y: 77.5
+n: 7
+numerador: 1
+sqrt1: 1.5353
+sqrt2: 2.82843
+denominador: 4.34248
+resultado de Pearson:	0.230283
+==================================
+==================================
+columnas a evaluar: 132 , 302
+sum_x: 13
+sum_y: 16
+sum_c_x: 42.5
+sum_c_y: 66
+sum_x_m_y: 52.5
+n: 4
+numerador: 0.5
+sqrt1: 0.5
+sqrt2: 1.41421
+denominador: 0.707107
+resultado de Pearson:	0.707107
+==================================
+==================================
+columnas a evaluar: 132 , 384
+sum_x: 73
+sum_y: 69
+sum_c_x: 297
+sum_c_y: 256
+sum_x_m_y: 268.25
+n: 19
+numerador: 3.14474
+sqrt1: 4.06526
+sqrt2: 2.32832
+denominador: 9.4652
+resultado de Pearson:	0.332243
+==================================
+==================================
+columnas a evaluar: 132 , 457
+sum_x: 107.5
+sum_y: 84
+sum_c_x: 460.75
+sum_c_y: 290.5
+sum_x_m_y: 351.75
+n: 26
+numerador: 4.44232
+sqrt1: 4.0347
+sqrt2: 4.37211
+denominador: 17.6402
+resultado de Pearson:	0.25183
+==================================
+==================================
+columnas a evaluar: 132 , 321
+sum_x: 13
+sum_y: 12
+sum_c_x: 57.5
+sum_c_y: 50
+sum_x_m_y: 53
+n: 3
+numerador: 1
+sqrt1: 1.08012
+sqrt2: 1.41421
+denominador: 1.52753
+resultado de Pearson:	0.654653
+==================================
+==================================
+columnas a evaluar: 132 , 423
+sum_x: 76.5
+sum_y: 62.5
+sum_c_x: 333.25
+sum_c_y: 234.75
+sum_x_m_y: 271
+n: 18
+numerador: 5.375
+sqrt1: 2.85044
+sqrt2: 4.21143
+denominador: 12.0044
+resultado de Pearson:	0.447752
+==================================
+==================================
+columnas a evaluar: 132 , 344
+sum_x: 30
+sum_y: 32
+sum_c_x: 105.5
+sum_c_y: 126
+sum_x_m_y: 109
+n: 9
+numerador: 2.33334
+sqrt1: 2.34521
+sqrt2: 3.49603
+denominador: 8.19892
+resultado de Pearson:	0.284591
+==================================
+==================================
+columnas a evaluar: 132 , 350
+sum_x: 50
+sum_y: 50
+sum_c_x: 218.5
+sum_c_y: 214
+sum_x_m_y: 209.5
+n: 12
+numerador: 1.16667
+sqrt1: 3.18852
+sqrt2: 2.38048
+denominador: 7.5902
+resultado de Pearson:	0.153708
+==================================
+==================================
+columnas a evaluar: 132 , 585
+sum_x: 43
+sum_y: 42
+sum_c_x: 191
+sum_c_y: 180
+sum_x_m_y: 182.5
+n: 10
+numerador: 1.89999
+sqrt1: 2.46982
+sqrt2: 1.89737
+denominador: 4.68616
+resultado de Pearson:	0.405448
+==================================
+==================================
+columnas a evaluar: 132 , 547
+sum_x: 189
+sum_y: 158
+sum_c_x: 819
+sum_c_y: 616.5
+sum_x_m_y: 670.5
+n: 45
+numerador: 6.90002
+sqrt1: 5.01996
+sqrt2: 7.85776
+denominador: 39.4457
+resultado de Pearson:	0.174925
+==================================
+==================================
+columnas a evaluar: 132 , 476
+sum_x: 13.5
+sum_y: 13
+sum_c_x: 62.25
+sum_c_y: 57
+sum_x_m_y: 59
+n: 3
+numerador: 0.5
+sqrt1: 1.22474
+sqrt2: 0.816497
+denominador: 1
+resultado de Pearson:	0.499999
+==================================
+==================================
+columnas a evaluar: 132 , 667
+sum_x: 14.5
+sum_y: 15
+sum_c_x: 56.75
+sum_c_y: 59
+sum_x_m_y: 57
+n: 4
+numerador: 2.625
+sqrt1: 2.04634
+sqrt2: 1.65831
+denominador: 3.39347
+resultado de Pearson:	0.773545
+==================================
+==================================
+columnas a evaluar: 132 , 338
+sum_x: 27.5
+sum_y: 29
+sum_c_x: 99.25
+sum_c_y: 109
+sum_x_m_y: 100
+n: 8
+numerador: 0.3125
+sqrt1: 2.17227
+sqrt2: 1.9685
+denominador: 4.27611
+resultado de Pearson:	0.0730804
+==================================
+==================================
+columnas a evaluar: 132 , 39
+sum_x: 18
+sum_y: 17
+sum_c_x: 66
+sum_c_y: 61
+sum_x_m_y: 63
+n: 5
+numerador: 1.8
+sqrt1: 1.09544
+sqrt2: 1.78885
+denominador: 1.95959
+resultado de Pearson:	0.918559
+==================================
+==================================
+columnas a evaluar: 132 , 303
+sum_x: 84
+sum_y: 83
+sum_c_x: 337
+sum_c_y: 323
+sum_x_m_y: 321.25
+n: 22
+numerador: 4.34091
+sqrt1: 4.03395
+sqrt2: 3.14064
+denominador: 12.6692
+resultado de Pearson:	0.342635
+==================================
+==================================
+columnas a evaluar: 132 , 352
+sum_x: 41
+sum_y: 38
+sum_c_x: 175.5
+sum_c_y: 148
+sum_x_m_y: 157.75
+n: 10
+numerador: 1.95
+sqrt1: 2.72029
+sqrt2: 1.89737
+denominador: 5.1614
+resultado de Pearson:	0.377804
+==================================
+==================================
+columnas a evaluar: 132 , 431
+sum_x: 49
+sum_y: 53.5
+sum_c_x: 198
+sum_c_y: 229.75
+sum_x_m_y: 205.5
+n: 13
+numerador: 3.84616
+sqrt1: 3.64797
+sqrt2: 3.09466
+denominador: 11.2892
+resultado de Pearson:	0.340693
+==================================
+==================================
+columnas a evaluar: 132 , 134
+sum_x: 66
+sum_y: 74
+sum_c_x: 254.5
+sum_c_y: 313.5
+sum_x_m_y: 277
+n: 18
+numerador: 5.66666
+sqrt1: 3.53553
+sqrt2: 3.04594
+denominador: 10.769
+resultado de Pearson:	0.526199
+==================================
+==================================
+columnas a evaluar: 132 , 355
+sum_x: 70
+sum_y: 74.5
+sum_c_x: 272
+sum_c_y: 309.75
+sum_x_m_y: 274.75
+n: 19
+numerador: 0.276306
+sqrt1: 3.7557
+sqrt2: 4.199
+denominador: 15.7702
+resultado de Pearson:	0.0175208
+==================================
+==================================
+columnas a evaluar: 132 , 458
+sum_x: 36
+sum_y: 43
+sum_c_x: 125
+sum_c_y: 172.5
+sum_x_m_y: 143
+n: 11
+numerador: 2.27272
+sqrt1: 2.67989
+sqrt2: 2.09978
+denominador: 5.62719
+resultado de Pearson:	0.403882
+==================================
+==================================
+columnas a evaluar: 132 , 358
+sum_x: 54.5
+sum_y: 60
+sum_c_x: 209.75
+sum_c_y: 260
+sum_x_m_y: 221
+n: 15
+numerador: 3
+sqrt1: 3.4254
+sqrt2: 4.47214
+denominador: 15.3188
+resultado de Pearson:	0.195837
+==================================
+==================================
+columnas a evaluar: 132 , 101
+sum_x: 12
+sum_y: 18.5
+sum_c_x: 37
+sum_c_y: 85.75
+sum_x_m_y: 55.75
+n: 4
+numerador: 0.25
+sqrt1: 1
+sqrt2: 0.433013
+denominador: 0.433013
+resultado de Pearson:	0.57735
+==================================
+==================================
+columnas a evaluar: 132 , 373
+sum_x: 23
+sum_y: 22
+sum_c_x: 94
+sum_c_y: 88
+sum_x_m_y: 89.5
+n: 6
+numerador: 5.16666
+sqrt1: 2.41523
+sqrt2: 2.70801
+denominador: 6.54047
+resultado de Pearson:	0.789952
+==================================
+==================================
+columnas a evaluar: 132 , 592
+sum_x: 15
+sum_y: 19
+sum_c_x: 50
+sum_c_y: 77
+sum_x_m_y: 57.5
+n: 5
+numerador: 0.5
+sqrt1: 2.23607
+sqrt2: 2.19089
+denominador: 4.89898
+resultado de Pearson:	0.102062
+==================================
+==================================
+columnas a evaluar: 132 , 561
+sum_x: 67
+sum_y: 68
+sum_c_x: 265.5
+sum_c_y: 264.5
+sum_x_m_y: 255.25
+n: 18
+numerador: 2.13889
+sqrt1: 4.01387
+sqrt2: 2.75882
+denominador: 11.0736
+resultado de Pearson:	0.193153
+==================================
+==================================
+columnas a evaluar: 132 , 378
+sum_x: 42
+sum_y: 31.5
+sum_c_x: 183
+sum_c_y: 118.75
+sum_x_m_y: 140.25
+n: 10
+numerador: 7.95
+sqrt1: 2.56905
+sqrt2: 4.41871
+denominador: 11.3519
+resultado de Pearson:	0.700324
+==================================
+==================================
+columnas a evaluar: 132 , 578
+sum_x: 14
+sum_y: 8.5
+sum_c_x: 51
+sum_c_y: 24.25
+sum_x_m_y: 31.25
+n: 4
+numerador: 1.5
+sqrt1: 1.41421
+sqrt2: 2.48747
+denominador: 3.51781
+resultado de Pearson:	0.426401
+==================================
+==================================
+columnas a evaluar: 132 , 503
+sum_x: 26
+sum_y: 27
+sum_c_x: 99.5
+sum_c_y: 105
+sum_x_m_y: 101.5
+n: 7
+numerador: 1.21429
+sqrt1: 1.71131
+sqrt2: 0.925818
+denominador: 1.58436
+resultado de Pearson:	0.766421
+==================================
+==================================
+columnas a evaluar: 132 , 316
+sum_x: 33.5
+sum_y: 29.5
+sum_c_x: 128.25
+sum_c_y: 99.75
+sum_x_m_y: 110.75
+n: 9
+numerador: 0.944443
+sqrt1: 1.88562
+sqrt2: 1.74802
+denominador: 3.29609
+resultado de Pearson:	0.286534
+==================================
+==================================
+columnas a evaluar: 132 , 103
+sum_x: 11.5
+sum_y: 14
+sum_c_x: 44.75
+sum_c_y: 66
+sum_x_m_y: 54
+n: 3
+numerador: 0.333332
+sqrt1: 0.816497
+sqrt2: 0.816495
+denominador: 0.666666
+resultado de Pearson:	0.499999
+==================================
+==================================
+columnas a evaluar: 132 , 421
+sum_x: 19.5
+sum_y: 22
+sum_c_x: 66.75
+sum_c_y: 84
+sum_x_m_y: 72
+n: 6
+numerador: 0.5
+sqrt1: 1.83712
+sqrt2: 1.82574
+denominador: 3.3541
+resultado de Pearson:	0.149071
+==================================
+==================================
+columnas a evaluar: 132 , 394
+sum_x: 68.5
+sum_y: 64
+sum_c_x: 276.75
+sum_c_y: 254.5
+sum_x_m_y: 248
+n: 18
+numerador: 4.44444
+sqrt1: 4.00867
+sqrt2: 5.1908
+denominador: 20.8082
+resultado de Pearson:	0.213591
+==================================
+==================================
+columnas a evaluar: 132 , 536
+sum_x: 14.5
+sum_y: 19
+sum_c_x: 53.75
+sum_c_y: 91
+sum_x_m_y: 69
+n: 4
+numerador: 0.125
+sqrt1: 1.08972
+sqrt2: 0.866025
+denominador: 0.943729
+resultado de Pearson:	0.132453
+==================================
+==================================
+columnas a evaluar: 132 , 400
+sum_x: 27.5
+sum_y: 33
+sum_c_x: 99.25
+sum_c_y: 139
+sum_x_m_y: 114.5
+n: 8
+numerador: 1.0625
+sqrt1: 2.17227
+sqrt2: 1.69558
+denominador: 3.68326
+resultado de Pearson:	0.288467
+==================================
+==================================
+columnas a evaluar: 132 , 401
+sum_x: 10.5
+sum_y: 14
+sum_c_x: 38.75
+sum_c_y: 66
+sum_x_m_y: 50
+n: 3
+numerador: 1
+sqrt1: 1.41421
+sqrt2: 0.816495
+denominador: 1.1547
+resultado de Pearson:	0.866027
+==================================
+==================================
+columnas a evaluar: 132 , 402
+sum_x: 63
+sum_y: 64.5
+sum_c_x: 260
+sum_c_y: 267.25
+sum_x_m_y: 254.5
+n: 16
+numerador: 0.53125
+sqrt1: 3.45507
+sqrt2: 2.68968
+denominador: 9.29303
+resultado de Pearson:	0.0571665
+==================================
+==================================
+columnas a evaluar: 132 , 385
+sum_x: 18
+sum_y: 22
+sum_c_x: 69
+sum_c_y: 100
+sum_x_m_y: 81
+n: 5
+numerador: 1.8
+sqrt1: 2.04939
+sqrt2: 1.78885
+denominador: 3.66606
+resultado de Pearson:	0.490992
+==================================
+==================================
+columnas a evaluar: 132 , 408
+sum_x: 29
+sum_y: 25
+sum_c_x: 108.5
+sum_c_y: 85
+sum_x_m_y: 91
+n: 8
+numerador: 0.375
+sqrt1: 1.83712
+sqrt2: 2.62202
+denominador: 4.81696
+resultado de Pearson:	0.0778499
+==================================
+SIZE OF VEC: 10
+239 ; 1 ; 0 ; 0
+132 ; 1 ; 0 ; 0
+158 ; 0.999999 ; 0 ; 0
+291 ; 0.999992 ; 0 ; 0
+349 ; 0.98198 ; 0 ; 0
+179 ; 0.961524 ; 0 ; 0
+445 ; 0.944908 ; 0 ; 0
+153 ; 0.927173 ; 0 ; 0
+39 ; 0.918559 ; 0 ; 0
+386 ; 0.917661 ; 0 ; 0
