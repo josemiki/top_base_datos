@@ -111,6 +111,15 @@ void load_matrix_file()
 
     }
 
+    
+
+    cout<<"load matriz users \n size_matrix_user: "<<matrix_user.size()<<endl;
+    cout<<"load matriz books \n size_matrix_book: "<<matrix_book.size()<<endl;
+
+}
+
+void print_matrix()
+{
     auto it=matrix_user.begin();
     int size_hash_y=0;
     while(it!=matrix_user.end())
@@ -126,12 +135,7 @@ void load_matrix_file()
         it++;
     }
     cout<<"size_hash:\t"<<size_hash_y<<endl;
-
-    cout<<"load matriz users \n size_matrix_user: "<<matrix_user.size()<<endl;
-    cout<<"load matriz books \n size_matrix_book: "<<matrix_book.size()<<endl;
-
 }
-
 
 float distancia_euclidea(string col1,string col2)
 {
@@ -172,7 +176,6 @@ float correlacion_pearson(string col1, string col2)
 
     if(itc1==matrix_user.end())
         cout<<"columna 1 no existe: "<<col1<<endl;
-    
     if(itc2==matrix_user.end())
         cout<<"columna 2 no existe: "<<col2<<endl;
     
@@ -269,6 +272,49 @@ float correlacion_pearson(string col1, string col2)
 
 float similitud_coseno(string col1,string col2)
 {
+    //cout<<"COSENO: "<<col1<<" y "<<col2<<endl;
+    float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
+
+    auto columna1=*(matrix_user.find(col1)->second);
+    auto columna2=*(matrix_user.find(col2)->second);
+    
+    auto itc1=columna1.begin();
+    // itc2=columna2.find(itc1->first);
+
+    //cout<<"Columna 2 original size: "<<columna2.size()<<endl;
+
+    while(itc1!=columna1.end())
+    {
+        
+        auto itc2=columna2.find(itc1->first);
+        ///cout<<"obtuvo itc2"<<endl;
+        if(itc2!=columna2.end() && itc1->first==itc2->first)
+        {
+            resultado_p+=(itc1->second*itc2->second);
+            resultado_x+=powf(itc1->second,2.0);
+            resultado_y+=powf(itc2->second,2.0);
+            columna2.erase(itc2);
+        }
+        else
+        {
+            resultado_x+=powf(itc1->second,2.0);
+            
+        }
+        itc1++;
+    }
+    //cout<<"Columna 2 erase size: "<<columna2.size()<<endl;
+    for(auto itr = columna2.begin(); itr!=columna2.end(); itr++) 
+    {
+        resultado_y+=powf(itr->second,2.0);
+    }
+
+    resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
+    if(isnan(resultado))
+        return -1.0;
+    else
+        return resultado;   
+    
+    /*
     float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
 
     auto itc1=matrix_user.find(col1); 
@@ -278,6 +324,7 @@ float similitud_coseno(string col1,string col2)
 
     std::unordered_map< string, std::vector< float > > map ;
     
+    auto tmp =itc2->second;
 
     while(itf1!=itc1->second->end()&&itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
@@ -315,7 +362,7 @@ float similitud_coseno(string col1,string col2)
         }
         itf2++;
     }
-
+    
     for(auto itr = map.begin(); itr!=map.end(); itr++) 
     {
       //std::cout<<itr->first<<":";
@@ -331,7 +378,7 @@ float similitud_coseno(string col1,string col2)
     if(isnan(resultado))
         return -1.0;
     else
-        return resultado;   
+        return resultado;   */
 }
 
 float distancia_manhattan(string col1,string col2)
@@ -388,26 +435,20 @@ struct higher_distance
 myvec k_nn_pearson(string col,int k)
 {
     myvec vec;
-    auto itc1=matrix_user.find(col); 
+    auto itc1=matrix_user.find(col);
+    
     auto itc2=matrix_user.begin();    
     auto it_matrix_end=matrix_user.end();
-    while(itc2!=it_matrix_end)
+    while(itc2!=it_matrix_end && itc2->first!=col)
     {
         
         vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
         itc2++;
     }
-
-    for(int i=0;i<vec.size();i++)
-        cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
-
-    //std::sort(vec.begin(), vec.end(), higher_distance());
-    //vec.erase(vec.begin());
-    
-    //int fin=(vec.size()-k);
-    //for(int i=0;i<fin;i++)
-    //    vec.pop_back();
-    //cout<<"SIZE OF VEC: "<<vec.size()<<endl;
+    std::sort(vec.begin(), vec.end(), higher_distance());
+    int fin=(vec.size()-k);
+    for(int i=0;i<fin;i++)
+        vec.pop_back();
     return vec;
 
 }
@@ -417,20 +458,19 @@ myvec k_nn_manhattan(string col,int k)
     auto itc1=matrix_user.find(col); 
     auto itc2=matrix_user.begin();    
     auto it_matrix_end=matrix_user.end();
-
+    float resultado=1.1;
     while(itc2!=it_matrix_end)
     {
-        
-        vec.push_back(MyStruct(itc2->first,distancia_manhattan(col,itc2->first),0.0,0.0));
+        resultado=distancia_manhattan(col,itc2->first);
+        if(resultado!=0.0)
+            vec.push_back(MyStruct(itc2->first,resultado,0.0,0.0));
         itc2++;
     }
-    cout<<"inicio:\t"<<vec.size()<<endl;
-    std::sort(vec.begin(), vec.end(), higher_distance());
-    //vec.erase(vec.begin());
+    std::sort(vec.begin(), vec.end(), less_distance());
+    
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
         vec.pop_back();
-    cout<<"fin:\t"<<vec.size()<<endl;  
     return vec;
 
 }
@@ -440,22 +480,18 @@ myvec k_nn_coseno(string col,int k)
     auto itc1=matrix_user.find(col); 
     auto itc2=matrix_user.begin();    
     auto it_matrix_end=matrix_user.end();
-    //auto itf1=itc1->second->begin();
-    //auto itf2=itc2->second->begin();
-
     while(itc2!=it_matrix_end)
     {
-        
         vec.push_back(MyStruct(itc2->first,similitud_coseno(col,itc2->first),0.0,0.0));
-        //cout<<correlacion_pearson(col,itc2->first)<<endl;
         itc2++;
     }
-    //Usando euclidea
+    cout<<"acabo knn"<<endl;
     std::sort(vec.begin(), vec.end(), higher_distance());
+    //for(int i=0;i<vec.size();i++)
+    //    cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
     vec.erase(vec.begin());
-    for(int i=0;i<vec.size();i++)
-        cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
-    cout<<"ordenado"<<endl;
+    
+
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
         vec.pop_back();
@@ -469,36 +505,35 @@ myvec k_nn_euclidea(string col,int k)
     auto itc1=matrix_user.find(col); 
     auto itc2=matrix_user.begin();    
     auto it_matrix_end=matrix_user.end();
-
+    float resultado=1.1;
     while(itc2!=it_matrix_end)
     {
-        
-        vec.push_back(MyStruct(itc2->first,distancia_euclidea(col,itc2->first),0.0,0.0));
+        resultado=distancia_manhattan(col,itc2->first);
+        if(resultado!=0.0)
+            vec.push_back(MyStruct(itc2->first,distancia_euclidea(col,itc2->first),0.0,0.0));
         itc2++;
     }
-    cout<<"inicio:\t"<<vec.size()<<endl;
-    std::sort(vec.begin(), vec.end(), higher_distance());
-    //vec.erase(vec.begin());
+    std::sort(vec.begin(), vec.end(), less_distance());
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
         vec.pop_back();
-    std::sort(vec.begin(), vec.end(), less_distance());
-
-    cout<<"fin:\t"<<vec.size()<<endl;  
     return vec;
-
 }
 
 void calcular_influencia(string col, vector < MyStruct >& score)
 {
     float suma_pearson=0.0;
+    float resultado;
     for(int i=0;i<score.size();i++)
     {
-        score[i].pearson=distancia_euclidea(col,score[i].key);
+        resultado=similitud_coseno(col,score[i].key);
+        //cout<<"pearson k_nn: "<<col<<" , "<<score[i].key<<"  resultado: "<<resultado<<endl;
+
+        score[i].pearson=resultado;
         // cout<<suma_pearson<<endl;
         suma_pearson+=score[i].pearson;
     }
-    //cout<<suma_pearson<<endl;
+    cout<<suma_pearson<<endl;
     for(int i=0;i<score.size();i++)
     {
         //score[i].influencia=score[i].pearson/suma_pearson*100;
@@ -506,12 +541,12 @@ void calcular_influencia(string col, vector < MyStruct >& score)
     }
 
 }
-float proyectado_knn(myvec & knn,string libro)
+float proyectado_knn_coseno(string name,string libro,int k)
 {
-    //cout<<"entre proyeccion"<<endl;
-    int k= knn.size();
+    myvec knn=k_nn_coseno(name,k);
+    calcular_influencia(name,knn);
+
     float resultado=0.0;
-    //float * puntaje=new float[k];
     for(int i=0;i<k;i++)
     {
         auto itmb=matrix_book.find(libro);
@@ -522,11 +557,14 @@ float proyectado_knn(myvec & knn,string libro)
                 resultado+=knn[i].influencia*it->second;
             else
                 resultado+=0.0;
-                //cout<<"autor no califico libro"<<endl;
-        }//cout<<knn[i].influencia*matrix_book.find(libro)->second->find(knn[i].key)->second<<endl;
-
+        }
     }
-    //cout<<resultado;
+    for(int i=0;i<knn.size();i++)
+    {
+            cout<<knn[i].key<<" ; "<<knn[i].distancia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+
+        cout<<endl;
+    }
     return resultado;
 }
 myvec k_nn_rango(string col,float r)
@@ -632,17 +670,14 @@ int main()
 {
 
     load_matrix_file();
-    cout<<"distancia_euclidea: "<<distancia_euclidea("205","207");
-    cout<<"distancia_manhatan: "<<distancia_manhattan("205","207");
-    cout<<"correlacion de Pearson: "<<correlacion_pearson("205","207");
-    cout<<"similitud_coseno: "<<similitud_coseno("205","207");
-    //cout<<"===> 277752 "<<"k:  "<<8<<endl;
-    //myvec knn=k_nn_pearson("277752",800);
-    //cout<<"===> 132 "<<"k:  "<<10<<endl;
-    //myvec knn=k_nn_pearson("132",10);
-    //calcular_influencia("277752",knn);
-    //crear_usuario("ben");
-    //myvec knn=k_nn_euclidea("ben",50);
+    //cout<<"distancia_euclidea: "<<distancia_euclidea("135","205")<<endl;;
+    //cout<<"distancia_manhatan: "<<distancia_manhattan("135","205")<<endl;;
+    //cout<<"correlacion de Pearson: "<<correlacion_pearson("135","205")<<endl;;
+    //cout<<"similitud_coseno: "<<similitud_coseno("205","207")<<endl;;
+    crear_usuario("ben");
+    cout<<"correlacion de Pearson: "<<correlacion_pearson("ben","475")<<endl;
+    cout<<"proyeccion:\t"<<proyectado_knn_coseno("ben","Desperado (1995)",10)<<endl;
+    
     
     
     /*calcular_influencia("ben",knn);
