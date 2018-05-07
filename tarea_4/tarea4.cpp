@@ -15,8 +15,9 @@ using namespace std;
 #define fila_u unordered_map<string,float>
 #define columna_b unordered_map<string,fila_u*>
 
-#define users unordered_map<string,string>
-#define books unordered_map<string,string>
+#define vec_atrib vector<string>
+#define users unordered_map<string,vec_atrib*>
+#define books unordered_map<string,vec_atrib*>
 
 #define myvec vector < MyStruct >
 
@@ -27,7 +28,47 @@ users hash_users;
 books hash_books;
 
 
+void load_hash_header()
+{
+    ifstream book("../../ml-latest-small/movies.csv");
+    string b1,b2,b3;
+    int line=1;
+    while(!book.eof())
+    {
+        getline(book,b1,';');
+        if(!b1.empty())
+        {
+            getline(book,b2,';');
+            getline(book,b3);
+            vec_atrib* new_v = new vec_atrib();
+            //new_v->insert.push_back(b2);
+            //new_v->insert.push_back(b3);
+            hash_books.insert({b1,new_v});
+            //cout<<"line: "<<line<<" book: "<<b1<<" all: "<<b2<<endl;
+            ++line;
+        }
+    }
+    
+    cout<<"load books \n size_books: "<<hash_books.size()<<endl;
 
+    /*ifstream user("../../bd/BX-Users.csv");
+    line=1;
+    //int i=0;
+    while(!user.eof())
+    {
+        getline(user,b1,';');
+        if(!b1.empty())
+        {            
+            getline(user,b2);
+            hash_users.insert({b1,b2});
+            //cout<<"line: "<<line<<" user: "<<b1<<" all: "<<b2<<endl;
+            ++line;
+        }
+    }
+    cout<<"load users \n size_users: "<<hash_users.size()<<endl;
+    */
+
+}
 void load_matrix_file()
 {
  ifstream input("../../ml-latest-small/ratings.csv");
@@ -47,37 +88,24 @@ void load_matrix_file()
                 auto it_f_u=matrix_book.find(b);
                 if(it_f_b!=matrix_user.end())
                 {
-                    //cout<<"entro if"<<endl;
-                    //cout<<"it_f_b: "<<it_f_b->first<<" , "<<it_f_b->second->size()<<endl;
                     it_f_b->second->insert({b,rat});
-                    //cout<<"salio if"<<endl;
                 }
                 else
                 {
-                    //cout<<"entro else"<<endl;
                     fila_b* fb=new fila_b();
                     fb->insert({b,rat});
                     matrix_user.insert({u,fb});
-                    //cout<<"salio else"<<endl;
                 }
                 if(it_f_u!=matrix_book.end())
                 {
-                    //cout<<"entro if"<<endl;
-                    //cout<<"it_f_b: "<<it_f_b->first<<" , "<<it_f_b->second->size()<<endl;
                     it_f_u->second->insert({u,rat});
-                    //cout<<"salio if"<<endl;
                 }
                 else
                 {
-                    //cout<<"entro else"<<endl;
                     fila_u* fu=new fila_u();
                     fu->insert({u,rat});
                     matrix_book.insert({b,fu});
-                    //cout<<"salio else"<<endl;
                 }
-                //matrix_book.insert({b,fu});
-            
-            //cout<<"line: "<<line<<" user: "<<u<<" book: "<<b<<" rat: "<<rat<<endl;
             ++line;
         }
 
@@ -87,16 +115,14 @@ void load_matrix_file()
     int size_hash_y=0;
     while(it!=matrix_user.end())
     {
-        //cout<<it->first<<" size hash: "<<(it->second)->size()<<endl;
-
         auto it2=it->second->begin();
         while(it2!=it->second->end())
         {
-            //cout<<"   "<<it2->first<<" , "<<it2->second<<"    ";
+            cout<<"["<<it->first<<"  ,  "<<it2->first<<"  ,  "<<it2->second<<"]";
             size_hash_y++;
             it2++;
         }
-        //cout<<endl;
+        cout<<endl;
         it++;
     }
     cout<<"size_hash:\t"<<size_hash_y<<endl;
@@ -119,23 +145,16 @@ float distancia_euclidea(string col1,string col2)
         auto itf2=itc2->second->find(itf1->first);
         if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
         {
-            
             if(itf1->first==itf2->first)
             {
-                //cout<<"col1: "<<itf1->second<<" col2: "<<itf2->second<<" res: "<<resultado<<endl;
-                //cout<<itf2->second<<endl;
                 resultado+=pow((itf1->second - itf2->second),2.0);
             }
-            //itf1++;
         }
-        //cout<<"no hay coincidencia"<<endl;
-        itf1++;    
-        
+        itf1++;         
     }
-
     return sqrt(resultado);
-
 }
+
 float correlacion_pearson(string col1, string col2)
 {
     //cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
@@ -214,10 +233,9 @@ float correlacion_pearson(string col1, string col2)
 
     float resultado=numerador/denominador;
 
-
-
-    //if(n==0||n==1||sum_x_m_y==0.0)
-      //  return resultado=-1.0;
+    if(n==0||n==1||isnan(resultado))
+        return resultado=-1.0;
+    
     //cout<<"resultado de Pearson:\t"<<resultado<<endl;
     /*if(n>=3 && numerador>0 && denominador>0)
     {
@@ -240,8 +258,9 @@ float correlacion_pearson(string col1, string col2)
          return resultado;
         
     }
-    else*/
-        return resultado=-1.0;
+    */
+    else
+        return resultado;
 
 
    
@@ -309,35 +328,11 @@ float similitud_coseno(string col1,string col2)
       //std::cout<<std::endl;
     }
     resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
-
-    return resultado;
+    if(isnan(resultado))
+        return -1.0;
+    else
+        return resultado;   
 }
-
-struct MyStruct
-{
-    string key;
-    float euclidia;
-    float pearson;
-    float influencia;
-
-    MyStruct(string k, float e,float p,float i) : key(k), euclidia(e), pearson(p),influencia(i) {}
-};
-
-struct less_than_key
-{
-    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
-    {
-        return (struct1.euclidia < struct2.euclidia);
-    }
-};
-
-struct more_than_key
-{
-    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
-    {
-        return (struct1.euclidia > struct2.euclidia);
-    }
-};
 
 float distancia_manhattan(string col1,string col2)
 {
@@ -346,7 +341,7 @@ float distancia_manhattan(string col1,string col2)
     auto itc1=matrix_user.find(col1); 
     auto itc2=matrix_user.find(col2);    
     auto it_matrix_end=matrix_user.end();
-    auto itf1=itc1->second->begin();
+    auto itf1=itc1->second->begin();  
     while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
         auto itf2=itc2->second->find(itf1->first);
@@ -355,21 +350,40 @@ float distancia_manhattan(string col1,string col2)
             
             if(itf1->first==itf2->first)
             {
-                //cout<<"col1: "<<itf1->second<<" col2: "<<itf2->second<<" res: "<<resultado<<endl;
-                //cout<<itf2->second<<endl;
-                //resultado+=(fabs(itr->second[0]-itr->second[1]));
                 resultado+=fabs(itf1->second - itf2->second);
             }
-            //itf1++;
         }
-        //cout<<"no hay coincidencia"<<endl;
-        itf1++;    
-        
+        itf1++;      
     }
-
-   
     return resultado;
 }
+
+struct MyStruct
+{
+    string key;
+    float distancia;
+    float pearson;
+    float influencia;
+
+    MyStruct(string k, float e,float p,float i) : key(k), distancia(e), pearson(p),influencia(i) {}
+};
+
+struct less_distance
+{
+    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
+    {
+        return (struct1.distancia < struct2.distancia);
+    }
+};
+
+struct higher_distance
+{
+    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
+    {
+        return (struct1.distancia > struct2.distancia);
+    }
+};
+
 
 myvec k_nn_pearson(string col,int k)
 {
@@ -385,15 +399,15 @@ myvec k_nn_pearson(string col,int k)
     }
 
     for(int i=0;i<vec.size();i++)
-        cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+        cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
 
-    std::sort(vec.begin(), vec.end(), more_than_key());
+    //std::sort(vec.begin(), vec.end(), higher_distance());
     //vec.erase(vec.begin());
     
-    int fin=(vec.size()-k);
-    for(int i=0;i<fin;i++)
-        vec.pop_back();
-    cout<<"SIZE OF VEC: "<<vec.size()<<endl;
+    //int fin=(vec.size()-k);
+    //for(int i=0;i<fin;i++)
+    //    vec.pop_back();
+    //cout<<"SIZE OF VEC: "<<vec.size()<<endl;
     return vec;
 
 }
@@ -411,7 +425,7 @@ myvec k_nn_manhattan(string col,int k)
         itc2++;
     }
     cout<<"inicio:\t"<<vec.size()<<endl;
-    std::sort(vec.begin(), vec.end(), more_than_key());
+    std::sort(vec.begin(), vec.end(), higher_distance());
     //vec.erase(vec.begin());
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
@@ -437,10 +451,10 @@ myvec k_nn_coseno(string col,int k)
         itc2++;
     }
     //Usando euclidea
-    std::sort(vec.begin(), vec.end(), more_than_key());
+    std::sort(vec.begin(), vec.end(), higher_distance());
     vec.erase(vec.begin());
     for(int i=0;i<vec.size();i++)
-        cout<<vec[i].key<<" , "<<vec[i].euclidia<<" , "<<vec[i].pearson<<endl;
+        cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
     cout<<"ordenado"<<endl;
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
@@ -463,12 +477,12 @@ myvec k_nn_euclidea(string col,int k)
         itc2++;
     }
     cout<<"inicio:\t"<<vec.size()<<endl;
-    std::sort(vec.begin(), vec.end(), more_than_key());
+    std::sort(vec.begin(), vec.end(), higher_distance());
     //vec.erase(vec.begin());
     int fin=(vec.size()-k);
     for(int i=0;i<fin;i++)
         vec.pop_back();
-    std::sort(vec.begin(), vec.end(), less_than_key());
+    std::sort(vec.begin(), vec.end(), less_distance());
 
     cout<<"fin:\t"<<vec.size()<<endl;  
     return vec;
@@ -533,7 +547,7 @@ myvec k_nn_rango(string col,float r)
     }
     
 
-    std::sort(vec.begin(), vec.end(), less_than_key());
+    std::sort(vec.begin(), vec.end(), less_distance());
     vec.erase(vec.begin());
     //cout<<"ordenado"<<endl;
     //cout<<"vec_size"<<vec.size()<<endl;
@@ -544,7 +558,7 @@ myvec k_nn_rango(string col,float r)
     while(it!=vec.end())
     {
         
-        if(r>(it->euclidia))
+        if(r>(it->distancia))
         {
              //   cout<<"if"<<r<<" , "<<it->euclidia<<endl;
             vec.erase(it);
@@ -618,27 +632,28 @@ int main()
 {
 
     load_matrix_file();
-    //cout<<"distancia_euclidea: "<<distancia_euclidea("15600","15651");
-    //cout<<"distancia_euclidea: "<<correlacion_pearson("15600","15651");ç
-    //cout<<"distancia_manhatan: "<<correlacion_pearson("29605","15651");
+    cout<<"distancia_euclidea: "<<distancia_euclidea("205","207");
+    cout<<"distancia_manhatan: "<<distancia_manhattan("205","207");
+    cout<<"correlacion de Pearson: "<<correlacion_pearson("205","207");
+    cout<<"similitud_coseno: "<<similitud_coseno("205","207");
     //cout<<"===> 277752 "<<"k:  "<<8<<endl;
     //myvec knn=k_nn_pearson("277752",800);
     //cout<<"===> 132 "<<"k:  "<<10<<endl;
     //myvec knn=k_nn_pearson("132",10);
     //calcular_influencia("277752",knn);
-    crear_usuario("ben");
-    myvec knn=k_nn_euclidea("ben",50);
+    //crear_usuario("ben");
+    //myvec knn=k_nn_euclidea("ben",50);
     
     
-    calcular_influencia("ben",knn);
+    /*calcular_influencia("ben",knn);
     for(int i=0;i<knn.size();i++)
     {
-            cout<<knn[i].key<<" ; "<<knn[i].euclidia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
+            cout<<knn[i].key<<" ; "<<knn[i].distancia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
 
         cout<<endl;
     }
     //cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
-    
+    */
     return 0;
 }
 
