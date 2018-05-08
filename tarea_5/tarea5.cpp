@@ -165,9 +165,12 @@ void calc_average()
             itf++;
         }
         avg=(avg/float(n));
+        cout<<"User: "<<itc->first<<" Avg: "<<avg<<endl;
         hash_avg.insert({itc->first,avg});
         //matrix_book.find("average")->second->insert({itc->first,avg});
         //itc->second->insert({"average",avg});
+        n=0;
+        avg=0.0;
         itc++;
     }
     cout<<"size average"<<hash_avg.size()<<endl;
@@ -175,7 +178,7 @@ void calc_average()
 
 float similitud_books(string col1, string col2)
 {
-    cout<<"books a evaluar: "<<col1<<" y "<<col2<<endl;
+    //cout<<"books a evaluar: "<<col1<<" y "<<col2<<endl;
     float resultado=0.0;
     float numerador=0.0;
     float denominador=0.0;
@@ -193,16 +196,20 @@ float similitud_books(string col1, string col2)
         {
             if(itf1->first==itf2->first)
             {
-                numerador+=((hash_avg.find(itf1->first)->second-itf1->second)*(hash_avg.find(itf2->first)->second-itf2->second));
+                cout<<"User1: "<<itf1->first<<"  Valu1: "<<itf1->second<<"  Valu2: "<<itf2->second<<"  Avg: "<<hash_avg.find(itf1->first)->second<<endl;
+                numerador+=((itf1->second-hash_avg.find(itf1->first)->second)*(itf2->second-hash_avg.find(itf2->first)->second));
                 a+=powf((hash_avg.find(itf1->first)->second-itf1->second),2.0);
                 b+=powf((hash_avg.find(itf2->first)->second-itf2->second),2.0);
+                //numerador+=((hash_avg.find(itf1->first)->second-itf1->second)*(hash_avg.find(itf2->first)->second-itf2->second));
+                //a+=powf((hash_avg.find(itf1->first)->second-itf1->second),2.0);
+                //b+=powf((hash_avg.find(itf2->first)->second-itf2->second),2.0);
             }
         }
         itf1++;         
     }
     
     denominador=(sqrtf(a)*sqrtf(b));
-    cout<<"Numerador: "<<numerador<<" Denominador: "<<denominador<<endl;
+    //cout<<"Numerador: "<<numerador<<" Denominador: "<<denominador<<endl;
     resultado=numerador/denominador;
     if(isnan(resultado))
         return 0;
@@ -390,6 +397,7 @@ void predecir_coseno(string user,string book)
     while(it_similitud!=hash_similitud.end())
     {
         auto it_norma=vec2.find(it_similitud->first);
+        cout<<"similitud: "<<it_similitud->first<<"   "<<it_similitud->second<<endl;
         numerador+=(it_similitud->second*it_norma->second.normalizado);
         denominador+=fabs(it_similitud->second);
         it_similitud++;    
@@ -400,17 +408,14 @@ void predecir_coseno(string user,string book)
     cout<<"Prrediccion Real: "<<prediccion<<endl;
 
 }
-void predecir_sw1(string user,string book)
-{
-    
-}
+
 int main()
 {
 
     load_matrix_file();
    
-    predecir_coseno("478","67255");
-    predecir_sw1("478","67255");
+    predecir_coseno("1","39");
+    //predecir_sw1("478","67255");
     //predecir("470","3007");
     //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;
     return 0;
