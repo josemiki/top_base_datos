@@ -400,12 +400,17 @@ void predecir_coseno(string user,string book)
     cout<<"Prrediccion Real: "<<prediccion<<endl;
 
 }
+void predecir_sw1(string user,string book)
+{
+    
+}
 int main()
 {
 
     load_matrix_file();
    
     predecir_coseno("478","67255");
+    predecir_sw1("478","67255");
     //predecir("470","3007");
     //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;
     return 0;
