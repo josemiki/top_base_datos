@@ -6,6 +6,7 @@
 #include<algorithm>
 #include<cstdio>
 #include<cmath>
+#include<iterator>
 
 using namespace std;
 
@@ -19,13 +20,22 @@ using namespace std;
 #define users unordered_map<string,vec_atrib*>
 #define books unordered_map<string,vec_atrib*>
 
-#define myvec vector < MyStruct >
+#define list_average unordered_map<string,float>
+
+#define myvec vector < Normalizado >
+#define myhash unordered_map <string , Normalizado >
 
 columna_u matrix_user;
 columna_b matrix_book;
 
 users hash_users;
 books hash_books;
+
+list_average hash_similitud;
+
+list_average hash_avg;
+
+
 
 
 void load_hash_header()
@@ -142,9 +152,9 @@ void calc_average()
     //auto itmb=matrix_book.begin();
     int n=0;
     float avg=0.0;
-    fila_u* fu=new fila_u();
+    //fila_u* fu=new fila_u();
     //fu->insert({u,rat});
-    matrix_book.insert({"average",fu});
+    //matrix_book.insert({"average",fu});
     while(itc!=matrix_user.end())
     {
         auto itf=itc->second->begin();
@@ -155,10 +165,12 @@ void calc_average()
             itf++;
         }
         avg=(avg/float(n));
-        matrix_book.find("average")->second->insert({itc->first,avg});
-        itc->second->insert({"average",avg});
+        hash_avg.insert({itc->first,avg});
+        //matrix_book.find("average")->second->insert({itc->first,avg});
+        //itc->second->insert({"average",avg});
         itc++;
     }
+    cout<<"size average"<<hash_avg.size()<<endl;
 }
 
 float similitud_books(string col1, string col2)
@@ -170,6 +182,9 @@ float similitud_books(string col1, string col2)
     auto itc2=matrix_book.find(col2);    
     auto it_matrix_end=matrix_book.end();
     auto itf1=itc1->second->begin();
+
+    float a=0.0,b=0.0;
+
     while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
     {
         auto itf2=itc2->second->find(itf1->first);
@@ -177,574 +192,212 @@ float similitud_books(string col1, string col2)
         {
             if(itf1->first==itf2->first)
             {
-                numerador+=(matrix_user.find(itf1->first)->second->find("average")->second-itf1>second);
-                resultado+=pow((itf1->second - itf2->second),2.0);
+                numerador+=((hash_avg.find(itf1->first)->second-itf1->second)*(hash_avg.find(itf2->first)->second-itf2->second));
+                a+=powf((hash_avg.find(itf1->first)->second-itf1->second),2.0);
+                b+=powf((hash_avg.find(itf2->first)->second-itf2->second),2.0);
             }
         }
         itf1++;         
     }
-    return sqrt(resultado);
-}
-void calcular_matrix_similitud()
-{
-
-}
-
-
-
-
-float distancia_euclidea(string col1,string col2)
-{
-    float resultado=0.0;
-    auto itc1=matrix_user.find(col1); 
-    auto itc2=matrix_user.find(col2);    
-    auto it_matrix_end=matrix_user.end();
-    auto itf1=itc1->second->begin();
-    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
-    {
-        auto itf2=itc2->second->find(itf1->first);
-        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
-        {
-            if(itf1->first==itf2->first)
-            {
-                resultado+=pow((itf1->second - itf2->second),2.0);
-            }
-        }
-        itf1++;         
-    }
-    return sqrt(resultado);
-}
-
-float correlacion_pearson(string col1, string col2)
-{
-    //cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
-    float sum_x_m_y=0.0;
-    float sum_x=0.0;
-    float sum_y=0.0;
-    float sum_c_x=0.0;
-    float sum_c_y=0.0;
-    //float resultado=0.0;
-
-    int n=0;
-    
-    auto itc1=matrix_user.find(col1); 
-    auto itc2=matrix_user.find(col2);
-
-    if(itc1==matrix_user.end())
-        cout<<"columna 1 no existe: "<<col1<<endl;
-    if(itc2==matrix_user.end())
-        cout<<"columna 2 no existe: "<<col2<<endl;
-    
-    
-    auto it_matrix_end=matrix_user.end();
-    auto itf1=itc1->second->begin();
-
-    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
-    {
-        auto itf2=itc2->second->find(itf1->first);
-
-        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
-        {
-            //cout<<"entro 1 if"<<endl;
-            
-                //cout<<itf1->second<<","<<itf2->second<<endl;
-
-                sum_x=sum_x+itf1->second;
-                //cout<<"sum_x: "<<sum_x<<endl;
-                
-                sum_y=sum_y+itf2->second; 
-                //cout<<"sum_y: "<<sum_y<<endl;
-
-                sum_c_x=sum_c_x+powf(itf1->second,2.0);
-                //cout<<"sum_c_x: "<<sum_c_x<<endl;
-                
-                sum_c_y=sum_c_y+powf(itf2->second,2.0);
-                //cout<<"sum_c_y: "<<sum_c_y<<endl;
-                
-                sum_x_m_y=sum_x_m_y+(itf1->second*itf2->second);
-                //cout<<"sum_x_m_y: "<<sum_x_m_y<<endl;
-
-                n++;
-                //cout<<"n: "<<n<<endl;
-                
-            
-           
-            
-        }
-         //cout<<"===========>"<<endl;
-        //cout<<"no hay coincidencia"<<endl;
-        itf1++; 
-    }
-    
-    //resultado=(sum_x_m_y-((sum_x*sum_y)/n))/((sqrt(sum_c_x-(pow(sum_x,2.0)/n)))*(sqrt(sum_c_y-(pow(sum_y,2.0)/n))));
-    float sum=(sum_x*sum_y)/n;
-    float numerador=sum_x_m_y-sum;
-    
-    float mx=powf(sum_x,2.0);
-    mx=mx/n;
-    float sqrt1=sqrtf(sum_c_x-mx);
-    
-    float my=powf(sum_y,2.0);
-    my=my/n;
-    float sqrt2=sqrtf(sum_c_y-my);
-    
-    float denominador=sqrt1*sqrt2;
-
-    float resultado=numerador/denominador;
-
-    if(n==0||n==1||isnan(resultado))
-        return resultado=-1.0;
-    
-    //cout<<"resultado de Pearson:\t"<<resultado<<endl;
-    /*if(n>=3 && numerador>0 && denominador>0)
-    {
-        cout<<"=================================="<<endl;
-        cout<<"columnas a evaluar: "<<col1<<" , "<<col2<<endl;
-        cout<<"sum_x: "<<sum_x<<endl;  
-        cout<<"sum_y: "<<sum_y<<endl;
-        cout<<"sum_c_x: "<<sum_c_x<<endl;
-        cout<<"sum_c_y: "<<sum_c_y<<endl;
-        cout<<"sum_x_m_y: "<<sum_x_m_y<<endl;
-        cout<<"n: "<<n<<endl;
-        
-        cout<<"numerador: "<<numerador<<endl;
-        cout<<"sqrt1: "<<sqrt1<<endl;
-        cout<<"sqrt2: "<<sqrt2<<endl;
-        cout<<"denominador: "<<denominador<<endl;
-        
-        cout<<"resultado de Pearson:\t"<<resultado<<endl;
-        cout<<"=================================="<<endl;
-         return resultado;
-        
-    }
-    */
-    else
-        return resultado;
-
-
-   
-    
-}
-
-float similitud_coseno(string col1,string col2)
-{
-    //cout<<"COSENO: "<<col1<<" y "<<col2<<endl;
-    float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
-
-    auto columna1=*(matrix_user.find(col1)->second);
-    auto columna2=*(matrix_user.find(col2)->second);
-    
-    auto itc1=columna1.begin();
-    // itc2=columna2.find(itc1->first);
-
-    //cout<<"Columna 2 original size: "<<columna2.size()<<endl;
-
-    while(itc1!=columna1.end())
-    {
-        
-        auto itc2=columna2.find(itc1->first);
-        ///cout<<"obtuvo itc2"<<endl;
-        if(itc2!=columna2.end() && itc1->first==itc2->first)
-        {
-            resultado_p+=(itc1->second*itc2->second);
-            resultado_x+=powf(itc1->second,2.0);
-            resultado_y+=powf(itc2->second,2.0);
-            columna2.erase(itc2);
-        }
-        else
-        {
-            resultado_x+=powf(itc1->second,2.0);
-            
-        }
-        itc1++;
-    }
-    //cout<<"Columna 2 erase size: "<<columna2.size()<<endl;
-    for(auto itr = columna2.begin(); itr!=columna2.end(); itr++) 
-    {
-        resultado_y+=powf(itr->second,2.0);
-    }
-
-    resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
-    if(isnan(resultado))
-        return -1.0;
-    else
-        return resultado;   
-    
-    /*
-    float resultado_x=0.0, resultado_y=0.0, resultado_p=0.0, resultado=0.0;
-
-    auto itc1=matrix_user.find(col1); 
-    auto itc2=matrix_user.find(col2);    
-    auto it_matrix_end=matrix_user.end();
-    auto itf1=itc1->second->begin();
-
-    std::unordered_map< string, std::vector< float > > map ;
-    
-    auto tmp =itc2->second;
-
-    while(itf1!=itc1->second->end()&&itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
-    {
-        auto itf2=itc2->second->find(itf1->first);
-        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
-        {
-            if(itf1->first==itf2->first)
-            {
-                
-                map[itf1->first].push_back(itf1->second);
-                map[itf1->first].push_back(itf2->second);
-               // cout<<"insert: "<<itf1->second<<" , "<<itf2->second <<endl;
-               
-            }
-                          
-        }
-        else//if(itf2->first!=itf2->first)
-        {
-                map[itf1->first].push_back(itf1->second);
-                map[itf1->first].push_back(0.0);
-                //cout<<"insert2: "<<itf1->second<<" , "<<0.0 <<endl;
-        } 
-        itf1++;    
-        
-    }
-    auto itf2=itc2->second->begin();
-    while(itf2!=itc2->second->end())
-    {
-        auto it = map.find(itf2->first);
-        if(it==map.end())
-        {
-            //cout<<"newinsert"<<endl;
-            map[itf2->first].push_back(0.0);
-            map[itf2->first].push_back(itf2->second);
-        }
-        itf2++;
-    }
-    
-    for(auto itr = map.begin(); itr!=map.end(); itr++) 
-    {
-      //std::cout<<itr->first<<":";
-      
-          resultado_p+=(itr->second[0]*itr->second[1]);
-          resultado_x+=powf(itr->second[0],2.0);
-          resultado_y+=powf(itr->second[1],2.0);
-          //std::cout<<*vitr<<",";
-      
-      //std::cout<<std::endl;
-    }
-    resultado=resultado_p/(pow(resultado_x,0.5)*(pow(resultado_y,0.5)));
-    if(isnan(resultado))
-        return -1.0;
-    else
-        return resultado;   */
-}
-
-float distancia_manhattan(string col1,string col2)
-{
-
-    float resultado=0.0;
-    auto itc1=matrix_user.find(col1); 
-    auto itc2=matrix_user.find(col2);    
-    auto it_matrix_end=matrix_user.end();
-    auto itf1=itc1->second->begin();  
-    while(itf1!=itc1->second->end() && itc1!=it_matrix_end && itc2!=it_matrix_end && itc1->second->begin()!=itc2->second->end())
-    {
-        auto itf2=itc2->second->find(itf1->first);
-        if(itf1 != itc1->second->end() && itf2 != itc2->second->end())
-        {
-            
-            if(itf1->first==itf2->first)
-            {
-                resultado+=fabs(itf1->second - itf2->second);
-            }
-        }
-        itf1++;      
-    }
+    denominador=(sqrtf(a)*sqrtf(b));
+    resultado=numerador/denominador;
     return resultado;
 }
-
-struct MyStruct
+void calcular_matrix_similitud(string book,string user)
 {
-    string key;
-    float distancia;
-    float pearson;
-    float influencia;
+    auto it_user=matrix_user.find(user)->second;
+    auto book_per_user=it_user->begin();
+    while(book_per_user!=it_user->end())
+    {
+        //cout<<"similitud books: "<<similitud_books(book,book_per_user->first)<<endl;
+        hash_similitud.insert({book_per_user->first,similitud_books(book,book_per_user->first)});
+        book_per_user++;
+    }
+    cout<<"size col matrix similitud: "<<hash_similitud.size()<<endl;
+    /*while(itc!=it_matrix_end)
+    {
+        itf1=itc->second->begin();
+        cout<<"Evaluando movie: "<<itf1->first<<endl;
 
-    MyStruct(string k, float e,float p,float i) : key(k), distancia(e), pearson(p),influencia(i) {}
+        auto itf2 = matrix_book.begin();
+        while(itf2!=it_matrix_end && itf2->first!="average" && itc->first!="average")
+        {
+            auto itm1=matrix_similitud.find(itf1->first);
+            auto itm2=matrix_similitud.find(itf2->first);
+            float sb=similitud_books(itf1->first,itf2->first);
+
+            if(itm1!=matrix_similitud.end())
+            {
+                cout<<"Insertando b1:  "<<itf1->first<<" b2:  "<<itf2->first<<endl;
+                //float sb=similitud_books(itf1->first,itf2->first);
+                itm1->second->insert({itf2->first,sb});
+            {
+            }
+            if(itm2!=matrix_similitud.end())
+            {
+                cout<<"Insertando b2:  "<<itf2->first<<" b1:  "<<itf1->first<<endl;
+                //float sb=similitud_books(itf1->first,itf2->first);
+                itm2->second->insert({itf1->first,sb});
+            }
+            else
+                //float sb=similitud_books(itf1->first,itf2->first);
+                cout<<"Insertando NUEVO b1:  "<<itf1->first<<" b2:  "<<itf2->first<<endl;
+                fila_b * fb=new fila_b();
+                fb->insert({itf2->first,sb});
+                matrix_similitud.insert({itf1->first,fb});
+                
+                fila_b * bf=new fila_b();
+                bf->insert({itf1->first,sb});
+                matrix_similitud.insert({itf2->first,bf});
+            }
+            itf2++;
+        }
+        //itf1++;
+        itc++;
+    }
+    cout<<"size col matrix similitud: "<<matrix_similitud.size()<<endl;
+    //auto itc = matrix_book.begin();
+    auto it_matrix_end = matrix_book.end();
+    float sb;
+    //#pragma omp parallel for
+    for(auto itf1 = matrix_book.begin();itf1!=it_matrix_end;itf1++)
+    {
+        auto itf2 = itf1;
+        itf2++;
+        
+        for(;itf2!=it_matrix_end;itf2++)
+        {
+            sb=similitud_books(itf1->first,itf2->first);
+            auto itmb1=matrix_similitud.find(itf1->first);    
+            auto itmb2=matrix_similitud.find(itf2->first);    
+            if(itmb1!=matrix_similitud.end())
+            {
+                cout<<"Insertando b1:  "<<itf1->first<<" b2:  "<<itf2->first<<endl;
+                itmb1->second->insert({itf2->first,sb});
+            }
+            else
+            {
+                cout<<"Creando NUEVO b1:  "<<itf1->first<<" b2:  "<<itf2->first<<endl;
+                fila_b * fb=new fila_b();
+                fb->insert({itf2->first,sb});
+                matrix_similitud.insert({itf1->first,fb});
+                
+                if(itmb2!=matrix_similitud.end())
+                {
+                    cout<<"Insertando b2:  "<<itf2->first<<" b1:  "<<itf1->first<<endl;
+                    //float sb=similitud_books(itf1->first,itf2->first);
+                    itmb2->second->insert({itf1->first,sb});
+                }
+                else
+                {
+                    cout<<"Creando NUEVO b2:  "<<itf1->first<<" b1:  "<<itf2->first<<endl;
+                    fila_b * bf=new fila_b();
+                    bf->insert({itf1->first,sb});
+                    matrix_similitud.insert({itf2->first,bf});
+                }
+            }
+        }
+    }
+    cout<<"size col matrix similitud: "<<matrix_similitud.size()<<endl;
+    
+    */
+}
+
+struct Normalizado
+{
+    string book;
+    float real;
+    float normalizado;
+    float opcional;
+
+    Normalizado(string b, float r,float n,float o) : book(b), real(r), normalizado(n),opcional(o) {}
 };
-
 struct less_distance
 {
-    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
+    inline bool operator() (const Normalizado& struct1, const Normalizado& struct2)
     {
-        return (struct1.distancia < struct2.distancia);
+        return (struct1.normalizado < struct2.normalizado);
     }
 };
 
 struct higher_distance
 {
-    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
+    inline bool operator() (const Normalizado& struct1, const Normalizado& struct2)
     {
-        return (struct1.distancia > struct2.distancia);
+        return (struct1.normalizado > struct2.normalizado);
     }
 };
 
-
-myvec k_nn_pearson(string col,int k)
+myvec normalizar(string user,float &a,float &b)
 {
     myvec vec;
-    auto itc1=matrix_user.find(col);
-    
-    auto itc2=matrix_user.begin();    
-    auto it_matrix_end=matrix_user.end();
-    while(itc2!=it_matrix_end && itc2->first!=col)
+    auto it_mat_user=matrix_user.find(user)->second->begin();
+    while(it_mat_user!=matrix_user.find(user)->second->end())
     {
-        
-        vec.push_back(MyStruct(itc2->first,correlacion_pearson(col,itc2->first),0.0,0.0));
-        itc2++;
+        vec.push_back(Normalizado(it_mat_user->first,it_mat_user->second,it_mat_user->second,0.0));
+        it_mat_user++;
     }
+    std::sort(vec.begin(), vec.end(), less_distance());
+    /*for(auto it = vec.begin();it<vec.end();it++)
+        cout<<it->normalizado<<endl;
+*/
+    float min=vec[0].normalizado;
+    int fin = vec.size()-1;
+    float max=vec[fin].normalizado;
+
+    a=min;
+    b=max;
+
+    for(int i=0;i<vec.size();i++)
+    {
+        vec[i].normalizado=((2*(vec[i].real-min))-(max-min))/(max-min);
+    }
+
     std::sort(vec.begin(), vec.end(), higher_distance());
-    int fin=(vec.size()-k);
-    for(int i=0;i<fin;i++)
-        vec.pop_back();
-    return vec;
+    for(auto it = vec.begin();it<vec.end();it++)
+        cout<<"movie: "<<it->book<<" real: "<<it->real<<" normalizado: "<<it->normalizado<<endl;
 
-}
-myvec k_nn_manhattan(string col,int k)
-{
-    myvec vec;
-    auto itc1=matrix_user.find(col); 
-    auto itc2=matrix_user.begin();    
-    auto it_matrix_end=matrix_user.end();
-    float resultado=1.1;
-    while(itc2!=it_matrix_end)
-    {
-        resultado=distancia_manhattan(col,itc2->first);
-        if(resultado!=0.0)
-            vec.push_back(MyStruct(itc2->first,resultado,0.0,0.0));
-        itc2++;
-    }
-    std::sort(vec.begin(), vec.end(), less_distance());
-    
-    int fin=(vec.size()-k);
-    for(int i=0;i<fin;i++)
-        vec.pop_back();
-    return vec;
-
-}
-myvec k_nn_coseno(string col,int k)
-{
-    myvec vec;
-    auto itc1=matrix_user.find(col); 
-    auto itc2=matrix_user.begin();    
-    auto it_matrix_end=matrix_user.end();
-    while(itc2!=it_matrix_end)
-    {
-        vec.push_back(MyStruct(itc2->first,similitud_coseno(col,itc2->first),0.0,0.0));
-        itc2++;
-    }
-    cout<<"acabo knn"<<endl;
-    std::sort(vec.begin(), vec.end(), higher_distance());
-    //for(int i=0;i<vec.size();i++)
-    //    cout<<vec[i].key<<" , "<<vec[i].distancia<<" , "<<vec[i].pearson<<endl;
-    vec.erase(vec.begin());
-    
-
-    int fin=(vec.size()-k);
-    for(int i=0;i<fin;i++)
-        vec.pop_back();
-    
-    return vec;
-
-}
-myvec k_nn_euclidea(string col,int k)
-{
-    myvec vec;
-    auto itc1=matrix_user.find(col); 
-    auto itc2=matrix_user.begin();    
-    auto it_matrix_end=matrix_user.end();
-    float resultado=1.1;
-    while(itc2!=it_matrix_end)
-    {
-        resultado=distancia_manhattan(col,itc2->first);
-        if(resultado!=0.0)
-            vec.push_back(MyStruct(itc2->first,distancia_euclidea(col,itc2->first),0.0,0.0));
-        itc2++;
-    }
-    std::sort(vec.begin(), vec.end(), less_distance());
-    int fin=(vec.size()-k);
-    for(int i=0;i<fin;i++)
-        vec.pop_back();
     return vec;
 }
 
-void calcular_influencia(string col, vector < MyStruct >& score)
+void predecir(string user,string book)
 {
-    float suma_pearson=0.0;
-    float resultado;
-    for(int i=0;i<score.size();i++)
+    calc_average();
+    calcular_matrix_similitud(book,user);
+    float min=0.0;
+    float max=0.0;
+    myvec vec=normalizar(user,min,max);
+
+
+    myhash vec2;
+    for(int i=0;i<vec.size();i++)
+        vec2.insert({vec[i].book,vec[i]});
+
+    float numerador=0.0;
+    float denominador=0.0;
+
+    auto it_similitud=hash_similitud.begin();
+    while(it_similitud!=hash_similitud.end())
     {
-        resultado=similitud_coseno(col,score[i].key);
-        //cout<<"pearson k_nn: "<<col<<" , "<<score[i].key<<"  resultado: "<<resultado<<endl;
-
-        score[i].pearson=resultado;
-        // cout<<suma_pearson<<endl;
-        suma_pearson+=score[i].pearson;
+        auto it_norma=vec2.find(it_similitud->first);
+        numerador+=(it_similitud->second*it_norma->second.normalizado);
+        denominador+=fabs(it_similitud->second);
+        it_similitud++;    
     }
-    cout<<suma_pearson<<endl;
-    for(int i=0;i<score.size();i++)
-    {
-        //score[i].influencia=score[i].pearson/suma_pearson*100;
-        score[i].influencia=score[i].pearson/suma_pearson;
-    }
+    float prediccion=numerador/float(denominador);
+    cout<<"Prrediccion NOrmalizado: "<<prediccion<<endl;
+    prediccion=((0.5*(prediccion+1))*(max-min))+min;
+    cout<<"Prrediccion Real: "<<prediccion<<endl;
 
-}
-float proyectado_knn_coseno(string name,string libro,int k)
-{
-    myvec knn=k_nn_coseno(name,k);
-    calcular_influencia(name,knn);
-
-    float resultado=0.0;
-    for(int i=0;i<k;i++)
-    {
-        auto itmb=matrix_book.find(libro);
-        if(itmb!=matrix_book.end())
-        {
-            auto it=itmb->second->find(knn[i].key);
-            if(it!=itmb->second->end())
-                resultado+=knn[i].influencia*it->second;
-            else
-                resultado+=0.0;
-        }
-    }
-    for(int i=0;i<knn.size();i++)
-    {
-            cout<<knn[i].key<<" ; "<<knn[i].distancia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
-
-        cout<<endl;
-    }
-    return resultado;
-}
-myvec k_nn_rango(string col,float r)
-{
-    myvec vec;
-
-    auto itc1=matrix_user.find(col); 
-    auto itc2=matrix_user.begin();    
-    auto it_matrix_end=matrix_user.end();
-    //auto itf1=itc1->second->begin();
-    //auto itf2=itc2->second->begin();
-
-    while(itc2!=it_matrix_end)
-    {
-        
-        vec.push_back(MyStruct(itc2->first,similitud_coseno(col,itc2->first),0.0,0.0));
-        itc2++;
-    }
-    
-
-    std::sort(vec.begin(), vec.end(), less_distance());
-    vec.erase(vec.begin());
-    //cout<<"ordenado"<<endl;
-    //cout<<"vec_size"<<vec.size()<<endl;
-   
- 
-    
-    auto it =vec.begin();
-    while(it!=vec.end())
-    {
-        
-        if(r>(it->distancia))
-        {
-             //   cout<<"if"<<r<<" , "<<it->euclidia<<endl;
-            vec.erase(it);
-            it=vec.begin();
-        }
-        it++;
-    }
-    //for(int i=0;i<vec.size();i++)
-    //    cout<<vec[i].key<<","<<vec[i].euclidia<<"."<<endl;
-    //cout<<"fin aaaaa"<<endl;
-    
-    return vec;
-
-}
-void crear_usuario(string name)
-{
-    vector<string> lmovie;
-    lmovie.push_back("7");
-    lmovie.push_back("285");
-    lmovie.push_back("1317");
-    lmovie.push_back("5323");
-    lmovie.push_back("3581");
-    lmovie.push_back("134246");
-    lmovie.push_back("63239");
-    lmovie.push_back("73531");
-    lmovie.push_back("2354");
-    lmovie.push_back("82242");
-
-    vector<float> lrating;
-    lrating.push_back(3.5);
-    lrating.push_back(4.1);
-    lrating.push_back(2.0);
-    lrating.push_back(1.5);
-    lrating.push_back(2.8);
-    lrating.push_back(5.0);
-    lrating.push_back(3.7);
-    lrating.push_back(4.8);
-    lrating.push_back(1.8);
-    //lrating.push_back(1.8);
-    lrating.push_back(4.5);
-    
-    for(int i=0;i<lmovie.size();i++)
-    {
-        auto it_f_b=matrix_user.find(name);
-        auto it_f_u=matrix_book.find(lmovie[i]);
-        if(it_f_b!=matrix_user.end())
-        {
-            it_f_b->second->insert({lmovie[i],lrating[i]});
-        }
-        else
-        {
-            fila_b* fb=new fila_b();
-            fb->insert({lmovie[i],lrating[i]});
-            matrix_user.insert({name,fb});
-        }
-        if(it_f_u!=matrix_book.end())
-        {
-            it_f_u->second->insert({name,lrating[i]});
-        }
-        else
-        {
-            fila_u* fu=new fila_u();
-            fu->insert({name,lrating[i]});
-            matrix_book.insert({lmovie[i],fu});
-        }
-        
-    }
-    //auto itmu=
 }
 int main()
 {
 
     load_matrix_file();
-    //cout<<"distancia_euclidea: "<<distancia_euclidea("135","205")<<endl;;
-    //cout<<"distancia_manhatan: "<<distancia_manhattan("135","205")<<endl;;
-    //cout<<"correlacion de Pearson: "<<correlacion_pearson("135","205")<<endl;;
-    //cout<<"similitud_coseno: "<<similitud_coseno("205","207")<<endl;;
-    crear_usuario("ben");
-    cout<<"correlacion de Pearson: "<<correlacion_pearson("ben","475")<<endl;
-    cout<<"proyeccion:\t"<<proyectado_knn_coseno("ben","Desperado (1995)",10)<<endl;
-    
-    
-    
-    /*calcular_influencia("ben",knn);
-    for(int i=0;i<knn.size();i++)
-    {
-            cout<<knn[i].key<<" ; "<<knn[i].distancia<<" ; "<<knn[i].pearson<<" ; "<<knn[i].influencia;
-
-        cout<<endl;
-    }
-    //cout<<"proyeccion:\t"<<proyectado_knn(knn,"Lord of the Rings")<<endl;
-    */
+   
+    //predecir("478","67255");
+    predecir("470","3007");
+    //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;
     return 0;
 }
 
