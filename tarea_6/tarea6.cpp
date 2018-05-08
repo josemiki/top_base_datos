@@ -195,7 +195,7 @@ void predecir_sw1(string user,string book)
     calcular_desviacion(user,book); 
     cout<<"size hash: "<<list_desv.size()<<endl;
 
-    for(auto it = list_desv.begin()->;it<list_desv.end();it++)
+    for(auto it = list_desv.begin();it!=list_desv.end();it++)
         cout<<"movie: "<<it->second.book<<" desv: "<<it->second.desv<<" card: "<<it->second.cardinalidad<<endl;
 }
 int main()
