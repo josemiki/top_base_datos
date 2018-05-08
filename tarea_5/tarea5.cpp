@@ -175,6 +175,7 @@ void calc_average()
 
 float similitud_books(string col1, string col2)
 {
+    cout<<"books a evaluar: "<<col1<<" y "<<col2<<endl;
     float resultado=0.0;
     float numerador=0.0;
     float denominador=0.0;
@@ -199,9 +200,18 @@ float similitud_books(string col1, string col2)
         }
         itf1++;         
     }
+    
     denominador=(sqrtf(a)*sqrtf(b));
+    cout<<"Numerador: "<<numerador<<" Denominador: "<<denominador<<endl;
     resultado=numerador/denominador;
-    return resultado;
+    if(isnan(resultado))
+        return 0;
+    
+    else
+    {
+        cout<<"Resultado: "<<resultado<<endl;
+        return resultado;
+    }
 }
 void calcular_matrix_similitud(string book,string user)
 {
@@ -360,7 +370,7 @@ myvec normalizar(string user,float &a,float &b)
     return vec;
 }
 
-void predecir(string user,string book)
+void predecir_coseno(string user,string book)
 {
     calc_average();
     calcular_matrix_similitud(book,user);
@@ -395,8 +405,8 @@ int main()
 
     load_matrix_file();
    
-    //predecir("478","67255");
-    predecir("470","3007");
+    predecir_coseno("478","67255");
+    //predecir("470","3007");
     //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;
     return 0;
 }

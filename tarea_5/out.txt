@@ -1,0 +1,304 @@
+load matriz users 
+ size_matrix_user: 671
+load matriz books 
+ size_matrix_book: 9066
+size average671
+books a evaluar: 67255 y 122886
+Numerador: 29.8134 Denominador: 30.0623
+Resultado: 0.991722
+books a evaluar: 67255 y 109487
+Numerador: 70.9146 Denominador: 71.7671
+Resultado: 0.988121
+books a evaluar: 67255 y 109374
+Numerador: 59.0421 Denominador: 59.906
+Resultado: 0.98558
+books a evaluar: 67255 y 106918
+Numerador: 24.0174 Denominador: 24.0962
+Resultado: 0.996729
+books a evaluar: 67255 y 99114
+Numerador: 90.1942 Denominador: 100.943
+Resultado: 0.893514
+books a evaluar: 67255 y 84844
+Numerador: 20.1122 Denominador: 20.1122
+Resultado: 1
+books a evaluar: 67255 y 80693
+Numerador: 31.7262 Denominador: 31.7852
+Resultado: 0.998144
+books a evaluar: 67255 y 80463
+Numerador: 141.851 Denominador: 151.168
+Resultado: 0.938366
+books a evaluar: 67255 y 74458
+Numerador: 116.809 Denominador: 117.246
+Resultado: 0.996273
+books a evaluar: 67255 y 73017
+Numerador: 110.863 Denominador: 113.728
+Resultado: 0.974811
+books a evaluar: 67255 y 72998
+Numerador: 157.143 Denominador: 160.268
+Resultado: 0.980502
+books a evaluar: 67255 y 72378
+Numerador: 43.5577 Denominador: 45.2074
+Resultado: 0.963508
+books a evaluar: 67255 y 4973
+Numerador: 74.6019 Denominador: 74.9293
+Resultado: 0.99563
+books a evaluar: 67255 y 2571
+Numerador: 178.186 Denominador: 196.429
+Resultado: 0.907129
+books a evaluar: 67255 y 89492
+Numerador: 32.5238 Denominador: 40.8352
+Resultado: 0.796466
+books a evaluar: 67255 y 5995
+Numerador: 70.8474 Denominador: 73.7199
+Resultado: 0.961035
+books a evaluar: 67255 y 81562
+Numerador: 91.1556 Denominador: 94.5832
+Resultado: 0.963761
+books a evaluar: 67255 y 2329
+Numerador: 72.6703 Denominador: 75.7679
+Resultado: 0.959117
+books a evaluar: 67255 y 88125
+Numerador: 104.311 Denominador: 113.968
+Resultado: 0.915265
+books a evaluar: 67255 y 48516
+Numerador: 112.799 Denominador: 124.563
+Resultado: 0.905555
+books a evaluar: 67255 y 7153
+Numerador: 153.21 Denominador: 166.127
+Resultado: 0.922246
+books a evaluar: 67255 y 8984
+Numerador: 31.5698 Denominador: 32.2429
+Resultado: 0.979124
+books a evaluar: 67255 y 2028
+Numerador: 100.349 Denominador: 104.194
+Resultado: 0.963094
+books a evaluar: 67255 y 3147
+Numerador: 95.4229 Denominador: 98.4489
+Resultado: 0.969263
+books a evaluar: 67255 y 92259
+Numerador: 38.0423 Denominador: 38.0938
+Resultado: 0.998648
+books a evaluar: 67255 y 1884
+Numerador: 46.2258 Denominador: 47.6264
+Resultado: 0.970592
+books a evaluar: 67255 y 5956
+Numerador: 62.9478 Denominador: 65.6099
+Resultado: 0.959425
+books a evaluar: 67255 y 6902
+Numerador: 13.0543 Denominador: 13.0543
+Resultado: 1
+books a evaluar: 67255 y 260
+Numerador: 117.339 Denominador: 121.438
+Resultado: 0.966245
+books a evaluar: 67255 y 2542
+Numerador: 70.6379 Denominador: 85.4667
+Resultado: 0.826495
+books a evaluar: 67255 y 138036
+Numerador: 7.11452 Denominador: 7.11452
+Resultado: 1
+books a evaluar: 67255 y 1527
+Numerador: 117.802 Denominador: 118.112
+Resultado: 0.997378
+books a evaluar: 67255 y 55269
+Numerador: 30.5242 Denominador: 37.7851
+Resultado: 0.807837
+books a evaluar: 67255 y 91529
+Numerador: 109.083 Denominador: 110.369
+Resultado: 0.988351
+books a evaluar: 67255 y 59315
+Numerador: 159.573 Denominador: 170.817
+Resultado: 0.934174
+books a evaluar: 67255 y 7361
+Numerador: 104.599 Denominador: 105.054
+Resultado: 0.995676
+books a evaluar: 67255 y 1270
+Numerador: 172.327 Denominador: 183.515
+Resultado: 0.939035
+books a evaluar: 67255 y 6373
+Numerador: 68.5673 Denominador: 70.243
+Resultado: 0.976144
+books a evaluar: 67255 y 81537
+Numerador: 5.19022 Denominador: 5.19022
+Resultado: 1
+books a evaluar: 67255 y 296
+Numerador: 144.46 Denominador: 145.43
+Resultado: 0.993334
+books a evaluar: 67255 y 47
+Numerador: 166.67 Denominador: 170.015
+Resultado: 0.980327
+books a evaluar: 67255 y 118900
+Numerador: 26.2607 Denominador: 26.5504
+Resultado: 0.98909
+books a evaluar: 67255 y 318
+Numerador: 149.137 Denominador: 149.624
+Resultado: 0.996744
+books a evaluar: 67255 y 7293
+Numerador: 30.2543 Denominador: 30.5032
+Resultado: 0.991842
+books a evaluar: 67255 y 778
+Numerador: 98.3769 Denominador: 101.013
+Resultado: 0.973907
+books a evaluar: 67255 y 1193
+Numerador: 101.814 Denominador: 103.801
+Resultado: 0.980863
+books a evaluar: 67255 y 119145
+Numerador: 48.2457 Denominador: 48.6047
+Resultado: 0.992613
+books a evaluar: 67255 y 64957
+Numerador: 37.0896 Denominador: 37.4357
+Resultado: 0.990755
+books a evaluar: 67255 y 8368
+Numerador: 74.5549 Denominador: 85.1665
+Resultado: 0.875402
+books a evaluar: 67255 y 2959
+Numerador: 178.599 Denominador: 188.97
+Resultado: 0.945117
+books a evaluar: 67255 y 91542
+Numerador: 75.5266 Denominador: 77.4679
+Resultado: 0.974941
+books a evaluar: 67255 y 4993
+Numerador: 151.564 Denominador: 162.058
+Resultado: 0.935244
+books a evaluar: 67255 y 4995
+Numerador: 95.8177 Denominador: 105.496
+Resultado: 0.908256
+books a evaluar: 67255 y 293
+Numerador: 111.125 Denominador: 120.299
+Resultado: 0.923735
+books a evaluar: 67255 y 53125
+Numerador: 48.9623 Denominador: 54.6781
+Resultado: 0.895465
+books a evaluar: 67255 y 68157
+Numerador: 129.694 Denominador: 131.678
+Resultado: 0.984933
+books a evaluar: 67255 y 55247
+Numerador: 79.8542 Denominador: 83.6988
+Resultado: 0.954066
+books a evaluar: 67255 y 356
+Numerador: 121.85 Denominador: 142.394
+Resultado: 0.855722
+books a evaluar: 67255 y 1089
+Numerador: 84.6318 Denominador: 85.2604
+Resultado: 0.992627
+books a evaluar: 67255 y 5952
+Numerador: 155.779 Denominador: 165.597
+Resultado: 0.940709
+books a evaluar: 67255 y 58559
+Numerador: 176.705 Denominador: 192.286
+Resultado: 0.91897
+books a evaluar: 67255 y 7438
+Numerador: 69.1132 Denominador: 77.9361
+Resultado: 0.886794
+books a evaluar: 67255 y 3949
+Numerador: 76.5097 Denominador: 77.1708
+Resultado: 0.991434
+books a evaluar: 67255 y 5989
+Numerador: 85.2432 Denominador: 96.2138
+Resultado: 0.885977
+books a evaluar: 67255 y 1210
+Numerador: 113.222 Denominador: 117.343
+Resultado: 0.964879
+books a evaluar: 67255 y 6016
+Numerador: 105.86 Denominador: 114.492
+Resultado: 0.924607
+books a evaluar: 67255 y 79132
+Numerador: 196.979 Denominador: 207.387
+Resultado: 0.949812
+books a evaluar: 67255 y 59022
+Numerador: 9.18258 Denominador: 9.18258
+Resultado: 1
+books a evaluar: 67255 y 7458
+Numerador: 35.4099 Denominador: 37.3825
+Resultado: 0.947233
+books a evaluar: 67255 y 30812
+Numerador: 48.7479 Denominador: 49.4906
+Resultado: 0.984993
+books a evaluar: 67255 y 32587
+Numerador: 119.319 Denominador: 124.638
+Resultado: 0.957327
+books a evaluar: 67255 y 4011
+Numerador: 97.1517 Denominador: 103.702
+Resultado: 0.936834
+books a evaluar: 67255 y 47099
+Numerador: 48.5154 Denominador: 48.8315
+Resultado: 0.993527
+books a evaluar: 67255 y 54001
+Numerador: 74.1415 Denominador: 84.6804
+Resultado: 0.875546
+size col matrix similitud: 74
+movie: 296 real: 5 normalizado: 1
+movie: 84844 real: 5 normalizado: 1
+movie: 5995 real: 5 normalizado: 1
+movie: 1089 real: 5 normalizado: 1
+movie: 79132 real: 5 normalizado: 1
+movie: 106918 real: 5 normalizado: 1
+movie: 2329 real: 5 normalizado: 1
+movie: 4011 real: 5 normalizado: 1
+movie: 5989 real: 5 normalizado: 1
+movie: 109487 real: 5 normalizado: 1
+movie: 7153 real: 5 normalizado: 1
+movie: 5952 real: 5 normalizado: 1
+movie: 356 real: 5 normalizado: 1
+movie: 318 real: 5 normalizado: 1
+movie: 122886 real: 5 normalizado: 1
+movie: 1270 real: 5 normalizado: 1
+movie: 64957 real: 5 normalizado: 1
+movie: 1527 real: 5 normalizado: 1
+movie: 2542 real: 5 normalizado: 1
+movie: 4993 real: 5 normalizado: 1
+movie: 92259 real: 5 normalizado: 1
+movie: 55247 real: 5 normalizado: 1
+movie: 2959 real: 4.5 normalizado: 0.6
+movie: 3949 real: 4.5 normalizado: 0.6
+movie: 4995 real: 4.5 normalizado: 0.6
+movie: 6373 real: 4.5 normalizado: 0.6
+movie: 68157 real: 4.5 normalizado: 0.6
+movie: 260 real: 4.5 normalizado: 0.6
+movie: 8984 real: 4.5 normalizado: 0.6
+movie: 48516 real: 4.5 normalizado: 0.6
+movie: 88125 real: 4.5 normalizado: 0.6
+movie: 2028 real: 4.5 normalizado: 0.6
+movie: 5956 real: 4.5 normalizado: 0.6
+movie: 74458 real: 4.5 normalizado: 0.6
+movie: 55269 real: 4.5 normalizado: 0.6
+movie: 109374 real: 4.5 normalizado: 0.6
+movie: 8368 real: 4.5 normalizado: 0.6
+movie: 1210 real: 4.5 normalizado: 0.6
+movie: 6016 real: 4.5 normalizado: 0.6
+movie: 7458 real: 4.5 normalizado: 0.6
+movie: 1193 real: 4.5 normalizado: 0.6
+movie: 778 real: 4.5 normalizado: 0.6
+movie: 32587 real: 4.5 normalizado: 0.6
+movie: 47099 real: 4.5 normalizado: 0.6
+movie: 54001 real: 4.5 normalizado: 0.6
+movie: 91529 real: 4 normalizado: 0.2
+movie: 73017 real: 4 normalizado: 0.2
+movie: 99114 real: 4 normalizado: 0.2
+movie: 119145 real: 4 normalizado: 0.2
+movie: 7361 real: 4 normalizado: 0.2
+movie: 30812 real: 4 normalizado: 0.2
+movie: 138036 real: 4 normalizado: 0.2
+movie: 91542 real: 4 normalizado: 0.2
+movie: 1884 real: 4 normalizado: 0.2
+movie: 3147 real: 4 normalizado: 0.2
+movie: 53125 real: 4 normalizado: 0.2
+movie: 7438 real: 4 normalizado: 0.2
+movie: 72998 real: 4 normalizado: 0.2
+movie: 89492 real: 4 normalizado: 0.2
+movie: 6902 real: 4 normalizado: 0.2
+movie: 2571 real: 3.5 normalizado: -0.2
+movie: 58559 real: 3.5 normalizado: -0.2
+movie: 7293 real: 3.5 normalizado: -0.2
+movie: 118900 real: 3.5 normalizado: -0.2
+movie: 47 real: 3.5 normalizado: -0.2
+movie: 81537 real: 3.5 normalizado: -0.2
+movie: 59315 real: 3.5 normalizado: -0.2
+movie: 293 real: 3.5 normalizado: -0.2
+movie: 80463 real: 3.5 normalizado: -0.2
+movie: 80693 real: 3.5 normalizado: -0.2
+movie: 81562 real: 3 normalizado: -0.6
+movie: 59022 real: 2.5 normalizado: -1
+movie: 72378 real: 2.5 normalizado: -1
+movie: 4973 real: 2.5 normalizado: -1
+Prrediccion NOrmalizado: 0.445985
+Prrediccion Real: 4.30748
