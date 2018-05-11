@@ -408,6 +408,16 @@ void predecir_coseno(string user,string book)
     cout<<"Prrediccion Real: "<<prediccion<<endl;
 
 }
+void recomendar(string name)
+{
+    auto it_m_user=matrix_user.find(name);
+    auto it_book_per_user=it_m_user->second->begin();
+    auto it_m_book=matrix_book.begin();
+    while(it_book_per_user!=it_m_user->second->end())
+    {
+        //if(it_book_per_user-first!=it)
+    } 
+}
 
 int main()
 {
@@ -415,6 +425,7 @@ int main()
     load_matrix_file();
    
     predecir_coseno("1","39");
+    recomendar("1");
     //predecir_sw1("478","67255");
     //predecir("470","3007");
     //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;

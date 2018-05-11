@@ -197,7 +197,7 @@ void calcular_desviacion(string user,string book)
     cout<<"Resultado: "<<sum/sum_card<<endl;
 
 }
-void predecir_sw1(string user,string book)
+void predecir_ws1(string user,string book)
 {
     calcular_desviacion(user,book); 
     //cout<<"size hash: "<<list_desv.size()<<endl;
@@ -211,7 +211,7 @@ int main()
 
     load_matrix_file();
    
-    predecir_sw1("478","67255");
+    predecir_ws1("1","39");
     //predecir("470","3007");
     //cout<<"similitud entre "<<similitud_books("1293","593")<<endl;;
     return 0;
