@@ -175,7 +175,7 @@ pair<float,int> desv(string col1,string col2)
     
     else
     {
-        cout<<"Resultado: "<<resultado<<endl;
+        //cout<<"Resultado: "<<resultado<<endl;
         return make_pair(resultado,c);
     }
 } 
@@ -183,20 +183,28 @@ void calcular_desviacion(string user,string book)
 {
     auto it_m_user=matrix_user.find(user);
     auto it_book_per_user=it_m_user->second->begin();
+    float sum=0.0;
+    float sum_card=0.0;
+
     while(it_book_per_user!=it_m_user->second->end())
     {
         auto p=desv(book,it_book_per_user->first);
-        list_desv.insert({it_book_per_user->first,NewDesv(it_book_per_user->first,p.first,p.second,0.0)});
+        list_desv.insert({it_book_per_user->first,NewDesv(it_book_per_user->first,p.first,p.second,it_book_per_user->second)});
+        sum+=((p.first+it_book_per_user->second)*p.second);
+        sum_card+=p.second;
         it_book_per_user++;
     }
+    cout<<"Resultado: "<<sum/sum_card<<endl;
+
 }
 void predecir_sw1(string user,string book)
 {
     calcular_desviacion(user,book); 
-    cout<<"size hash: "<<list_desv.size()<<endl;
-
-    for(auto it = list_desv.begin();it!=list_desv.end();it++)
-        cout<<"movie: "<<it->second.book<<" desv: "<<it->second.desv<<" card: "<<it->second.cardinalidad<<endl;
+    //cout<<"size hash: "<<list_desv.size()<<endl;
+    
+    
+    //for(auto it = list_desv.begin();it!=list_desv.end();it++)
+    //    cout<<"movie: "<<it->second.book<<" desv: "<<it->second.desv<<" card: "<<it->second.cardinalidad<<" rating: "<<it->second.opcional<<endl;
 }
 int main()
 {
