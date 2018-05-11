@@ -165,7 +165,7 @@ void calc_average()
             itf++;
         }
         avg=(avg/float(n));
-        cout<<"User: "<<itc->first<<" Avg: "<<avg<<endl;
+        //cout<<"User: "<<itc->first<<" Avg: "<<avg<<endl;
         hash_avg.insert({itc->first,avg});
         //matrix_book.find("average")->second->insert({itc->first,avg});
         //itc->second->insert({"average",avg});
@@ -196,7 +196,7 @@ float similitud_books(string col1, string col2)
         {
             if(itf1->first==itf2->first)
             {
-                cout<<"User1: "<<itf1->first<<"  Valu1: "<<itf1->second<<"  Valu2: "<<itf2->second<<"  Avg: "<<hash_avg.find(itf1->first)->second<<endl;
+                //cout<<"User1: "<<itf1->first<<"  Valu1: "<<itf1->second<<"  Valu2: "<<itf2->second<<"  Avg: "<<hash_avg.find(itf1->first)->second<<endl;
                 numerador+=((itf1->second-hash_avg.find(itf1->first)->second)*(itf2->second-hash_avg.find(itf2->first)->second));
                 a+=powf((hash_avg.find(itf1->first)->second-itf1->second),2.0);
                 b+=powf((hash_avg.find(itf2->first)->second-itf2->second),2.0);
@@ -216,7 +216,7 @@ float similitud_books(string col1, string col2)
     
     else
     {
-        cout<<"Resultado: "<<resultado<<endl;
+        //cout<<"Resultado: "<<resultado<<endl;
         return resultado;
     }
 }
@@ -355,9 +355,6 @@ myvec normalizar(string user,float &a,float &b)
         it_mat_user++;
     }
     std::sort(vec.begin(), vec.end(), less_distance());
-    /*for(auto it = vec.begin();it<vec.end();it++)
-        cout<<it->normalizado<<endl;
-*/
     float min=vec[0].normalizado;
     int fin = vec.size()-1;
     float max=vec[fin].normalizado;
@@ -371,13 +368,13 @@ myvec normalizar(string user,float &a,float &b)
     }
 
     std::sort(vec.begin(), vec.end(), higher_distance());
-    for(auto it = vec.begin();it<vec.end();it++)
-        cout<<"movie: "<<it->book<<" real: "<<it->real<<" normalizado: "<<it->normalizado<<endl;
+    //for(auto it = vec.begin();it<vec.end();it++)
+    //    cout<<"movie: "<<it->book<<" real: "<<it->real<<" normalizado: "<<it->normalizado<<endl;
 
     return vec;
 }
 
-void predecir_coseno(string user,string book)
+float predecir_coseno(string user,string book)
 {
     calc_average();
     calcular_matrix_similitud(book,user);
@@ -397,26 +394,39 @@ void predecir_coseno(string user,string book)
     while(it_similitud!=hash_similitud.end())
     {
         auto it_norma=vec2.find(it_similitud->first);
-        cout<<"similitud: "<<it_similitud->first<<"   "<<it_similitud->second<<endl;
+        //cout<<"similitud: "<<it_similitud->first<<"   "<<it_similitud->second<<endl;
         numerador+=(it_similitud->second*it_norma->second.normalizado);
         denominador+=fabs(it_similitud->second);
         it_similitud++;    
     }
     float prediccion=numerador/float(denominador);
-    cout<<"Prrediccion NOrmalizado: "<<prediccion<<endl;
+    //cout<<"Prrediccion NOrmalizado: "<<prediccion<<endl;
     prediccion=((0.5*(prediccion+1))*(max-min))+min;
-    cout<<"Prrediccion Real: "<<prediccion<<endl;
+    //cout<<"Prrediccion Real: "<<prediccion<<endl;
+    return prediccion;
 
 }
-void recomendar(string name)
+void recomendar(string user)
 {
-    auto it_m_user=matrix_user.find(name);
-    auto it_book_per_user=it_m_user->second->begin();
+    auto it_m_user=matrix_user.find(user);
+    auto it_books_user=it_m_user->second;
     auto it_m_book=matrix_book.begin();
-    while(it_book_per_user!=it_m_user->second->end())
+    
+    auto it_look = it_books_user->find(it_m_book->first);
+
+    unordered_map<string,float> hash_resultado;
+    
+    while(it_m_book!=matrix_book.end())
     {
-        //if(it_book_per_user-first!=it)
+        it_look = it_books_user->find(it_m_book->first);
+        
+        if(it_look == it_books_user->end())
+        {
+            hash_resultado.insert({it_m_book->first,predecir_coseno(user,it_m_book->first)});
+        }
+        it_m_book++;
     } 
+    cout<<hash_resultado.size()<<endl;
 }
 
 int main()
